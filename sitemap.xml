@@ -172,7 +172,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/cpp/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -200,14 +200,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/win/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/cpp/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/win/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -223,7 +223,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/cpp/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -251,14 +251,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/win/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/cpp/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/win/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
