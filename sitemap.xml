@@ -165,6 +165,13 @@
 
   
   <url>
+    <loc>https://github.com/peitianyu/blog.git/tags/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2021-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://github.com/peitianyu/blog.git/tags/tool/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
@@ -179,7 +186,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -200,13 +207,6 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
-    <lastmod>2021-10-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/peitianyu/blog.git/tags/win/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
@@ -214,6 +214,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/categories/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2021-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/tool/</loc>
@@ -230,7 +237,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -245,13 +252,6 @@
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/linux/</loc>
-    <lastmod>2021-10-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
