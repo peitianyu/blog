@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/2021/10/19/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/index/</loc>
+    <loc>https://github.com/peitianyu/blog.git/2021/10/28/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/index/</loc>
     
     <lastmod>2021-10-28</lastmod>
     
@@ -193,6 +193,13 @@
   </url>
   
   <url>
+    <loc>https://github.com/peitianyu/blog.git/tags/tool/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://github.com/peitianyu/blog.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
@@ -214,14 +221,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/tool/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/win/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/win/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/slam/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -238,6 +245,13 @@
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/cpp/</loc>
+    <lastmod>2021-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/categories/tool/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -265,14 +279,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/tool/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/win/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/win/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/slam/</loc>
     <lastmod>2021-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
