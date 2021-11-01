@@ -263,13 +263,6 @@
 
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/cpp/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/peitianyu/blog.git/tags/slam/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
@@ -278,6 +271,13 @@
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/tags/cpp/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -298,14 +298,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/ros/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/linux/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/linux/</loc>
+    <loc>https://github.com/peitianyu/blog.git/tags/ros/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,13 +321,6 @@
 
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/cpp/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/peitianyu/blog.git/categories/slam/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
@@ -336,6 +329,13 @@
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/categories/cpp/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -356,14 +356,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/ros/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/linux/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/linux/</loc>
+    <loc>https://github.com/peitianyu/blog.git/categories/ros/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
