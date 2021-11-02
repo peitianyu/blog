@@ -45,9 +45,9 @@
     <link href="https://peitianyu.github.io/blog/2021/11/02/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%86%85%E6%97%8B%E8%BD%AC/"/>
     <id>https://peitianyu.github.io/blog/2021/11/02/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%86%85%E6%97%8B%E8%BD%AC/</id>
     <published>2021-11-02T04:30:12.000Z</published>
-    <updated>2021-11-02T13:03:07.730Z</updated>
+    <updated>2021-11-02T13:07:47.696Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/ahelloyou/article/details/108903506?ops_request_misc=%7B%22request_id%22:%22163585328716780271555754%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585328716780271555754&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-108903506.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&spm=1018.2226.3001.4187">旋转矩阵_ahelloyou的博客-CSDN博客_旋转矩阵</a></p><p><a href="https://blog.csdn.net/u012424737/article/details/106269229?ops_request_misc=%7B%22request_id%22:%22163585328716780271555754%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585328716780271555754&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-2-106269229.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&spm=1018.2226.3001.4187">机器人运动学基础——旋转矩阵_太初有泪的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/hongbin_xu/article/details/78929006?ops_request_misc=%7B%22request_id%22:%22163585334816780366567178%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585334816780366567178&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-78929006.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E5%90%91%E9%87%8F&spm=1018.2226.3001.4187">三维重建学习(1)：基础知识：旋转矩阵与旋转向量_hongbin_xu的博客-CSDN博客_旋转向量</a></p><h1 id="简记"><a href="#简记" class="headerlink" title="简记"></a>简记</h1><p><img src="https://i.loli.net/2021/11/02/OFHhYlzxc4b95WR.jpg" alt="三位空间内的旋转"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/ahelloyou/article/details/108903506?ops_request_misc=%7B%22request_id%22:%22163585328716780271555754%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585328716780271555754&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-108903506.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&spm=1018.2226.3001.4187">旋转矩阵_ahelloyou的博客-CSDN博客_旋转矩阵</a></p><p><a href="https://blog.csdn.net/u012424737/article/details/106269229?ops_request_misc=%7B%22request_id%22:%22163585328716780271555754%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585328716780271555754&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-2-106269229.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&spm=1018.2226.3001.4187">机器人运动学基础——旋转矩阵_太初有泪的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/hongbin_xu/article/details/78929006?ops_request_misc=%7B%22request_id%22:%22163585334816780366567178%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585334816780366567178&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-78929006.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E5%90%91%E9%87%8F&spm=1018.2226.3001.4187">三维重建学习(1)：基础知识：旋转矩阵与旋转向量_hongbin_xu的博客-CSDN博客_旋转向量</a></p><h1 id="简记"><a href="#简记" class="headerlink" title="简记"></a>简记</h1><p><img src="https://i.loli.net/2021/11/02/dxrQGvqahi5YN2I.jpg" alt="三位空间内的旋转"></p>]]></content>
     
     
       
@@ -161,30 +161,6 @@
   </entry>
   
   <entry>
-    <title>嵌入式相关的开源项目</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
-    <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-01T08:22:56.607Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw">https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw</a></p><h2 id="1-Avem"><a href="#1-Avem" class="headerlink" title="1.Avem"></a>1.<a href="https://github.com/avem-labs/Avem">Avem</a></h2><p>这是一个轻量级无人机飞控项目。</p><h1 id="2-Awesome-Embedded"><a href="#2-Awesome-Embedded" class="headerlink" title="2.Awesome-Embedded"></a>2.<a href="https://github.com/nhivp/Awesome-Embedded">Awesome-Embedded</a></h1><p>这是一个很棒的嵌入式资源汇总的项目。汇聚了各种嵌入式相关的资源：</p><h1 id="3-soft-and-hard"><a href="#3-soft-and-hard" class="headerlink" title="3.soft-and-hard"></a>3.<a href="https://github.com/alwxkxk/soft-and-hard">soft-and-hard</a></h1><p>这是一个以物联网项目为主方向分享web开发教程，制作并演示一个物联网系统是怎么跑起来的，介绍如何学习相关知识。</p><h1 id="4-FreeModbus"><a href="#4-FreeModbus" class="headerlink" title="4.FreeModbus"></a>4.<a href="https://github.com/armink/FreeModbus_Slave-Master-RTT-STM32">FreeModbus</a></h1><p>FreeModbus是一款开源的Modbus协议栈，但是只有从机开源，主机源码是需要<strong>收费</strong>的。同时网上也没有发现比较好的开源的Modbus主机协议栈，所以才开发这款支持主机模式的FreeModbus协议栈。</p><h1 id="5-EmbedSummary"><a href="#5-EmbedSummary" class="headerlink" title="5. EmbedSummary"></a>5.<strong><a href="https://github.com/zhengnianli/EmbedSummary"> EmbedSummary</a></strong></h1><p>精心汇总了一些嵌入式相关资源，包括但不限于编程语言、单片机、开源项目、物联网、操作系统、Linux等资源</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>时间触发嵌入式系统设计模式</title>
     <link href="https://peitianyu.github.io/blog/2021/11/01/%E6%97%B6%E9%97%B4%E7%89%87%E8%B0%83%E5%BA%A6/"/>
     <id>https://peitianyu.github.io/blog/2021/11/01/%E6%97%B6%E9%97%B4%E7%89%87%E8%B0%83%E5%BA%A6/</id>
@@ -197,6 +173,30 @@
       
       
     <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/wowocpp/article/details/82887</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>嵌入式相关的开源项目</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
+    <published>2021-11-01T04:30:12.000Z</published>
+    <updated>2021-11-01T08:22:56.607Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw">https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw</a></p><h2 id="1-Avem"><a href="#1-Avem" class="headerlink" title="1.Avem"></a>1.<a href="https://github.com/avem-labs/Avem">Avem</a></h2><p>这是一个轻量级无人机飞控项目。</p><h1 id="2-Awesome-Embedded"><a href="#2-Awesome-Embedded" class="headerlink" title="2.Awesome-Embedded"></a>2.<a href="https://github.com/nhivp/Awesome-Embedded">Awesome-Embedded</a></h1><p>这是一个很棒的嵌入式资源汇总的项目。汇聚了各种嵌入式相关的资源：</p><h1 id="3-soft-and-hard"><a href="#3-soft-and-hard" class="headerlink" title="3.soft-and-hard"></a>3.<a href="https://github.com/alwxkxk/soft-and-hard">soft-and-hard</a></h1><p>这是一个以物联网项目为主方向分享web开发教程，制作并演示一个物联网系统是怎么跑起来的，介绍如何学习相关知识。</p><h1 id="4-FreeModbus"><a href="#4-FreeModbus" class="headerlink" title="4.FreeModbus"></a>4.<a href="https://github.com/armink/FreeModbus_Slave-Master-RTT-STM32">FreeModbus</a></h1><p>FreeModbus是一款开源的Modbus协议栈，但是只有从机开源，主机源码是需要<strong>收费</strong>的。同时网上也没有发现比较好的开源的Modbus主机协议栈，所以才开发这款支持主机模式的FreeModbus协议栈。</p><h1 id="5-EmbedSummary"><a href="#5-EmbedSummary" class="headerlink" title="5. EmbedSummary"></a>5.<strong><a href="https://github.com/zhengnianli/EmbedSummary"> EmbedSummary</a></strong></h1><p>精心汇总了一些嵌入式相关资源，包括但不限于编程语言、单片机、开源项目、物联网、操作系统、Linux等资源</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw&quot;&gt;</summary>
       
     
     
