@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/peitianyu/blog.git/2021/10/19/%E6%A8%A1%E6%9D%BF/</loc>
+    
+    <lastmod>2021-11-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/2021/11/02/ros_cmake%20-%20%E5%89%AF%E6%9C%AC/</loc>
+    
+    <lastmod>2021-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/peitianyu/blog.git/2021/10/29/RTOS%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%A8%B3%E5%AE%9A/</loc>
     
     <lastmod>2021-11-01</lastmod>
@@ -256,7 +270,7 @@
 
   <url>
     <loc>https://github.com/peitianyu/blog.git</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -264,56 +278,56 @@
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/slam/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/cpp/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/tool/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/peitianyu/blog.git/tags/linux/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/ros/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/tags/linux/</loc>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/tags/win/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -322,56 +336,56 @@
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/slam/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/cpp/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/tool/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/peitianyu/blog.git/categories/linux/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/ros/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/peitianyu/blog.git/categories/linux/</loc>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/peitianyu/blog.git/categories/win/</loc>
-    <lastmod>2021-11-01</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
