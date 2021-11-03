@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://peitianyu.github.io/blog/2021/10/19/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/</loc>
+    
+    <lastmod>2021-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/2021/11/02/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%86%85%E6%97%8B%E8%BD%AC/</loc>
     
     <lastmod>2021-11-02</lastmod>
@@ -270,64 +277,64 @@
 
   <url>
     <loc>https://peitianyu.github.io/blog</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/cpp/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <loc>https://peitianyu.github.io/blog/tags/cpp/</loc>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/tool/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/linux/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/win/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -335,57 +342,57 @@
 
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/cpp/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <loc>https://peitianyu.github.io/blog/categories/cpp/</loc>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/tool/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/linux/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/win/</loc>
-    <lastmod>2021-11-02</lastmod>
+    <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
