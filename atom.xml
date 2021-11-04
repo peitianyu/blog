@@ -41,30 +41,6 @@
   </entry>
   
   <entry>
-    <title>文案</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%96%87%E6%A1%88/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%96%87%E6%A1%88/</id>
-    <published>2021-11-03T04:30:12.000Z</published>
-    <updated>2021-11-03T13:51:35.980Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/N04Hmkdy1zJd3oKLxXCD1A">|文案 |</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxMDY1NjA3OQ==&mid=2247542985&idx=1&sn=b23ca251f7d07c224c2a837407b8b5f4&chksm=976326e9a014afff608b64f5b0f8878f25df4b65efdfb03eeb200fb3ca73e3b40a5142ac8de3&scene=21#wechat_redirect">|文案 |</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/N04Hmkdy1zJd3oKLxXCD1A&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="文学" scheme="https://peitianyu.github.io/blog/categories/%E6%96%87%E5%AD%A6/"/>
-    
-    
-    <category term="文学" scheme="https://peitianyu.github.io/blog/tags/%E6%96%87%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo模板</title>
     <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/"/>
     <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/</id>
@@ -85,6 +61,30 @@
     
     
     <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文案</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%96%87%E6%A1%88/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%96%87%E6%A1%88/</id>
+    <published>2021-11-03T04:30:12.000Z</published>
+    <updated>2021-11-03T13:51:35.980Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/N04Hmkdy1zJd3oKLxXCD1A">|文案 |</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxMDY1NjA3OQ==&mid=2247542985&idx=1&sn=b23ca251f7d07c224c2a837407b8b5f4&chksm=976326e9a014afff608b64f5b0f8878f25df4b65efdfb03eeb200fb3ca73e3b40a5142ac8de3&scene=21#wechat_redirect">|文案 |</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/N04Hmkdy1zJd3oKLxXCD1A&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="文学" scheme="https://peitianyu.github.io/blog/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="文学" scheme="https://peitianyu.github.io/blog/tags/%E6%96%87%E5%AD%A6/"/>
     
   </entry>
   
@@ -141,7 +141,7 @@
     <link href="https://peitianyu.github.io/blog/2021/11/01/RTOS%E5%A4%9A%E4%BB%BB%E5%8A%A1%E8%AE%BF%E9%97%AE%E5%90%8C%E4%B8%80%E4%B8%AAUART%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
     <id>https://peitianyu.github.io/blog/2021/11/01/RTOS%E5%A4%9A%E4%BB%BB%E5%8A%A1%E8%AE%BF%E9%97%AE%E5%90%8C%E4%B8%80%E4%B8%AAUART%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/</id>
     <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-01T08:43:54.587Z</updated>
+    <updated>2021-11-04T00:46:00.546Z</updated>
     
     <content type="html"><![CDATA[<h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h3><p><a href="https://mp.weixin.qq.com/s/4wWhF-Pm0vC8O0Qt5eiN-Q">RTOS多任务访问同一个UART的操作方法</a></p><p>在RTOS多任务编程的时候，同一个硬件（比如UART、I2C等）被多个任务访问的情况比较多，如果不合理处理，就会导致“混乱”的局面。</p><p>处理“混乱”局面的方法比较多，下面基于<strong>FreeRTOS</strong>，以UART为例讲讲常见的<em><strong>互斥</strong></em>、<em><strong>队列</strong></em>这两种方法。</p><h3 id="互斥访问方法"><a href="#互斥访问方法" class="headerlink" title="互斥访问方法"></a><strong>互斥访问方法</strong></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建互斥量资源</span></span><br><span class="line">SemaphoreHandle_t xSemaphore = <span class="literal">NULL</span>;</span><br><span class="line">xSemaphore = xSemaphoreCreateMutex();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TaskA</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//占用资源</span></span><br><span class="line">    <span class="keyword">if</span>(xSemaphoreTake(xSemaphore, <span class="number">10</span> ) == pdTRUE)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="comment">//使用资源(发送数据)</span></span><br><span class="line">      USART_SendNByte();</span><br><span class="line">      <span class="comment">//释放资源</span></span><br><span class="line">      xSemaphoreGive(xSemaphore);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>信号量与互斥量区别</strong>：</p><p><strong>信号量</strong>：多个任务同步使用某个资源；</p><p>一个任务完成某个动作后通过信号告诉别的任务，别的任务才可以执行某些动作；</p><p><strong>互斥量</strong>：多任务互斥使用某个资源；</p><p>一个任务占用某个资源，那么别的任务就无法访问，直到该任务离开，其他任务才可以访问该资源；</p><h3 id="队列操作方法"><a href="#队列操作方法" class="headerlink" title="队列操作方法"></a><strong>队列操作方法</strong></h3><p>队列操作方法就是FIFO，先入先出的原理。比如：<strong>任务A要使用UART发送一串数据，将其加入队列； 接着任务B也要使用UART发送一串数据</strong>。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">QueueHandle_t xQueue;</span><br><span class="line">xQueue = xQueueCreate(QUEUE_LENGTH, QUEUE_ITEM_SIZE);</span><br><span class="line"></span><br><span class="line">xTaskCreate(UART_Send_Task, <span class="string">&quot;UART_Send&quot;</span>, STACK_SIZE, <span class="literal">NULL</span>, TASK_PRIORITY, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TaskA</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//任务相关操作</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//加入队列</span></span><br><span class="line">    xQueueSend(xQueue, &amp;TaskA_Buf, <span class="number">10</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TaskB</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//任务相关操作</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//加入队列</span></span><br><span class="line">    xQueueSend(xQueue, &amp;TaskB_Buf, <span class="number">10</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">UART_Send_Task</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//循环读取队列BUF</span></span><br><span class="line">    <span class="keyword">if</span>(xQueueReceive(xQueue, &amp;Buf, <span class="number">10</span>) == pdTRUE)</span><br><span class="line">    &#123;</span><br><span class="line">      USART_SendNByte(&amp;Buf);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -153,10 +153,12 @@
     
     
     
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
     <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
