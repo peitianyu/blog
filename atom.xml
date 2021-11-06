@@ -45,9 +45,9 @@
     <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
     <id>https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</id>
     <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-06T12:16:14.356Z</updated>
+    <updated>2021-11-06T12:19:14.409Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/little_ox/article/details/105056030">(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客</a></p><h1 id="最小系统"><a href="#最小系统" class="headerlink" title="最小系统"></a>最小系统</h1><p>组成**:主芯片**,<strong>复位电路</strong>,<strong>时钟电路</strong>,<strong>电源电路</strong>,<strong>下载电路</strong></p><h2 id="主芯片"><a href="#主芯片" class="headerlink" title="主芯片"></a>主芯片</h2><p>根据自己需要的io数量,功能选择好主芯片</p><h2 id="复位电路-时钟电路-下载电路"><a href="#复位电路-时钟电路-下载电路" class="headerlink" title="复位电路,时钟电路,下载电路"></a>复位电路,时钟电路,下载电路</h2><p>由于低电平复位,因此可以通过上拉电阻实现,由于<strong>复位电路</strong>与<strong>时钟电路</strong>一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,<strong>下载电路</strong>的话直接<code>clk</code>,<code>dio</code>给他,通过<code>SWD</code>,或者<code>JTAG</code>下载</p><p><img src="https://i.loli.net/2021/11/06/uVUHSfX4Lt2Reiq.png" alt="image-20211106195658724.png"></p><p>**!注意:**有很多电路会有电容滤波,这里电容应该与电源尽可能放一块.</p><h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p>比较麻烦的是电源电路,或者降压,或者稳压,根据需要实现.</p><p>这里提供一种从24v转3.3v的思路电源思路.这里使用<code>TPS5430</code>芯片实现的一种电源降压的方式</p><p><img src="https://i.loli.net/2021/11/06/OokdWnJcprP4uZV.png" alt="image-20211106200343212.png"></p><p><img src="https://i.loli.net/2021/11/06/SXDMrFs3iagZGBq.png" alt="image-20211106200412912.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/little_ox/article/details/105056030">(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客</a></p><h1 id="最小系统"><a href="#最小系统" class="headerlink" title="最小系统"></a>最小系统</h1><p>组成:<strong>主芯片</strong>,<strong>复位电路</strong>,<strong>时钟电路</strong>,<strong>电源电路</strong>,<strong>下载电路</strong></p><h2 id="主芯片"><a href="#主芯片" class="headerlink" title="主芯片"></a>主芯片</h2><p>根据自己需要的io数量,功能选择好主芯片</p><h2 id="复位电路-时钟电路-下载电路"><a href="#复位电路-时钟电路-下载电路" class="headerlink" title="复位电路,时钟电路,下载电路"></a>复位电路,时钟电路,下载电路</h2><p>由于低电平复位,因此可以通过上拉电阻实现,由于<strong>复位电路</strong>与<strong>时钟电路</strong>一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,<strong>下载电路</strong>的话直接<code>clk</code>,<code>dio</code>给他,通过<code>SWD</code>,或者<code>JTAG</code>下载</p><p><img src="https://i.loli.net/2021/11/06/uVUHSfX4Lt2Reiq.png" alt="image-20211106195658724.png"></p><p>**!注意:**有很多电路会有电容滤波,这里电容应该与电源尽可能放一块.</p><h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p>比较麻烦的是电源电路,或者降压,或者稳压,根据需要实现.</p><p>这里提供一种从24v转3.3v的思路电源思路.这里使用<code>TPS5430</code>芯片实现的一种电源降压的方式</p><p><img src="https://i.loli.net/2021/11/06/OokdWnJcprP4uZV.png" alt="image-20211106200343212.png"></p><p><img src="https://i.loli.net/2021/11/06/SXDMrFs3iagZGBq.png" alt="image-20211106200412912.png"></p>]]></content>
     
     
       
@@ -188,30 +188,6 @@
   </entry>
   
   <entry>
-    <title>树莓派入门</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/</id>
-    <published>2021-11-03T04:30:12.000Z</published>
-    <updated>2021-11-03T13:51:08.689Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="树莓派入门"><a href="#树莓派入门" class="headerlink" title="树莓派入门"></a>树莓派入门</h2><h3 id="1、树莓派安装"><a href="#1、树莓派安装" class="headerlink" title="1、树莓派安装"></a>1、树莓派安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">教程网站：https://blog.csdn.net/bhniunan/article/details/104783321</span><br><span class="line">    https://blog.csdn.net/W17330937835/article/details/105351273?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161603417716780255273810%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=161603417716780255273810&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-3-105351273.pc_search_result_no_baidu_js&amp;utm_term=%E6%A0%91%E8%8E%93%E6%B4%BE4b</span><br><span class="line"></span><br><span class="line">https://ubuntu-mate.org/</span><br><span class="line">noobs安装系统：https://blog.csdn.net/diandianxiyu_geek/article/details/78949393</span><br><span class="line"></span><br><span class="line">https://shumeipai.nxez.com/download</span><br><span class="line">https://make.quwj.com/member/2/bookmarks?category=36</span><br></pre></td></tr></table></figure><h3 id="2、汉化Raspbian操作系统"><a href="#2、汉化Raspbian操作系统" class="headerlink" title="2、汉化Raspbian操作系统"></a>2、汉化Raspbian操作系统</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/bhniunan/article/details/104842773</span><br><span class="line">中文输入法：https://blog.csdn.net/qq_33475105/article/details/113488707?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161605416616780261948746%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=161605416616780261948746&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-3-113488707.pc_search_result_no_baidu_js&amp;utm_term=%E6%A0%91%E8%8E%93%E6%B4%BE4b%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95</span><br></pre></td></tr></table></figure><h3 id="3、树莓派gpio控制"><a href="#3、树莓派gpio控制" class="headerlink" title="3、树莓派gpio控制"></a>3、树莓派gpio控制</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wiki.jikexueyuan.com/project/raspberry-pi/gpio.html</span><br></pre></td></tr></table></figure><h3 id="4、树莓派命令行连接wifi"><a href="#4、树莓派命令行连接wifi" class="headerlink" title="4、树莓派命令行连接wifi"></a>4、树莓派命令行连接wifi</h3><p><a href="https://blog.csdn.net/u010875635/article/details/70170145">https://blog.csdn.net/u010875635/article/details/70170145</a></p><h3 id="5、树莓派用rc-local设置开机启动"><a href="#5、树莓派用rc-local设置开机启动" class="headerlink" title="5、树莓派用rc.local设置开机启动"></a>5、树莓派用rc.local设置开机启动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入etc/rc.local</span><br><span class="line">编辑需要打开的设置，直接编辑命令</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;树莓派入门&quot;&gt;&lt;a href=&quot;#树莓派入门&quot; class=&quot;headerlink&quot; title=&quot;树莓派入门&quot;&gt;&lt;/a&gt;树莓派入门&lt;/h2&gt;&lt;h3 id=&quot;1、树莓派安装&quot;&gt;&lt;a href=&quot;#1、树莓派安装&quot; class=&quot;headerlink&quot; title=</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo模板</title>
     <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/"/>
     <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/</id>
@@ -232,6 +208,30 @@
     
     
     <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派入门</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/</id>
+    <published>2021-11-03T04:30:12.000Z</published>
+    <updated>2021-11-03T13:51:08.689Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="树莓派入门"><a href="#树莓派入门" class="headerlink" title="树莓派入门"></a>树莓派入门</h2><h3 id="1、树莓派安装"><a href="#1、树莓派安装" class="headerlink" title="1、树莓派安装"></a>1、树莓派安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">教程网站：https://blog.csdn.net/bhniunan/article/details/104783321</span><br><span class="line">    https://blog.csdn.net/W17330937835/article/details/105351273?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161603417716780255273810%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=161603417716780255273810&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-3-105351273.pc_search_result_no_baidu_js&amp;utm_term=%E6%A0%91%E8%8E%93%E6%B4%BE4b</span><br><span class="line"></span><br><span class="line">https://ubuntu-mate.org/</span><br><span class="line">noobs安装系统：https://blog.csdn.net/diandianxiyu_geek/article/details/78949393</span><br><span class="line"></span><br><span class="line">https://shumeipai.nxez.com/download</span><br><span class="line">https://make.quwj.com/member/2/bookmarks?category=36</span><br></pre></td></tr></table></figure><h3 id="2、汉化Raspbian操作系统"><a href="#2、汉化Raspbian操作系统" class="headerlink" title="2、汉化Raspbian操作系统"></a>2、汉化Raspbian操作系统</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/bhniunan/article/details/104842773</span><br><span class="line">中文输入法：https://blog.csdn.net/qq_33475105/article/details/113488707?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161605416616780261948746%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=161605416616780261948746&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-3-113488707.pc_search_result_no_baidu_js&amp;utm_term=%E6%A0%91%E8%8E%93%E6%B4%BE4b%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95</span><br></pre></td></tr></table></figure><h3 id="3、树莓派gpio控制"><a href="#3、树莓派gpio控制" class="headerlink" title="3、树莓派gpio控制"></a>3、树莓派gpio控制</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://wiki.jikexueyuan.com/project/raspberry-pi/gpio.html</span><br></pre></td></tr></table></figure><h3 id="4、树莓派命令行连接wifi"><a href="#4、树莓派命令行连接wifi" class="headerlink" title="4、树莓派命令行连接wifi"></a>4、树莓派命令行连接wifi</h3><p><a href="https://blog.csdn.net/u010875635/article/details/70170145">https://blog.csdn.net/u010875635/article/details/70170145</a></p><h3 id="5、树莓派用rc-local设置开机启动"><a href="#5、树莓派用rc-local设置开机启动" class="headerlink" title="5、树莓派用rc.local设置开机启动"></a>5、树莓派用rc.local设置开机启动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入etc/rc.local</span><br><span class="line">编辑需要打开的设置，直接编辑命令</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;树莓派入门&quot;&gt;&lt;a href=&quot;#树莓派入门&quot; class=&quot;headerlink&quot; title=&quot;树莓派入门&quot;&gt;&lt;/a&gt;树莓派入门&lt;/h2&gt;&lt;h3 id=&quot;1、树莓派安装&quot;&gt;&lt;a href=&quot;#1、树莓派安装&quot; class=&quot;headerlink&quot; title=</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -334,30 +334,6 @@
   </entry>
   
   <entry>
-    <title>变量初始化多种操作</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/</id>
-    <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-01T06:06:58.027Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ">嵌入式C语言编程时，变量、数组、指针初始化的多种操作</a></p><h1 id="数值初始化"><a href="#数值初始化" class="headerlink" title="数值初始化"></a>数值初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>    inum  = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">float</span>  fnum = <span class="number">0.00f</span>;</span><br><span class="line"><span class="keyword">double</span> dnum = <span class="number">0.00</span>;</span><br></pre></td></tr></table></figure><h1 id="字符初始化"><a href="#字符初始化" class="headerlink" title="字符初始化"></a>字符初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">&#x27;\0&#x27;</span>; </span><br></pre></td></tr></table></figure><h1 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h1><p>实际上就是将字符数组中的字符都初始化为<code>&#39;\0&#39;</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用&quot;&quot;实现</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>] = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">// 使用memset</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(str, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(str));</span><br><span class="line"><span class="comment">//使用循环</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    str[i] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一般使用<code>memset</code>最合适,一般采用<code>+1</code>的方式参考:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> year[<span class="number">4</span>+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">memset</span>(year, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(year));</span><br><span class="line"><span class="built_in">strcpy</span>(year,<span class="string">&quot;2018&quot;</span>);</span><br></pre></td></tr></table></figure><h1 id="指针初始化"><a href="#指针初始化" class="headerlink" title="指针初始化"></a>指针初始化</h1><p>需要使用<code>malloc</code>申请动态内存</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *p = <span class="literal">NULL</span>;  </span><br><span class="line">p=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="keyword">if</span>(<span class="literal">NULL</span> == p)</span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Memory Allocated at: %x\n&quot;</span>,p);  </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Not Enough Memory!\n&quot;</span>);  </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">free</span>(p);  </span><br><span class="line">p = <span class="literal">NULL</span>;   <span class="comment">//这一行给指针置空必不可少，否则很可能后面操作了这个野指针而不自知，从而导致出现严重的问题</span></span><br></pre></td></tr></table></figure><h1 id="结构体初始化"><a href="#结构体初始化" class="headerlink" title="结构体初始化"></a>结构体初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line">&#125;STU;</span><br><span class="line">STU stu1;</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1));</span><br></pre></td></tr></table></figure><p>注意初始化结构体数组时</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STU stus[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stus)); <span class="comment">//正确，数组本身在内存里就是连续的，sizeof取出的就是数组的字节长度</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU));  <span class="comment">//错误，只会初始化第一个STU结构体，后面还有9个STU元素并未初始化</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU)*<span class="number">10</span>);  <span class="comment">//正确，效果与第一个是一样的</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0x00</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1)); <span class="comment">//正确,效果与第一个是一样的</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
-  </entry>
-  
-  <entry>
     <title>软件开发中各种开发模型的优缺点</title>
     <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
     <id>https://peitianyu.github.io/blog/2021/11/01/%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/</id>
@@ -378,6 +354,30 @@
     
     
     <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>变量初始化多种操作</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-11-01T04:30:12.000Z</published>
+    <updated>2021-11-01T06:06:58.027Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ">嵌入式C语言编程时，变量、数组、指针初始化的多种操作</a></p><h1 id="数值初始化"><a href="#数值初始化" class="headerlink" title="数值初始化"></a>数值初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>    inum  = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">float</span>  fnum = <span class="number">0.00f</span>;</span><br><span class="line"><span class="keyword">double</span> dnum = <span class="number">0.00</span>;</span><br></pre></td></tr></table></figure><h1 id="字符初始化"><a href="#字符初始化" class="headerlink" title="字符初始化"></a>字符初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">&#x27;\0&#x27;</span>; </span><br></pre></td></tr></table></figure><h1 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h1><p>实际上就是将字符数组中的字符都初始化为<code>&#39;\0&#39;</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用&quot;&quot;实现</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>] = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">// 使用memset</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(str, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(str));</span><br><span class="line"><span class="comment">//使用循环</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    str[i] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一般使用<code>memset</code>最合适,一般采用<code>+1</code>的方式参考:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> year[<span class="number">4</span>+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">memset</span>(year, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(year));</span><br><span class="line"><span class="built_in">strcpy</span>(year,<span class="string">&quot;2018&quot;</span>);</span><br></pre></td></tr></table></figure><h1 id="指针初始化"><a href="#指针初始化" class="headerlink" title="指针初始化"></a>指针初始化</h1><p>需要使用<code>malloc</code>申请动态内存</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *p = <span class="literal">NULL</span>;  </span><br><span class="line">p=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="keyword">if</span>(<span class="literal">NULL</span> == p)</span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Memory Allocated at: %x\n&quot;</span>,p);  </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Not Enough Memory!\n&quot;</span>);  </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">free</span>(p);  </span><br><span class="line">p = <span class="literal">NULL</span>;   <span class="comment">//这一行给指针置空必不可少，否则很可能后面操作了这个野指针而不自知，从而导致出现严重的问题</span></span><br></pre></td></tr></table></figure><h1 id="结构体初始化"><a href="#结构体初始化" class="headerlink" title="结构体初始化"></a>结构体初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line">&#125;STU;</span><br><span class="line">STU stu1;</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1));</span><br></pre></td></tr></table></figure><p>注意初始化结构体数组时</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STU stus[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stus)); <span class="comment">//正确，数组本身在内存里就是连续的，sizeof取出的就是数组的字节长度</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU));  <span class="comment">//错误，只会初始化第一个STU结构体，后面还有9个STU元素并未初始化</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU)*<span class="number">10</span>);  <span class="comment">//正确，效果与第一个是一样的</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0x00</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1)); <span class="comment">//正确,效果与第一个是一样的</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
+    
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
@@ -454,30 +454,6 @@
   </entry>
   
   <entry>
-    <title>RTOS应用程序稳定</title>
-    <link href="https://peitianyu.github.io/blog/2021/10/29/RTOS%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%A8%B3%E5%AE%9A/"/>
-    <id>https://peitianyu.github.io/blog/2021/10/29/RTOS%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%A8%B3%E5%AE%9A/</id>
-    <published>2021-10-29T04:30:12.000Z</published>
-    <updated>2021-11-01T12:01:45.322Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站:"></a>参考网站:</h1><p><a href="https://www.eet-china.com/mp/a69844.html">提高RTOS应用程序稳定可靠的几点技巧-面包板社区 (eet-china.com)</a></p><p><a href="https://blog.csdn.net/weixin_42616791/article/details/108548128?ops_request_misc=%7B%22request_id%22:%22163576619116780366553575%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163576619116780366553575&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-2-108548128.pc_search_ecpm_flag&utm_term=+RTOS%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%92%E5%88%86&spm=1018.2226.3001.4187">RTOS 是如何进行任务划分的？_wenzi嵌入式软件的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/qq_35021496/article/details/81035750?ops_request_misc=%7B%22request_id%22:%22163576619116780271563446%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163576619116780271563446&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-81035750.pc_search_ecpm_flag&utm_term=+RTOS%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%92%E5%88%86&spm=1018.2226.3001.4187">UCOS 等 RTOS的任务划分原则（转载整理）_Dr树树的博客-CSDN博客</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网站&quot;&gt;&lt;a href=&quot;#参考网站&quot; class=&quot;headerlink&quot; title=&quot;参考网站:&quot;&gt;&lt;/a&gt;参考网站:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.eet-china.com/mp/a69844.html&quot;&gt;提高RTOS应用程</summary>
-      
-    
-    
-    
-    <category term="slam" scheme="https://peitianyu.github.io/blog/categories/slam/"/>
-    
-    
-    <category term="slam" scheme="https://peitianyu.github.io/blog/tags/slam/"/>
-    
-  </entry>
-  
-  <entry>
     <title>回调函数</title>
     <link href="https://peitianyu.github.io/blog/2021/10/29/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
     <id>https://peitianyu.github.io/blog/2021/10/29/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/</id>
@@ -498,6 +474,30 @@
     
     
     <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>局部全局坐标转换</title>
+    <link href="https://peitianyu.github.io/blog/2021/10/29/%E5%B1%80%E9%83%A8%E5%85%A8%E5%B1%80%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://peitianyu.github.io/blog/2021/10/29/%E5%B1%80%E9%83%A8%E5%85%A8%E5%B1%80%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/</id>
+    <published>2021-10-29T04:30:12.000Z</published>
+    <updated>2021-10-29T10:24:19.049Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="局部全局坐标转换"><a href="#局部全局坐标转换" class="headerlink" title="局部全局坐标转换"></a>局部全局坐标转换</h1><h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p><img src="https://i.loli.net/2021/10/29/QfTymrLqs7AG6a2.png" alt="image-20211029181117606.png"></p><h2 id="公式"><a href="#公式" class="headerlink" title="公式:"></a>公式:</h2><p><img src="https://i.loli.net/2021/10/29/7ht1yaPc3E26zBF.png" alt="image-20211029180943040.png"></p><h2 id="ROS-中里程计的计算代码理解"><a href="#ROS-中里程计的计算代码理解" class="headerlink" title="ROS 中里程计的计算代码理解"></a>ROS 中里程计的计算代码理解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> dt = (current_time - last_time).<span class="built_in">toSec</span>();</span><br><span class="line"><span class="keyword">double</span> delta_x = (vx * <span class="built_in">cos</span>(th) - vy * <span class="built_in">sin</span>(th)) * dt;</span><br><span class="line"><span class="keyword">double</span> delta_y = (vx * <span class="built_in">sin</span>(th) + vy * <span class="built_in">cos</span>(th)) * dt;</span><br><span class="line"><span class="keyword">double</span> delta_th = vth * dt;</span><br><span class="line"></span><br><span class="line">x += delta_x;</span><br><span class="line">y += delta_y;</span><br><span class="line">th += delta_th;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;局部全局坐标转换&quot;&gt;&lt;a href=&quot;#局部全局坐标转换&quot; class=&quot;headerlink&quot; title=&quot;局部全局坐标转换&quot;&gt;&lt;/a&gt;局部全局坐标转换&lt;/h1&gt;&lt;h2 id=&quot;模型&quot;&gt;&lt;a href=&quot;#模型&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    <category term="slam" scheme="https://peitianyu.github.io/blog/categories/slam/"/>
+    
+    
+    <category term="slam" scheme="https://peitianyu.github.io/blog/tags/slam/"/>
     
   </entry>
   
