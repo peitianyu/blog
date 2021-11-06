@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-11-05T06:14:45.991Z</updated>
+  <updated>2021-11-06T07:23:42.745Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通讯设计</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E9%80%9A%E8%AE%AF%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E9%80%9A%E8%AE%AF%E8%AE%BE%E8%AE%A1/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-06T07:23:42.745Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CAN"><a href="#CAN" class="headerlink" title="CAN:"></a>CAN:</h1><p><img src="https://i.loli.net/2021/11/06/Cs8JxWr3kPG7efT.png" alt="image-20211106130338091-16361750226251.png"></p><p><img src="https://i.loli.net/2021/11/06/6BkYVPWyMIU5g1Z.png" alt="image-20211106133256690.png"></p><p>两张图用的都是<code>TJA1050</code>,速度<code>1Mbps</code>,不过后期的处理略有些不同,上图can信号分两路输出,而下图,为保护电路,加入了<code>fuse</code>(熔断器),<code>SMAJ30CA</code>(瞬态抑制二极管)</p><p><img src="https://i.loli.net/2021/11/06/tcjs9VvHAG8ENQX.png" alt="image-20211106140618661.png"></p><p>这张图用的是<code>max3051</code>3.3v供电,高速运行<code>1Mbps</code>,这里使用了<code>ACT45B</code>共模电感起<code>EMI</code>滤波的作用，用于抑制高速信号线产生的电磁波向外辐射发射.</p><h1 id="RS485"><a href="#RS485" class="headerlink" title="RS485"></a>RS485</h1><p><img src="https://i.loli.net/2021/11/06/NuSOBZ4Yldot6wp.png" alt="image-20211106141453916.png"></p><p><img src="https://i.loli.net/2021/11/06/T8zrX3fUBA4Slc2.png" alt="image-20211106141550298.png"></p><p>由于采用<code>3.3v</code>供电,使用芯片为<code>sp3485</code>,参考图二,<code>5v</code>供电可更换为<code>max485</code>,电路设计上也还是同样,图一,采用<code>熔断器</code>与<code>瞬态一直二极管</code>保护电路</p><p><img src="https://i.loli.net/2021/11/06/QHouRcwMjXm7fFh.png" alt="image-20211106142404847"></p><p>这张图就是<code>max485</code>实现的<code>RS485</code>电路,同样对于电路保护也采用熔断器与瞬态一直二极管,同时采用电容进行进一步滤波.这里发送接收通过<code>EN</code>控制,三极管做开关功能,<code>EN</code>为0时接收,为1时发送.</p><h1 id="232"><a href="#232" class="headerlink" title="232"></a>232</h1><p><img src="https://i.loli.net/2021/11/06/J8CwfLA7H1uErT4.png" alt="image-20211106143625304"></p><p>数据手册:</p><p><a href="https://www.ti.com/cn/lit/ds/symlink/max3232.pdf?ts=1636166679814">具有 ±15kV ESD 保护功能的 MAX3232 3V 至 5.5V 多通道 RS-232 线路驱动器和接收器 datasheet </a></p><p>布板参考:</p><p><img src="https://i.loli.net/2021/11/06/wghYLF1WtiadvNS.png" alt="image-20211106143955599.png"></p><h1 id="USB转串口"><a href="#USB转串口" class="headerlink" title="USB转串口"></a>USB转串口</h1><p><img src="https://i.loli.net/2021/11/06/oKLkuhrp9EUb43w.png" alt="image-20211106145617779.png"></p><p>这张图是type_c转串口的图,图中使用<code>CH340N</code>实现板子最小化,非常<strong>nice</strong></p><p>下面是他的开源链接:<a href="https://oshwhub.com/vcijj/TYPE-C-usbzhuai-chuan-kou">TYPE C usb转串口 - 立创EDA开源硬件平台 (oshwhub.com)</a></p><p>当然为了保护电路,我们也可以在上边加上<code>熔断</code>与<code>瞬时抑制二极管</code></p><h1 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h1><p><strong>参考渡鸦卡发版设计</strong></p><p><img src="https://i.loli.net/2021/11/06/u3pGfIP86yELD4F.png" alt="image-20211106150109596.png"></p><p><strong>大佬的串口转以太网设计:</strong></p><p><a href="https://oshwhub.com/jixin/CH9121-4c2c4f99e2494eee8421dd23768820a1">串口转以太网模块-CH9121 - 立创EDA开源硬件平台 (oshwhub.com)</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;CAN&quot;&gt;&lt;a href=&quot;#CAN&quot; class=&quot;headerlink&quot; title=&quot;CAN:&quot;&gt;&lt;/a&gt;CAN:&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/06/Cs8JxWr3kPG7efT.png&quot; alt</summary>
+      
+    
+    
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/categories/sch/"/>
+    
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
+    
+  </entry>
   
   <entry>
     <title>hector基础使用</title>
@@ -110,30 +134,6 @@
     
     
     <category term="slam" scheme="https://peitianyu.github.io/blog/tags/slam/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文案</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%96%87%E6%A1%88/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%96%87%E6%A1%88/</id>
-    <published>2021-11-03T04:30:12.000Z</published>
-    <updated>2021-11-03T13:51:35.980Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/N04Hmkdy1zJd3oKLxXCD1A">|文案 |</a></p><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxMDY1NjA3OQ==&mid=2247542985&idx=1&sn=b23ca251f7d07c224c2a837407b8b5f4&chksm=976326e9a014afff608b64f5b0f8878f25df4b65efdfb03eeb200fb3ca73e3b40a5142ac8de3&scene=21#wechat_redirect">|文案 |</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/N04Hmkdy1zJd3oKLxXCD1A&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="文学" scheme="https://peitianyu.github.io/blog/categories/%E6%96%87%E5%AD%A6/"/>
-    
-    
-    <category term="文学" scheme="https://peitianyu.github.io/blog/tags/%E6%96%87%E5%AD%A6/"/>
     
   </entry>
   
