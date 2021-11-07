@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-11-06T07:46:11.413Z</updated>
+  <updated>2021-11-06T12:19:14.409Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最小系统设计</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-06T12:19:14.409Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/little_ox/article/details/105056030">(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客</a></p><h1 id="最小系统"><a href="#最小系统" class="headerlink" title="最小系统"></a>最小系统</h1><p>组成:<strong>主芯片</strong>,<strong>复位电路</strong>,<strong>时钟电路</strong>,<strong>电源电路</strong>,<strong>下载电路</strong></p><h2 id="主芯片"><a href="#主芯片" class="headerlink" title="主芯片"></a>主芯片</h2><p>根据自己需要的io数量,功能选择好主芯片</p><h2 id="复位电路-时钟电路-下载电路"><a href="#复位电路-时钟电路-下载电路" class="headerlink" title="复位电路,时钟电路,下载电路"></a>复位电路,时钟电路,下载电路</h2><p>由于低电平复位,因此可以通过上拉电阻实现,由于<strong>复位电路</strong>与<strong>时钟电路</strong>一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,<strong>下载电路</strong>的话直接<code>clk</code>,<code>dio</code>给他,通过<code>SWD</code>,或者<code>JTAG</code>下载</p><p><img src="https://i.loli.net/2021/11/06/uVUHSfX4Lt2Reiq.png" alt="image-20211106195658724.png"></p><p>**!注意:**有很多电路会有电容滤波,这里电容应该与电源尽可能放一块.</p><h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p>比较麻烦的是电源电路,或者降压,或者稳压,根据需要实现.</p><p>这里提供一种从24v转3.3v的思路电源思路.这里使用<code>TPS5430</code>芯片实现的一种电源降压的方式</p><p><img src="https://i.loli.net/2021/11/06/OokdWnJcprP4uZV.png" alt="image-20211106200343212.png"></p><p><img src="https://i.loli.net/2021/11/06/SXDMrFs3iagZGBq.png" alt="image-20211106200412912.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/little_ox/article/details/105</summary>
+      
+    
+    
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/categories/sch/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派串口通信</title>
@@ -41,28 +67,50 @@
   </entry>
   
   <entry>
-    <title>最小系统设计</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</id>
+    <title>树莓派备份</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/</id>
     <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-06T12:19:14.409Z</updated>
+    <updated>2021-11-06T13:10:22.879Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/little_ox/article/details/105056030">(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客</a></p><h1 id="最小系统"><a href="#最小系统" class="headerlink" title="最小系统"></a>最小系统</h1><p>组成:<strong>主芯片</strong>,<strong>复位电路</strong>,<strong>时钟电路</strong>,<strong>电源电路</strong>,<strong>下载电路</strong></p><h2 id="主芯片"><a href="#主芯片" class="headerlink" title="主芯片"></a>主芯片</h2><p>根据自己需要的io数量,功能选择好主芯片</p><h2 id="复位电路-时钟电路-下载电路"><a href="#复位电路-时钟电路-下载电路" class="headerlink" title="复位电路,时钟电路,下载电路"></a>复位电路,时钟电路,下载电路</h2><p>由于低电平复位,因此可以通过上拉电阻实现,由于<strong>复位电路</strong>与<strong>时钟电路</strong>一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,<strong>下载电路</strong>的话直接<code>clk</code>,<code>dio</code>给他,通过<code>SWD</code>,或者<code>JTAG</code>下载</p><p><img src="https://i.loli.net/2021/11/06/uVUHSfX4Lt2Reiq.png" alt="image-20211106195658724.png"></p><p>**!注意:**有很多电路会有电容滤波,这里电容应该与电源尽可能放一块.</p><h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p>比较麻烦的是电源电路,或者降压,或者稳压,根据需要实现.</p><p>这里提供一种从24v转3.3v的思路电源思路.这里使用<code>TPS5430</code>芯片实现的一种电源降压的方式</p><p><img src="https://i.loli.net/2021/11/06/OokdWnJcprP4uZV.png" alt="image-20211106200343212.png"></p><p><img src="https://i.loli.net/2021/11/06/SXDMrFs3iagZGBq.png" alt="image-20211106200412912.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://zhuanlan.zhihu.com/p/299844978?utm_source=wechat_session">收藏！最简单的树莓派系统备份方法！ - 知乎 (zhihu.com)</a></p><p><a href="https://post.smzdm.com/p/apzkgne7/">树莓派学习笔记 篇四：树莓派4B 的系统备份方法大全（全卡+压缩备份）_其他智能设备_什么值得买 (smzdm.com)</a></p><p><a href="https://blog.csdn.net/sinat_16643223/article/details/109006150">烧写之前备份过的树莓派镜像到SD卡，证明这样备份恢复是可行的！！！！！！！_TYINY的博客-CSDN博客</a></p><h1 id="最简单的方式"><a href="#最简单的方式" class="headerlink" title="最简单的方式"></a>最简单的方式</h1><p><code>win10</code>下新建一个<code>.img</code>格式文件,通过<code>Win32DiskImager</code>,<code>read</code>插入卡的系统,<code>read</code>完就备份好了</p><p><img src="https://qnam.smzdm.com/201912/08/5ded02bcc031f2090.jpg_e1080.jpg" alt="树莓派4B 的系统备份方法大全（全卡+压缩备份）"></p><h1 id="脚本方式-推荐"><a href="#脚本方式-推荐" class="headerlink" title="脚本方式(推荐)"></a>脚本方式(推荐)</h1><p><a href="https://github.com/BigBubbleGum/RaspberryBackup"> 在Linux系统中一键备份树莓派系统SD卡的脚本 (github.com)</a></p><ul><li>下载下来脚本<code>rpi-backup.sh</code>放入到<code>Linux</code>系统</li><li>插入需备份的树莓派系统,用<code>df -h</code>命令查询SD卡设备名</li><li>运行<code>sudo chmod +x rpi-backup.sh</code>后,运行<code>./rpi-backup.sh /dev/sdb1 /dev/sdb2</code></li><li>注意第一个参数是树莓派SD卡<code>/boot</code>分区的设备名：/dev/sdb1，第二个参数是<code>/</code>分区的设备名：/dev/sdb2，视情况修改）</li><li>终 img 文件会生成在<code>~/backupimg/</code>文件夹下</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/little_ox/article/details/105</summary>
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/299844978?utm_source=w</summary>
       
     
     
     
-    <category term="sch" scheme="https://peitianyu.github.io/blog/categories/sch/"/>
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
-    <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
+  </entry>
+  
+  <entry>
+    <title>树莓派安装Ubuntu18_server</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-07T03:49:11.896Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_36628778/article/details/105056549?ops_request_misc=%7B%22request_id%22:%22163048418216780264057617%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163048418216780264057617&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-105056549.pc_search_insert_download&utm_term=ubuntu18.04+server+wlan0&spm=1018.2226.3001.4187">树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客</a></p><p><a href="https://www.freesion.com/article/3758800537/">树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)</a></p><h1 id="img镜像下载"><a href="#img镜像下载" class="headerlink" title="img镜像下载"></a>img镜像下载</h1><p><a href="https://www.lxx1.com/3779">树莓派操作系统镜像下载地址</a></p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/bionic/release/ubuntu-18.04.5-preinstalled-server-arm64%2Braspi4.img.xz">ubuntu18_server</a></p><h1 id="将系统烧入SD卡"><a href="#将系统烧入SD卡" class="headerlink" title="将系统烧入SD卡"></a>将系统烧入SD卡</h1><p>使用<strong>win32diskimager</strong>或者<strong>balenaetcher</strong>烧录进去</p><p><img src="https://img-blog.csdnimg.cn/20210507104309422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxNTcwMDI1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200603191826555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDU4NDYx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="启动树莓派"><a href="#启动树莓派" class="headerlink" title="启动树莓派"></a>启动树莓派</h1><p>将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是<code>ubuntu</code>，之后需要马上修改密码，按提示操作即可。</p><h1 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h1><p>可以参考:</p><p><a href="https://blog.csdn.net/zyr920425/article/details/93351457">Ubuntu Server 18.04 连接 WIFI_zyr920425的博客-CSDN博客</a></p><p>编辑</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/netplan/xxxxxxx.yaml</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">    ethernets:</span><br><span class="line">        eth0:</span><br><span class="line">            dhcp4: false</span><br><span class="line">            addresses: [192.168.10.135/24]</span><br><span class="line">    wifis:</span><br><span class="line">        wlan0:</span><br><span class="line">            access-points:</span><br><span class="line">                &quot;10X&quot;:</span><br><span class="line">                    password: 123456787</span><br><span class="line">            dhcp4: true</span><br></pre></td></tr></table></figure><h1 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>参考:<a href="https://blog.csdn.net/Meteor_s/article/details/81301252">Ubuntu–更换软件源_星迹-CSDN博客_乌班图软件源</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>网线连接好,通过<code>ip a</code>查看是否配置好,然后在物理机上尝试<code>ping</code>通后连接</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh.exe ubuntu@192.168.xx.xx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_36628778/article/detai</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -188,30 +236,6 @@
   </entry>
   
   <entry>
-    <title>hexo模板</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/</id>
-    <published>2021-11-03T04:30:12.000Z</published>
-    <updated>2021-11-03T13:51:18.385Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    <category term="模板" scheme="https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-    <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>树莓派入门</title>
     <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/"/>
     <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/</id>
@@ -232,6 +256,30 @@
     
     
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo模板</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/</id>
+    <published>2021-11-03T04:30:12.000Z</published>
+    <updated>2021-11-03T13:51:18.385Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="模板" scheme="https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/"/>
+    
+    
+    <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
@@ -450,54 +498,6 @@
     
     
     <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回调函数</title>
-    <link href="https://peitianyu.github.io/blog/2021/10/29/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
-    <id>https://peitianyu.github.io/blog/2021/10/29/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/</id>
-    <published>2021-10-29T04:30:12.000Z</published>
-    <updated>2021-10-29T10:23:09.856Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h1><p><a href="https://blog.csdn.net/baidu_38172402/article/details/95119014?ops_request_misc=%7B%22request_id%22:%22163409375616780261926822%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163409375616780261926822&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-95119014.pc_search_ecpm_flag&utm_term=c%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0&spm=1018.2226.3001.4187">c语言回调函数</a></p><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/****************************************</span></span><br><span class="line"><span class="comment"> * 函数指针结构体</span></span><br><span class="line"><span class="comment"> ***************************************/</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">OP</span> &#123;</span></span><br><span class="line">    <span class="built_in"><span class="keyword">float</span></span> (*p_add)(<span class="keyword">float</span>, <span class="keyword">float</span>); </span><br><span class="line">    <span class="built_in"><span class="keyword">float</span></span> (*p_sub)(<span class="keyword">float</span>, <span class="keyword">float</span>); </span><br><span class="line">    <span class="built_in"><span class="keyword">float</span></span> (*p_mul)(<span class="keyword">float</span>, <span class="keyword">float</span>); </span><br><span class="line">    <span class="built_in"><span class="keyword">float</span></span> (*p_div)(<span class="keyword">float</span>, <span class="keyword">float</span>); </span><br><span class="line">&#125; OP; </span><br><span class="line"></span><br><span class="line"><span class="comment">/****************************************</span></span><br><span class="line"><span class="comment"> * 加减乘除函数</span></span><br><span class="line"><span class="comment"> ***************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">ADD</span><span class="params">(<span class="keyword">float</span> a, <span class="keyword">float</span> b)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">SUB</span><span class="params">(<span class="keyword">float</span> a, <span class="keyword">float</span> b)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">MUL</span><span class="params">(<span class="keyword">float</span> a, <span class="keyword">float</span> b)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a * b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">DIV</span><span class="params">(<span class="keyword">float</span> a, <span class="keyword">float</span> b)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a / b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/****************************************</span></span><br><span class="line"><span class="comment"> * 初始化函数指针</span></span><br><span class="line"><span class="comment"> ***************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init_op</span><span class="params">(OP *op)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    op-&gt;p_add = ADD;</span><br><span class="line">    op-&gt;p_sub = SUB;</span><br><span class="line">    op-&gt;p_mul = &amp;MUL;</span><br><span class="line">    op-&gt;p_div = &amp;DIV;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/****************************************</span></span><br><span class="line"><span class="comment"> * 库函数</span></span><br><span class="line"><span class="comment"> ***************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">add_sub_mul_div</span><span class="params">(<span class="keyword">float</span> a, <span class="keyword">float</span> b, <span class="keyword">float</span> (*op_func)(<span class="keyword">float</span>, <span class="keyword">float</span>))</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (*op_func)(a, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    OP *op = (OP *)<span class="built_in">malloc</span>(<span class="built_in"><span class="keyword">sizeof</span></span>(OP)); </span><br><span class="line">    <span class="built_in">init_op</span>(op);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/* 直接使用函数指针调用函数 */</span> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ADD = %f, SUB = %f, MUL = %f, DIV = %f\n&quot;</span>, (op-&gt;p_add)(<span class="number">1.3</span>, <span class="number">2.2</span>), (*op-&gt;p_sub)(<span class="number">1.3</span>, <span class="number">2.2</span>), </span><br><span class="line">            (op-&gt;p_mul)(<span class="number">1.3</span>, <span class="number">2.2</span>), (*op-&gt;p_div)(<span class="number">1.3</span>, <span class="number">2.2</span>));</span><br><span class="line">     </span><br><span class="line">    <span class="comment">/* 调用回调函数 */</span> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ADD = %f, SUB = %f, MUL = %f, DIV = %f\n&quot;</span>, </span><br><span class="line">            <span class="built_in">add_sub_mul_div</span>(<span class="number">1.3</span>, <span class="number">2.2</span>, ADD), </span><br><span class="line">            <span class="built_in">add_sub_mul_div</span>(<span class="number">1.3</span>, <span class="number">2.2</span>, SUB), </span><br><span class="line">            <span class="built_in">add_sub_mul_div</span>(<span class="number">1.3</span>, <span class="number">2.2</span>, MUL), </span><br><span class="line">            <span class="built_in">add_sub_mul_div</span>(<span class="number">1.3</span>, <span class="number">2.2</span>, DIV));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网站&quot;&gt;&lt;a href=&quot;#参考网站&quot; class=&quot;headerlink&quot; title=&quot;参考网站&quot;&gt;&lt;/a&gt;参考网站&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/baidu_38172402/article/details/</summary>
-      
-    
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>局部全局坐标转换</title>
-    <link href="https://peitianyu.github.io/blog/2021/10/29/%E5%B1%80%E9%83%A8%E5%85%A8%E5%B1%80%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/"/>
-    <id>https://peitianyu.github.io/blog/2021/10/29/%E5%B1%80%E9%83%A8%E5%85%A8%E5%B1%80%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/</id>
-    <published>2021-10-29T04:30:12.000Z</published>
-    <updated>2021-10-29T10:24:19.049Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="局部全局坐标转换"><a href="#局部全局坐标转换" class="headerlink" title="局部全局坐标转换"></a>局部全局坐标转换</h1><h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p><img src="https://i.loli.net/2021/10/29/QfTymrLqs7AG6a2.png" alt="image-20211029181117606.png"></p><h2 id="公式"><a href="#公式" class="headerlink" title="公式:"></a>公式:</h2><p><img src="https://i.loli.net/2021/10/29/7ht1yaPc3E26zBF.png" alt="image-20211029180943040.png"></p><h2 id="ROS-中里程计的计算代码理解"><a href="#ROS-中里程计的计算代码理解" class="headerlink" title="ROS 中里程计的计算代码理解"></a>ROS 中里程计的计算代码理解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> dt = (current_time - last_time).<span class="built_in">toSec</span>();</span><br><span class="line"><span class="keyword">double</span> delta_x = (vx * <span class="built_in">cos</span>(th) - vy * <span class="built_in">sin</span>(th)) * dt;</span><br><span class="line"><span class="keyword">double</span> delta_y = (vx * <span class="built_in">sin</span>(th) + vy * <span class="built_in">cos</span>(th)) * dt;</span><br><span class="line"><span class="keyword">double</span> delta_th = vth * dt;</span><br><span class="line"></span><br><span class="line">x += delta_x;</span><br><span class="line">y += delta_y;</span><br><span class="line">th += delta_th;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;局部全局坐标转换&quot;&gt;&lt;a href=&quot;#局部全局坐标转换&quot; class=&quot;headerlink&quot; title=&quot;局部全局坐标转换&quot;&gt;&lt;/a&gt;局部全局坐标转换&lt;/h1&gt;&lt;h2 id=&quot;模型&quot;&gt;&lt;a href=&quot;#模型&quot; class=&quot;headerlink&quot; titl</summary>
-      
-    
-    
-    
-    <category term="slam" scheme="https://peitianyu.github.io/blog/categories/slam/"/>
-    
-    
-    <category term="slam" scheme="https://peitianyu.github.io/blog/tags/slam/"/>
     
   </entry>
   
