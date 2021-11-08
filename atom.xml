@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-11-06T12:19:14.409Z</updated>
+  <updated>2021-11-08T11:35:29.572Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>最小系统设计</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</id>
-    <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-06T12:19:14.409Z</updated>
+    <title>电路设计_常见</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/08/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E5%B8%B8%E8%A7%81%E7%94%B5%E8%B7%AF/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/08/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E5%B8%B8%E8%A7%81%E7%94%B5%E8%B7%AF/</id>
+    <published>2021-11-08T04:30:12.000Z</published>
+    <updated>2021-11-08T11:35:29.572Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/little_ox/article/details/105056030">(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客</a></p><h1 id="最小系统"><a href="#最小系统" class="headerlink" title="最小系统"></a>最小系统</h1><p>组成:<strong>主芯片</strong>,<strong>复位电路</strong>,<strong>时钟电路</strong>,<strong>电源电路</strong>,<strong>下载电路</strong></p><h2 id="主芯片"><a href="#主芯片" class="headerlink" title="主芯片"></a>主芯片</h2><p>根据自己需要的io数量,功能选择好主芯片</p><h2 id="复位电路-时钟电路-下载电路"><a href="#复位电路-时钟电路-下载电路" class="headerlink" title="复位电路,时钟电路,下载电路"></a>复位电路,时钟电路,下载电路</h2><p>由于低电平复位,因此可以通过上拉电阻实现,由于<strong>复位电路</strong>与<strong>时钟电路</strong>一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,<strong>下载电路</strong>的话直接<code>clk</code>,<code>dio</code>给他,通过<code>SWD</code>,或者<code>JTAG</code>下载</p><p><img src="https://i.loli.net/2021/11/06/uVUHSfX4Lt2Reiq.png" alt="image-20211106195658724.png"></p><p>**!注意:**有很多电路会有电容滤波,这里电容应该与电源尽可能放一块.</p><h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p>比较麻烦的是电源电路,或者降压,或者稳压,根据需要实现.</p><p>这里提供一种从24v转3.3v的思路电源思路.这里使用<code>TPS5430</code>芯片实现的一种电源降压的方式</p><p><img src="https://i.loli.net/2021/11/06/OokdWnJcprP4uZV.png" alt="image-20211106200343212.png"></p><p><img src="https://i.loli.net/2021/11/06/SXDMrFs3iagZGBq.png" alt="image-20211106200412912.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="驱动输出电路"><a href="#驱动输出电路" class="headerlink" title="驱动输出电路"></a>驱动输出电路</h1><p><img src="https://i.loli.net/2021/11/08/IcfBqFezTlgAm9b.png" alt="image-20211108152310283.png"></p><p>这里需要注意的是,<code>uln2803</code>是一种<code>npn</code>输出,输出低电平,因此在其输出端会有上拉电阻.在<code>uln2803</code>左侧接<code>gnd</code>右侧接<code>24v</code>.</p><p>这里的<code>74hct245</code>为<code>三态输出八路收发器</code>作用是增加单片机的驱动能力.</p><p>将同样用<code>74hct245</code>此电路改为<code>pnp</code>型输出,需要将<code>uln2803</code>换为<code>tbd62783</code>,需要注意输出端需要接<code>下拉电阻</code>.</p><p>**!注意:**由于改驱动芯片<code>uln2803</code>输出最大电流为<code>500ma</code>可能出现烧芯片的情况,可以加一个<code>500ma</code>熔断</p><h1 id="放大电路-opa2333"><a href="#放大电路-opa2333" class="headerlink" title="放大电路(opa2333)"></a>放大电路(opa2333)</h1><p><img src="https://i.loli.net/2021/11/08/cdPVFXozHa5hrxR.png" alt="image-20211108185457678.png"></p><p>这里通过<code>R64</code>,<code>R65</code>阻值的变化来实现放大,具体详细可参考:<a href="https://blog.csdn.net/cyousui/article/details/82936155">(61条消息) 基本运算放大器原理_小神兵之技术篇-CSDN博客_运算放大器</a></p><p>值得注意的是,由于是轨到轨的放大电路,输入<code>24v</code>,最大放大电压同样也可以达到<code>24v</code></p><h1 id="模拟量采样电路"><a href="#模拟量采样电路" class="headerlink" title="模拟量采样电路"></a>模拟量采样电路</h1><p><img src="https://i.loli.net/2021/11/08/PRZG7qv6kX3yQA9.png" alt="image-20211108191319100.png"></p><p>这里两个二极管用以防过压,电压大于<code>3.3v</code>小于<code>26.7v</code>时直接通过<code>+3.3v</code>,输出,而大于<code>26.7v</code>击穿二极管,直接导地.</p><p><img src="https://i.loli.net/2021/11/08/F1qsv4pESJwMUbN.png" alt="image-20211108191642356.png"></p><p>模拟量采集,还需要注意一点就是,对于电源要进行滤波处理,使电源信号更干净</p><h1 id="普通光耦-TLP290-4-与单向高速光耦-PC4D10"><a href="#普通光耦-TLP290-4-与单向高速光耦-PC4D10" class="headerlink" title="普通光耦(TLP290-4)与单向高速光耦(PC4D10)"></a>普通光耦(TLP290-4)与单向高速光耦(PC4D10)</h1><p><img src="https://i.loli.net/2021/11/08/Z6cxwFV4NLpevJK.png" alt="image-20211108192255515.png"></p><p><code>TLP290-4</code>为一种普通光耦,可以实现双向导通,这里原理图<code>左边部分有些出入</code>需要注意一下,输出为<code>npn</code>型输出,注意上拉电阻</p><p><img src="https://i.loli.net/2021/11/08/lESfhw24NsPrKpc.png" alt="image-20211108191804168.png"></p><p><code>pc4d10</code>为告诉光耦,实现的<code>npn</code>型输出,所以注意需要有上拉电阻.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/little_ox/article/details/105</summary>
+    <summary type="html">&lt;h1 id=&quot;驱动输出电路&quot;&gt;&lt;a href=&quot;#驱动输出电路&quot; class=&quot;headerlink&quot; title=&quot;驱动输出电路&quot;&gt;&lt;/a&gt;驱动输出电路&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/08/IcfBqFezTlgAm9</summary>
       
     
     
@@ -39,30 +39,6 @@
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派串口通信</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</id>
-    <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-06T07:46:11.413Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/benchuspx/article/details/112571880?ops_request_misc=%7B%22request_id%22:%22163054521616780274150518%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163054521616780274150518&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-112571880.pc_search_insert_download&utm_term=%E6%A0%91%E8%8E%93%E6%B4%BEubuntu+20%E5%85%B3%E9%97%AD%E4%B8%B2%E5%8F%A3%E7%BB%88%E7%AB%AF%E8%B0%83%E8%AF%95&spm=1018.2226.3001.4187">树莓派4b ubuntu系统开启串口_benchuspx的博客-CSDN博客</a></p><p><a href="https://www.pianshen.com/article/3825828971/">树莓派4B如何使用串口与外部进行通信 - 程序员大本营 (pianshen.com)</a></p><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>树莓派原本的抽是用于<strong>串口控制台</strong>的,即<code>/ttyAMA0</code>,且此硬件串口也与蓝牙连接到一块,因此需要将<strong>控制台</strong>与<strong>蓝牙</strong>关闭才能使用</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul><li><p><code>/boot/firmware/nobtcmd.tx</code>t里删除<code>console = /ttyAMA 921600</code>从而禁用串口控制台.这个<code>txt文件</code>也可以用读卡器把sd卡插到windows系统里在<code>system-boot</code>里找到</p></li><li><p><code>/boot/firmware/config.txt</code> 里设置<code>enable_uart=1</code>（默认就是）.如果=0表示启用minicom串口，而不是这个硬件串口.</p></li><li><p><code>/boot/firmware/config.txt</code> 里加入一行<code>dtoverlay=disable-bt</code>从而禁用蓝牙.</p></li><li><p><code>sudo systemctl disable bluetooth</code>…… 禁用掉和蓝牙有关的开机启动项.直到桌面不再显示蓝牙标志，但是还有<code>/ttyAMA0</code>存在.</p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/benchuspx/article/details/112</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -79,6 +55,30 @@
       
       
     <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/299844978?utm_source=w</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派串口通信</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-06T07:46:11.413Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/benchuspx/article/details/112571880?ops_request_misc=%7B%22request_id%22:%22163054521616780274150518%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163054521616780274150518&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-112571880.pc_search_insert_download&utm_term=%E6%A0%91%E8%8E%93%E6%B4%BEubuntu+20%E5%85%B3%E9%97%AD%E4%B8%B2%E5%8F%A3%E7%BB%88%E7%AB%AF%E8%B0%83%E8%AF%95&spm=1018.2226.3001.4187">树莓派4b ubuntu系统开启串口_benchuspx的博客-CSDN博客</a></p><p><a href="https://www.pianshen.com/article/3825828971/">树莓派4B如何使用串口与外部进行通信 - 程序员大本营 (pianshen.com)</a></p><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>树莓派原本的抽是用于<strong>串口控制台</strong>的,即<code>/ttyAMA0</code>,且此硬件串口也与蓝牙连接到一块,因此需要将<strong>控制台</strong>与<strong>蓝牙</strong>关闭才能使用</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul><li><p><code>/boot/firmware/nobtcmd.tx</code>t里删除<code>console = /ttyAMA 921600</code>从而禁用串口控制台.这个<code>txt文件</code>也可以用读卡器把sd卡插到windows系统里在<code>system-boot</code>里找到</p></li><li><p><code>/boot/firmware/config.txt</code> 里设置<code>enable_uart=1</code>（默认就是）.如果=0表示启用minicom串口，而不是这个硬件串口.</p></li><li><p><code>/boot/firmware/config.txt</code> 里加入一行<code>dtoverlay=disable-bt</code>从而禁用蓝牙.</p></li><li><p><code>sudo systemctl disable bluetooth</code>…… 禁用掉和蓝牙有关的开机启动项.直到桌面不再显示蓝牙标志，但是还有<code>/ttyAMA0</code>存在.</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/benchuspx/article/details/112</summary>
       
     
     
@@ -115,11 +115,37 @@
   </entry>
   
   <entry>
-    <title>通讯设计</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E9%80%9A%E8%AE%AF%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E9%80%9A%E8%AE%AF%E8%AE%BE%E8%AE%A1/</id>
+    <title>电路设计_最小系统设计</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</id>
     <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-06T07:23:42.745Z</updated>
+    <updated>2021-11-08T06:22:13.129Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/little_ox/article/details/105056030">(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客</a></p><h1 id="最小系统"><a href="#最小系统" class="headerlink" title="最小系统"></a>最小系统</h1><p>组成:<strong>主芯片</strong>,<strong>复位电路</strong>,<strong>时钟电路</strong>,<strong>电源电路</strong>,<strong>下载电路</strong></p><h2 id="主芯片"><a href="#主芯片" class="headerlink" title="主芯片"></a>主芯片</h2><p>根据自己需要的io数量,功能选择好主芯片</p><h2 id="复位电路-时钟电路-下载电路"><a href="#复位电路-时钟电路-下载电路" class="headerlink" title="复位电路,时钟电路,下载电路"></a>复位电路,时钟电路,下载电路</h2><p>由于低电平复位,因此可以通过上拉电阻实现,由于<strong>复位电路</strong>与<strong>时钟电路</strong>一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,<strong>下载电路</strong>的话直接<code>clk</code>,<code>dio</code>给他,通过<code>SWD</code>,或者<code>JTAG</code>下载,这里使用的时<code>SWD</code>下载</p><p><img src="https://i.loli.net/2021/11/06/uVUHSfX4Lt2Reiq.png" alt="image-20211106195658724.png"></p><p>**!注意:**一般芯片都会有电源滤波,因此在布线的过程中注意将电容尽量放的里芯片近些.</p><h2 id="晶振的选择"><a href="#晶振的选择" class="headerlink" title="晶振的选择"></a>晶振的选择</h2><p>有源晶振:自供电,有内部电路,精度会高些,当然价格也贵些</p><p>无源晶振:内部不供电,与芯片直接相连,精度差些,在对时钟要求没那么高的情况下一般够用</p><h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p>比较麻烦的是电源电路,或者降压,或者稳压,根据需要实现.</p><p>这里提供一种从24v转3.3v的思路电源思路.这里使用<code>TPS5430</code>芯片实现的一种电源降压的方式,这里<code>D2</code>指的是<code>瞬态抑制</code>起到当电压超过24v(比如打火花)进来时,<code>D2</code>导通,24v直接接地,同事使用了F1保险丝做保护        </p><p><img src="https://i.loli.net/2021/11/06/OokdWnJcprP4uZV.png" alt="image-20211106200343212.png"></p><p><img src="https://i.loli.net/2021/11/06/SXDMrFs3iagZGBq.png" alt="image-20211106200412912.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/little_ox/article/details/105</summary>
+      
+    
+    
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/categories/sch/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电路设计_通讯设计</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E9%80%9A%E8%AE%AF%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E9%80%9A%E8%AE%AF%E8%AE%BE%E8%AE%A1/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-08T06:21:47.065Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CAN"><a href="#CAN" class="headerlink" title="CAN:"></a>CAN:</h1><p><img src="https://i.loli.net/2021/11/06/Cs8JxWr3kPG7efT.png" alt="image-20211106130338091-16361750226251.png"></p><p><img src="https://i.loli.net/2021/11/06/6BkYVPWyMIU5g1Z.png" alt="image-20211106133256690.png"></p><p>两张图用的都是<code>TJA1050</code>,速度<code>1Mbps</code>,不过后期的处理略有些不同,上图can信号分两路输出,而下图,为保护电路,加入了<code>fuse</code>(熔断器),<code>SMAJ30CA</code>(瞬态抑制二极管)</p><p><img src="https://i.loli.net/2021/11/06/tcjs9VvHAG8ENQX.png" alt="image-20211106140618661.png"></p><p>这张图用的是<code>max3051</code>3.3v供电,高速运行<code>1Mbps</code>,这里使用了<code>ACT45B</code>共模电感起<code>EMI</code>滤波的作用，用于抑制高速信号线产生的电磁波向外辐射发射.</p><h1 id="RS485"><a href="#RS485" class="headerlink" title="RS485"></a>RS485</h1><p><img src="https://i.loli.net/2021/11/06/NuSOBZ4Yldot6wp.png" alt="image-20211106141453916.png"></p><p><img src="https://i.loli.net/2021/11/06/T8zrX3fUBA4Slc2.png" alt="image-20211106141550298.png"></p><p>由于采用<code>3.3v</code>供电,使用芯片为<code>sp3485</code>,参考图二,<code>5v</code>供电可更换为<code>max485</code>,电路设计上也还是同样,图一,采用<code>熔断器</code>与<code>瞬态一直二极管</code>保护电路</p><p><img src="https://i.loli.net/2021/11/06/QHouRcwMjXm7fFh.png" alt="image-20211106142404847"></p><p>这张图就是<code>max485</code>实现的<code>RS485</code>电路,同样对于电路保护也采用熔断器与瞬态一直二极管,同时采用电容进行进一步滤波.这里发送接收通过<code>EN</code>控制,三极管做开关功能,<code>EN</code>为0时接收,为1时发送.</p><h1 id="232"><a href="#232" class="headerlink" title="232"></a>232</h1><p><img src="https://i.loli.net/2021/11/06/J8CwfLA7H1uErT4.png" alt="image-20211106143625304"></p><p>数据手册:</p><p><a href="https://www.ti.com/cn/lit/ds/symlink/max3232.pdf?ts=1636166679814">具有 ±15kV ESD 保护功能的 MAX3232 3V 至 5.5V 多通道 RS-232 线路驱动器和接收器 datasheet </a></p><p>布板参考:</p><p><img src="https://i.loli.net/2021/11/06/wghYLF1WtiadvNS.png" alt="image-20211106143955599.png"></p><h1 id="USB转串口"><a href="#USB转串口" class="headerlink" title="USB转串口"></a>USB转串口</h1><p><img src="https://i.loli.net/2021/11/06/oKLkuhrp9EUb43w.png" alt="image-20211106145617779.png"></p><p>这张图是type_c转串口的图,图中使用<code>CH340N</code>实现板子最小化,非常<strong>nice</strong></p><p>下面是他的开源链接:<a href="https://oshwhub.com/vcijj/TYPE-C-usbzhuai-chuan-kou">TYPE C usb转串口 - 立创EDA开源硬件平台 (oshwhub.com)</a></p><p>当然为了保护电路,我们也可以在上边加上<code>熔断</code>与<code>瞬时抑制二极管</code></p><h1 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h1><p><strong>参考渡鸦卡发版设计</strong></p><p><img src="https://i.loli.net/2021/11/06/u3pGfIP86yELD4F.png" alt="image-20211106150109596.png"></p><p><strong>大佬的串口转以太网设计:</strong></p><p><a href="https://oshwhub.com/jixin/CH9121-4c2c4f99e2494eee8421dd23768820a1">串口转以太网模块-CH9121 - 立创EDA开源硬件平台 (oshwhub.com)</a></p>]]></content>
     
@@ -430,30 +456,6 @@
   </entry>
   
   <entry>
-    <title>嵌入式相关的开源项目</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
-    <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-01T08:22:56.607Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw">https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw</a></p><h2 id="1-Avem"><a href="#1-Avem" class="headerlink" title="1.Avem"></a>1.<a href="https://github.com/avem-labs/Avem">Avem</a></h2><p>这是一个轻量级无人机飞控项目。</p><h1 id="2-Awesome-Embedded"><a href="#2-Awesome-Embedded" class="headerlink" title="2.Awesome-Embedded"></a>2.<a href="https://github.com/nhivp/Awesome-Embedded">Awesome-Embedded</a></h1><p>这是一个很棒的嵌入式资源汇总的项目。汇聚了各种嵌入式相关的资源：</p><h1 id="3-soft-and-hard"><a href="#3-soft-and-hard" class="headerlink" title="3.soft-and-hard"></a>3.<a href="https://github.com/alwxkxk/soft-and-hard">soft-and-hard</a></h1><p>这是一个以物联网项目为主方向分享web开发教程，制作并演示一个物联网系统是怎么跑起来的，介绍如何学习相关知识。</p><h1 id="4-FreeModbus"><a href="#4-FreeModbus" class="headerlink" title="4.FreeModbus"></a>4.<a href="https://github.com/armink/FreeModbus_Slave-Master-RTT-STM32">FreeModbus</a></h1><p>FreeModbus是一款开源的Modbus协议栈，但是只有从机开源，主机源码是需要<strong>收费</strong>的。同时网上也没有发现比较好的开源的Modbus主机协议栈，所以才开发这款支持主机模式的FreeModbus协议栈。</p><h1 id="5-EmbedSummary"><a href="#5-EmbedSummary" class="headerlink" title="5. EmbedSummary"></a>5.<strong><a href="https://github.com/zhengnianli/EmbedSummary"> EmbedSummary</a></strong></h1><p>精心汇总了一些嵌入式相关资源，包括但不限于编程语言、单片机、开源项目、物联网、操作系统、Linux等资源</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>时间触发嵌入式系统设计模式</title>
     <link href="https://peitianyu.github.io/blog/2021/11/01/%E6%97%B6%E9%97%B4%E7%89%87%E8%B0%83%E5%BA%A6/"/>
     <id>https://peitianyu.github.io/blog/2021/11/01/%E6%97%B6%E9%97%B4%E7%89%87%E8%B0%83%E5%BA%A6/</id>
@@ -478,26 +480,26 @@
   </entry>
   
   <entry>
-    <title>注释软件</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/01/%E6%B3%A8%E9%87%8A%E8%BD%AF%E4%BB%B6/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/01/%E6%B3%A8%E9%87%8A%E8%BD%AF%E4%BB%B6/</id>
+    <title>嵌入式相关的开源项目</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
     <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-01T09:07:34.012Z</updated>
+    <updated>2021-11-01T08:22:56.607Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/F2wN5Bbqqv_3R1gAlA19Pw">几款注释软件推荐</a></p><h1 id="javE"><a href="#javE" class="headerlink" title="javE"></a>javE</h1><p><strong><a href="http://www.jave.de/">http://www.jave.de/</a></strong></p><p>里边的字体,图片生成挺有意思,不过需要装java</p><h1 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h1><p><strong><a href="https://josoansi.de/download.php">https://josoansi.de/download.php</a></strong></p><p><img src="https://josoansi.de/images/screenshot128.jpg" alt="Screenshot AACircuit 1.28"></p><h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><p><a href="http://www.ascii-art.de/">ascii-art</a></p><p>有很多有意思的注释,可知看一下直接复制粘贴,很舒爽</p><p><a href="https://www.codeproject.com/Articles/4514/CodePlotter-1-6-Add-and-edit-diagrams-in-your-code">CodePlotter 1.6 - Add and edit diagrams in your code with this ‘Visio-like’ tool - CodeProject</a></p><p>类似于”Visio”的一款工具</p><p><img src="https://www.codeproject.com/KB/macros/codeplotter/CodePlotter.jpg" alt="Sample Image - CodePlotter.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw">https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw</a></p><h2 id="1-Avem"><a href="#1-Avem" class="headerlink" title="1.Avem"></a>1.<a href="https://github.com/avem-labs/Avem">Avem</a></h2><p>这是一个轻量级无人机飞控项目。</p><h1 id="2-Awesome-Embedded"><a href="#2-Awesome-Embedded" class="headerlink" title="2.Awesome-Embedded"></a>2.<a href="https://github.com/nhivp/Awesome-Embedded">Awesome-Embedded</a></h1><p>这是一个很棒的嵌入式资源汇总的项目。汇聚了各种嵌入式相关的资源：</p><h1 id="3-soft-and-hard"><a href="#3-soft-and-hard" class="headerlink" title="3.soft-and-hard"></a>3.<a href="https://github.com/alwxkxk/soft-and-hard">soft-and-hard</a></h1><p>这是一个以物联网项目为主方向分享web开发教程，制作并演示一个物联网系统是怎么跑起来的，介绍如何学习相关知识。</p><h1 id="4-FreeModbus"><a href="#4-FreeModbus" class="headerlink" title="4.FreeModbus"></a>4.<a href="https://github.com/armink/FreeModbus_Slave-Master-RTT-STM32">FreeModbus</a></h1><p>FreeModbus是一款开源的Modbus协议栈，但是只有从机开源，主机源码是需要<strong>收费</strong>的。同时网上也没有发现比较好的开源的Modbus主机协议栈，所以才开发这款支持主机模式的FreeModbus协议栈。</p><h1 id="5-EmbedSummary"><a href="#5-EmbedSummary" class="headerlink" title="5. EmbedSummary"></a>5.<strong><a href="https://github.com/zhengnianli/EmbedSummary"> EmbedSummary</a></strong></h1><p>精心汇总了一些嵌入式相关资源，包括但不限于编程语言、单片机、开源项目、物联网、操作系统、Linux等资源</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/F2wN5Bbqqv_3R1gAlA19Pw&quot;&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw&quot;&gt;</summary>
       
     
     
     
-    <category term="tool" scheme="https://peitianyu.github.io/blog/categories/tool/"/>
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
-    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
