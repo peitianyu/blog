@@ -119,30 +119,6 @@
   </entry>
   
   <entry>
-    <title>树莓派安装Ubuntu18_server</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</id>
-    <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-07T03:49:11.896Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_36628778/article/details/105056549?ops_request_misc=%7B%22request_id%22:%22163048418216780264057617%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163048418216780264057617&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-105056549.pc_search_insert_download&utm_term=ubuntu18.04+server+wlan0&spm=1018.2226.3001.4187">树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客</a></p><p><a href="https://www.freesion.com/article/3758800537/">树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)</a></p><h1 id="img镜像下载"><a href="#img镜像下载" class="headerlink" title="img镜像下载"></a>img镜像下载</h1><p><a href="https://www.lxx1.com/3779">树莓派操作系统镜像下载地址</a></p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/bionic/release/ubuntu-18.04.5-preinstalled-server-arm64%2Braspi4.img.xz">ubuntu18_server</a></p><h1 id="将系统烧入SD卡"><a href="#将系统烧入SD卡" class="headerlink" title="将系统烧入SD卡"></a>将系统烧入SD卡</h1><p>使用<strong>win32diskimager</strong>或者<strong>balenaetcher</strong>烧录进去</p><p><img src="https://img-blog.csdnimg.cn/20210507104309422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxNTcwMDI1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200603191826555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDU4NDYx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="启动树莓派"><a href="#启动树莓派" class="headerlink" title="启动树莓派"></a>启动树莓派</h1><p>将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是<code>ubuntu</code>，之后需要马上修改密码，按提示操作即可。</p><h1 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h1><p>可以参考:</p><p><a href="https://blog.csdn.net/zyr920425/article/details/93351457">Ubuntu Server 18.04 连接 WIFI_zyr920425的博客-CSDN博客</a></p><p>编辑</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/netplan/xxxxxxx.yaml</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">    ethernets:</span><br><span class="line">        eth0:</span><br><span class="line">            dhcp4: false</span><br><span class="line">            addresses: [192.168.10.135/24]</span><br><span class="line">    wifis:</span><br><span class="line">        wlan0:</span><br><span class="line">            access-points:</span><br><span class="line">                &quot;10X&quot;:</span><br><span class="line">                    password: 123456787</span><br><span class="line">            dhcp4: true</span><br></pre></td></tr></table></figure><h1 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>参考:<a href="https://blog.csdn.net/Meteor_s/article/details/81301252">Ubuntu–更换软件源_星迹-CSDN博客_乌班图软件源</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>网线连接好,通过<code>ip a</code>查看是否配置好,然后在物理机上尝试<code>ping</code>通后连接</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh.exe ubuntu@192.168.xx.xx</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_36628778/article/detai</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>树莓派备份</title>
     <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/"/>
     <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/</id>
@@ -155,6 +131,30 @@
       
       
     <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/299844978?utm_source=w</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派安装Ubuntu18_server</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-07T03:49:11.896Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_36628778/article/details/105056549?ops_request_misc=%7B%22request_id%22:%22163048418216780264057617%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163048418216780264057617&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-105056549.pc_search_insert_download&utm_term=ubuntu18.04+server+wlan0&spm=1018.2226.3001.4187">树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客</a></p><p><a href="https://www.freesion.com/article/3758800537/">树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)</a></p><h1 id="img镜像下载"><a href="#img镜像下载" class="headerlink" title="img镜像下载"></a>img镜像下载</h1><p><a href="https://www.lxx1.com/3779">树莓派操作系统镜像下载地址</a></p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/bionic/release/ubuntu-18.04.5-preinstalled-server-arm64%2Braspi4.img.xz">ubuntu18_server</a></p><h1 id="将系统烧入SD卡"><a href="#将系统烧入SD卡" class="headerlink" title="将系统烧入SD卡"></a>将系统烧入SD卡</h1><p>使用<strong>win32diskimager</strong>或者<strong>balenaetcher</strong>烧录进去</p><p><img src="https://img-blog.csdnimg.cn/20210507104309422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxNTcwMDI1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200603191826555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDU4NDYx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="启动树莓派"><a href="#启动树莓派" class="headerlink" title="启动树莓派"></a>启动树莓派</h1><p>将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是<code>ubuntu</code>，之后需要马上修改密码，按提示操作即可。</p><h1 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h1><p>可以参考:</p><p><a href="https://blog.csdn.net/zyr920425/article/details/93351457">Ubuntu Server 18.04 连接 WIFI_zyr920425的博客-CSDN博客</a></p><p>编辑</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/netplan/xxxxxxx.yaml</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">    ethernets:</span><br><span class="line">        eth0:</span><br><span class="line">            dhcp4: false</span><br><span class="line">            addresses: [192.168.10.135/24]</span><br><span class="line">    wifis:</span><br><span class="line">        wlan0:</span><br><span class="line">            access-points:</span><br><span class="line">                &quot;10X&quot;:</span><br><span class="line">                    password: 123456787</span><br><span class="line">            dhcp4: true</span><br></pre></td></tr></table></figure><h1 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>参考:<a href="https://blog.csdn.net/Meteor_s/article/details/81301252">Ubuntu–更换软件源_星迹-CSDN博客_乌班图软件源</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>网线连接好,通过<code>ip a</code>查看是否配置好,然后在物理机上尝试<code>ping</code>通后连接</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh.exe ubuntu@192.168.xx.xx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_36628778/article/detai</summary>
       
     
     
@@ -314,30 +314,6 @@
   </entry>
   
   <entry>
-    <title>hexo模板</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/</id>
-    <published>2021-11-03T04:30:12.000Z</published>
-    <updated>2021-11-03T13:51:18.385Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    <category term="模板" scheme="https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-    <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>树莓派入门</title>
     <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/"/>
     <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8/</id>
@@ -358,6 +334,30 @@
     
     
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo模板</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/03/%E6%A8%A1%E6%9D%BF/</id>
+    <published>2021-11-03T04:30:12.000Z</published>
+    <updated>2021-11-03T13:51:18.385Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="模板" scheme="https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/"/>
+    
+    
+    <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
@@ -460,30 +460,6 @@
   </entry>
   
   <entry>
-    <title>变量初始化多种操作</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/</id>
-    <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-01T06:06:58.027Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ">嵌入式C语言编程时，变量、数组、指针初始化的多种操作</a></p><h1 id="数值初始化"><a href="#数值初始化" class="headerlink" title="数值初始化"></a>数值初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>    inum  = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">float</span>  fnum = <span class="number">0.00f</span>;</span><br><span class="line"><span class="keyword">double</span> dnum = <span class="number">0.00</span>;</span><br></pre></td></tr></table></figure><h1 id="字符初始化"><a href="#字符初始化" class="headerlink" title="字符初始化"></a>字符初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">&#x27;\0&#x27;</span>; </span><br></pre></td></tr></table></figure><h1 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h1><p>实际上就是将字符数组中的字符都初始化为<code>&#39;\0&#39;</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用&quot;&quot;实现</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>] = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">// 使用memset</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(str, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(str));</span><br><span class="line"><span class="comment">//使用循环</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    str[i] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一般使用<code>memset</code>最合适,一般采用<code>+1</code>的方式参考:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> year[<span class="number">4</span>+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">memset</span>(year, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(year));</span><br><span class="line"><span class="built_in">strcpy</span>(year,<span class="string">&quot;2018&quot;</span>);</span><br></pre></td></tr></table></figure><h1 id="指针初始化"><a href="#指针初始化" class="headerlink" title="指针初始化"></a>指针初始化</h1><p>需要使用<code>malloc</code>申请动态内存</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *p = <span class="literal">NULL</span>;  </span><br><span class="line">p=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="keyword">if</span>(<span class="literal">NULL</span> == p)</span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Memory Allocated at: %x\n&quot;</span>,p);  </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Not Enough Memory!\n&quot;</span>);  </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">free</span>(p);  </span><br><span class="line">p = <span class="literal">NULL</span>;   <span class="comment">//这一行给指针置空必不可少，否则很可能后面操作了这个野指针而不自知，从而导致出现严重的问题</span></span><br></pre></td></tr></table></figure><h1 id="结构体初始化"><a href="#结构体初始化" class="headerlink" title="结构体初始化"></a>结构体初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line">&#125;STU;</span><br><span class="line">STU stu1;</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1));</span><br></pre></td></tr></table></figure><p>注意初始化结构体数组时</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STU stus[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stus)); <span class="comment">//正确，数组本身在内存里就是连续的，sizeof取出的就是数组的字节长度</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU));  <span class="comment">//错误，只会初始化第一个STU结构体，后面还有9个STU元素并未初始化</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU)*<span class="number">10</span>);  <span class="comment">//正确，效果与第一个是一样的</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0x00</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1)); <span class="comment">//正确,效果与第一个是一样的</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
-  </entry>
-  
-  <entry>
     <title>软件开发中各种开发模型的优缺点</title>
     <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
     <id>https://peitianyu.github.io/blog/2021/11/01/%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/</id>
@@ -504,6 +480,30 @@
     
     
     <category term="模板" scheme="https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>变量初始化多种操作</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-11-01T04:30:12.000Z</published>
+    <updated>2021-11-01T06:06:58.027Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ">嵌入式C语言编程时，变量、数组、指针初始化的多种操作</a></p><h1 id="数值初始化"><a href="#数值初始化" class="headerlink" title="数值初始化"></a>数值初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>    inum  = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">float</span>  fnum = <span class="number">0.00f</span>;</span><br><span class="line"><span class="keyword">double</span> dnum = <span class="number">0.00</span>;</span><br></pre></td></tr></table></figure><h1 id="字符初始化"><a href="#字符初始化" class="headerlink" title="字符初始化"></a>字符初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">&#x27;\0&#x27;</span>; </span><br></pre></td></tr></table></figure><h1 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h1><p>实际上就是将字符数组中的字符都初始化为<code>&#39;\0&#39;</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用&quot;&quot;实现</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>] = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">// 使用memset</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(str, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(str));</span><br><span class="line"><span class="comment">//使用循环</span></span><br><span class="line"><span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    str[i] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一般使用<code>memset</code>最合适,一般采用<code>+1</code>的方式参考:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> year[<span class="number">4</span>+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">memset</span>(year, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(year));</span><br><span class="line"><span class="built_in">strcpy</span>(year,<span class="string">&quot;2018&quot;</span>);</span><br></pre></td></tr></table></figure><h1 id="指针初始化"><a href="#指针初始化" class="headerlink" title="指针初始化"></a>指针初始化</h1><p>需要使用<code>malloc</code>申请动态内存</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *p = <span class="literal">NULL</span>;  </span><br><span class="line">p=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);  </span><br><span class="line"><span class="keyword">if</span>(<span class="literal">NULL</span> == p)</span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Memory Allocated at: %x\n&quot;</span>,p);  </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Not Enough Memory!\n&quot;</span>);  </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">free</span>(p);  </span><br><span class="line">p = <span class="literal">NULL</span>;   <span class="comment">//这一行给指针置空必不可少，否则很可能后面操作了这个野指针而不自知，从而导致出现严重的问题</span></span><br></pre></td></tr></table></figure><h1 id="结构体初始化"><a href="#结构体初始化" class="headerlink" title="结构体初始化"></a>结构体初始化</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line">&#125;STU;</span><br><span class="line">STU stu1;</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1));</span><br></pre></td></tr></table></figure><p>注意初始化结构体数组时</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STU stus[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stus)); <span class="comment">//正确，数组本身在内存里就是连续的，sizeof取出的就是数组的字节长度</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU));  <span class="comment">//错误，只会初始化第一个STU结构体，后面还有9个STU元素并未初始化</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stus, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(STU)*<span class="number">10</span>);  <span class="comment">//正确，效果与第一个是一样的</span></span><br><span class="line"><span class="built_in">memset</span>((<span class="keyword">char</span> *)&amp;stu1, <span class="number">0x00</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(stu1)); <span class="comment">//正确,效果与第一个是一样的</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4lbQwc_O4VqXxteC2bS2gQ&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
+    
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
