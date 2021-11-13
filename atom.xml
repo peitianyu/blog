@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-11-11T11:55:51.392Z</updated>
+  <updated>2021-11-13T01:06:25.756Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ros教程</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/13/ros%E6%95%99%E7%A8%8B/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/13/ros%E6%95%99%E7%A8%8B/</id>
+    <published>2021-11-13T04:30:12.000Z</published>
+    <updated>2021-11-13T01:06:25.756Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><strong>古月居21讲</strong></p><p><a href="https://blog.csdn.net/weixin_48395629/article/details/109022916?ops_request_misc=%7B%22request_id%22:%22162968965016780255230305%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=162968965016780255230305&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-109022916.pc_search_similar&utm_term=%E5%8F%A4%E6%9C%88%E5%B1%85ros%E5%85%A5%E9%97%A821%E8%AE%B2&spm=1018.2226.3001.4187">ROS入门21讲(古月居) 学习笔记_猫十一.的博客-CSDN博客</a></p><p><a href="https://www.bilibili.com/video/BV1L44y167ox?p=3">ROS教程1-9讲(古月居)_哔哩哔哩_bilibili</a></p><p><a href="https://www.guyuehome.com/blog/index">博客 - 古月居 (guyuehome.com)</a></p><p><strong>创客智造</strong></p><p><a href="https://www.ncnynl.com/archives/201608/496.html">ROS入门教程-目录 - 创客智造 (ncnynl.com)</a></p><p><a href="https://blog.csdn.net/wuzhishiwo/category_10362422.html">(70条消息) ros机器人_wuzhishiwo的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/zhangjiali12011/article/details/91885148?ops_request_misc=%7B%22request_id%22:%22162976489016780269870400%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=162976489016780269870400&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v29_ecpm-27-91885148.pc_search_similar&utm_term=%E5%8F%A4%E6%9C%88%E5%B1%85ros%E8%AF%BE%E7%A8%8B&spm=1018.2226.3001.4187">ROS资源整理-学习ROS用得到的一些资料（持续更新）_Jiali Zhang的博客-CSDN博客</a></p><p><strong>国外教程(需要科学上网)</strong>,可在线模拟,有开源代码</p><p><a href="https://app.theconstructsim.com/en/signup/#/LearningPaths">Learn Robotics from Zero - Robotics &amp; ROS Online Courses (theconstructsim.com)</a></p><p><strong>很现成的模拟</strong>舒爽</p><p><a href="https://www.icourse163.org/course/NUDT-1205969803">智能机器人系统_国防科技大学_中国大学MOOC(慕课) (icourse163.org)</a></p><p><strong>外文教程</strong></p><p><a href="https://cyberbotics.com/doc/guide/tutorial-8-using-ros">Webots: tutorial- (cyberbotics.com)</a></p><h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>通过<code>WSL</code>+<code>melodic</code>+<code>vscode</code>+<code>xlaunch</code>实现<code>ros</code>环境模拟</p><p><code>wsl安装</code>:<a href="https://peitianyu.github.io/blog/2021/10/19/wsl/">wsl安装与使用 | 某飞行员的随笔 (peitianyu.github.io)</a></p><p><code>melodic安装</code>:<a href="https://peitianyu.github.io/blog/2021/10/19/ros%E5%AE%89%E8%A3%85/">ros安装 | 某飞行员的随笔 (peitianyu.github.io)</a></p><p><code>vscode安装</code>:</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;古月居21讲&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.ne</summary>
+      
+    
+    
+    
+    <category term="ros" scheme="https://peitianyu.github.io/blog/categories/ros/"/>
+    
+    
+    <category term="ros" scheme="https://peitianyu.github.io/blog/tags/ros/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/13/vscode/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/13/vscode/</id>
+    <published>2021-11-13T04:30:12.000Z</published>
+    <updated>2021-11-13T01:22:17.748Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_48468423/article/details/118950592?ops_request_misc=%7B%22request_id%22:%22163676464916780262571699%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676464916780262571699&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-118950592.pc_search_mgc_flag&utm_term=vscode&spm=1018.2226.3001.4187">VsCode安装和配置c/c++环境（超完整，小白专用）_黄化的多多-CSDN博客_vscode配置c++环境</a></p><p><a href="https://blog.csdn.net/iceboy314159/article/details/107886801?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-107886801.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">vscode 与 WSL 进行linux开发_从零开始-CSDN博客_vscode wsl</a></p><p><a href="https://blog.csdn.net/reeeeein/article/details/104628415?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-104628415.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">在WSL中安装并配置VSCode_reeeeein的博客-CSDN博客_wsl安装vscode</a></p><p><a href="https://blog.csdn.net/weixin_43876113/article/details/105261577?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-4-105261577.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">WIN10安装WSL并使用VScode连接WSL_作业君的博客-CSDN博客_vscode wsl</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><code>vscode</code>配置<code>wsl</code></p><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><h2 id="下载安装vscode"><a href="#下载安装vscode" class="headerlink" title="下载安装vscode:"></a>下载安装<code>vscode</code>:</h2><p><a href="https://code.visualstudio.com/Download">Download Visual Studio Code - Mac, Linux, Windows</a></p><p>安装<code>win</code>版,一直下一步,注意改一下安装位置</p><h2 id="连接wsl"><a href="#连接wsl" class="headerlink" title="连接wsl"></a>连接<code>wsl</code></h2><p><code>ctrl + shift + x</code>打开应用商店,输入<code>Remote - WSL</code>安装由于事先安装好<code>wsl</code>了</p><p>打开左侧小电脑图标,点击进入即可进入<code>wsl</code>终端,可以通过点击左下角⚪,▲进入终端命令行</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_48468423/article/detai</summary>
+      
+    
+    
+    
+    <category term="tool" scheme="https://peitianyu.github.io/blog/categories/tool/"/>
+    
+    
+    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
     <title>USBCAN/CANalyst-II</title>
     <link href="https://peitianyu.github.io/blog/2021/11/11/USBCAN/"/>
     <id>https://peitianyu.github.io/blog/2021/11/11/USBCAN/</id>
     <published>2021-11-11T04:30:12.000Z</published>
-    <updated>2021-11-11T11:55:51.392Z</updated>
+    <updated>2021-11-13T01:04:27.331Z</updated>
     
     <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/muyoufansem/article/details/117955581?ops_request_misc=&request_id=&biz_id=102&utm_term=canalyst&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-117955581.pc_search_mgc_flag&spm=1018.2226.3001.4187">(完整版)Python读取CANalyst-II分析仪(创芯科技)接口函数_蜡笔小新历险记的博客-CSDN博客_创芯科技can分析仪驱动</a></p><p><a href="https://blog.csdn.net/qq_38766896/article/details/109404097?ops_request_misc=%7B%22request_id%22:%22163642380516780264058809%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163642380516780264058809&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-109404097.pc_search_mgc_flag&utm_term=canalyst-ii+linux&spm=1018.2226.3001.4187">Ubuntu16.04 （ROS）下通过CAN分析仪（USBCAN/CANalyst-II）调试无人车助力转向电机（1）_秋名山的过客-CSDN博客</a></p><p><a href="http://www.gcgd.net/newsinfo_726.html">USBCAN在Linux系统下使用说明 (gcgd.net)</a></p><p><a href="https://blog.csdn.net/qq_41545537/article/details/106714246?ops_request_misc=%7B%22request_id%22:%22163607238916780271515211%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163607238916780271515211&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-106714246.pc_search_mgc_flag&utm_term=ubuntucan%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85&spm=1018.2226.3001.4187">ubuntu下研华工控机CAN卡驱动的安装与测试_星辰和大海都需要门票的博客-CSDN博客</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>介绍两款使用过的<code>usb</code>转<code>can</code>的使用方法</p><p>一款是广成科技的<code>USBCAN-I PRO</code><a href="http://www.gcgd.net/tecrjlist.html">资料下载 (gcgd.net)</a></p><p>一款是创芯科技的<code>CANalyst</code><a href="https://www.zhcxgd.com/ZLXZ.html">珠海创芯科技有限公司 - 珠海创芯科技 (zhcxgd.com)</a></p><h1 id="软件安装与使用"><a href="#软件安装与使用" class="headerlink" title="软件安装与使用"></a>软件安装与使用</h1><h2 id="USBCAN"><a href="#USBCAN" class="headerlink" title="USBCAN:"></a>USBCAN:</h2><p><a href="http://www.gcgd.net/newsinfo_388.html">沈阳广成科技USBCAN系列产品驱动安装及ECANTools软件使用方法 (gcgd.net)</a></p><p><a href="https://pan.baidu.com/s/10R7zou8yxzarjlwlJkeN1A#list/path=%2FGC-USBCAN-----%E7%82%B9%E5%87%BB%E8%BF%9B%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E9%80%89%E6%8B%A9%E9%9C%80%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6">GC-USBCAN—–点击进入文件夹选择需要下载的文件_免费高速下载|百度网盘-分享无限制 (baidu.com)</a></p><h2 id="CANalyst"><a href="#CANalyst" class="headerlink" title="CANalyst:"></a>CANalyst:</h2><p><a href="https://blog.csdn.net/muyoufansem/article/details/117955581?ops_request_misc=&request_id=&biz_id=102&utm_term=canalyst&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-117955581.pc_search_mgc_flag&spm=1018.2226.3001.4187">(完整版)Python读取CANalyst-II分析仪(创芯科技)接口函数_蜡笔小新历险记的博客-CSDN博客_创芯科技can分析仪驱动</a></p><h1 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h1><h2 id="建议采用官方例程至少不会出错"><a href="#建议采用官方例程至少不会出错" class="headerlink" title="!建议采用官方例程至少不会出错"></a>!建议采用官方例程至少不会出错</h2><h2 id="这里推荐两个例程可以验证学习"><a href="#这里推荐两个例程可以验证学习" class="headerlink" title="这里推荐两个例程可以验证学习"></a>这里推荐两个例程可以验证学习</h2><p><a href="https://github.com/VincentCheungM/ESR_canalyst_ros">VincentCheungM/ESR_canalyst_ros: A warped ROS driver for CANalyst-II and ESR Radar (github.com)</a></p><p><a href="https://github.com/Andy-jg/RaspberryCanalyst-2">Andy-jg/RaspberryCanalyst-2: linux use the canalyst-2 (github.com)</a></p><h1 id="注意"><a href="#注意" class="headerlink" title="!注意"></a>!注意</h1><p>由于can驱动使用时每次都需要<code>sudo</code>,可以加配置,这样就不需要每次都<code>sudo</code>了</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/udev/rules.d/99-myusb.rules</span><br></pre></td></tr></table></figure><p>输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ACTION==&quot;add&quot;,SUBSYSTEMS==&quot;usb&quot;, ATTRS&#123;idVendor&#125;==&quot;04d8&quot;, ATTRS&#123;idProduct&#125;==&quot;0053&quot;,</span><br><span class="line">GROUP=&quot;users&quot;, MODE=&quot;0777&quot;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -37,8 +86,6 @@
     
     
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
     
   </entry>
   
@@ -195,6 +242,30 @@
   </entry>
   
   <entry>
+    <title>树莓派安装Ubuntu18_server</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-07T03:49:11.896Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_36628778/article/details/105056549?ops_request_misc=%7B%22request_id%22:%22163048418216780264057617%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163048418216780264057617&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-105056549.pc_search_insert_download&utm_term=ubuntu18.04+server+wlan0&spm=1018.2226.3001.4187">树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客</a></p><p><a href="https://www.freesion.com/article/3758800537/">树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)</a></p><h1 id="img镜像下载"><a href="#img镜像下载" class="headerlink" title="img镜像下载"></a>img镜像下载</h1><p><a href="https://www.lxx1.com/3779">树莓派操作系统镜像下载地址</a></p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/bionic/release/ubuntu-18.04.5-preinstalled-server-arm64%2Braspi4.img.xz">ubuntu18_server</a></p><h1 id="将系统烧入SD卡"><a href="#将系统烧入SD卡" class="headerlink" title="将系统烧入SD卡"></a>将系统烧入SD卡</h1><p>使用<strong>win32diskimager</strong>或者<strong>balenaetcher</strong>烧录进去</p><p><img src="https://img-blog.csdnimg.cn/20210507104309422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxNTcwMDI1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200603191826555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDU4NDYx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="启动树莓派"><a href="#启动树莓派" class="headerlink" title="启动树莓派"></a>启动树莓派</h1><p>将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是<code>ubuntu</code>，之后需要马上修改密码，按提示操作即可。</p><h1 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h1><p>可以参考:</p><p><a href="https://blog.csdn.net/zyr920425/article/details/93351457">Ubuntu Server 18.04 连接 WIFI_zyr920425的博客-CSDN博客</a></p><p>编辑</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/netplan/xxxxxxx.yaml</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">    ethernets:</span><br><span class="line">        eth0:</span><br><span class="line">            dhcp4: false</span><br><span class="line">            addresses: [192.168.10.135/24]</span><br><span class="line">    wifis:</span><br><span class="line">        wlan0:</span><br><span class="line">            access-points:</span><br><span class="line">                &quot;10X&quot;:</span><br><span class="line">                    password: 123456787</span><br><span class="line">            dhcp4: true</span><br></pre></td></tr></table></figure><h1 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>参考:<a href="https://blog.csdn.net/Meteor_s/article/details/81301252">Ubuntu–更换软件源_星迹-CSDN博客_乌班图软件源</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>网线连接好,通过<code>ip a</code>查看是否配置好,然后在物理机上尝试<code>ping</code>通后连接</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh.exe ubuntu@192.168.xx.xx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_36628778/article/detai</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>树莓派备份</title>
     <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/"/>
     <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/</id>
@@ -241,30 +312,6 @@
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派安装Ubuntu18_server</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</id>
-    <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-07T03:49:11.896Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_36628778/article/details/105056549?ops_request_misc=%7B%22request_id%22:%22163048418216780264057617%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163048418216780264057617&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-105056549.pc_search_insert_download&utm_term=ubuntu18.04+server+wlan0&spm=1018.2226.3001.4187">树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客</a></p><p><a href="https://www.freesion.com/article/3758800537/">树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)</a></p><h1 id="img镜像下载"><a href="#img镜像下载" class="headerlink" title="img镜像下载"></a>img镜像下载</h1><p><a href="https://www.lxx1.com/3779">树莓派操作系统镜像下载地址</a></p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/bionic/release/ubuntu-18.04.5-preinstalled-server-arm64%2Braspi4.img.xz">ubuntu18_server</a></p><h1 id="将系统烧入SD卡"><a href="#将系统烧入SD卡" class="headerlink" title="将系统烧入SD卡"></a>将系统烧入SD卡</h1><p>使用<strong>win32diskimager</strong>或者<strong>balenaetcher</strong>烧录进去</p><p><img src="https://img-blog.csdnimg.cn/20210507104309422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxNTcwMDI1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200603191826555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDU4NDYx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="启动树莓派"><a href="#启动树莓派" class="headerlink" title="启动树莓派"></a>启动树莓派</h1><p>将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是<code>ubuntu</code>，之后需要马上修改密码，按提示操作即可。</p><h1 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h1><p>可以参考:</p><p><a href="https://blog.csdn.net/zyr920425/article/details/93351457">Ubuntu Server 18.04 连接 WIFI_zyr920425的博客-CSDN博客</a></p><p>编辑</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/netplan/xxxxxxx.yaml</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">    ethernets:</span><br><span class="line">        eth0:</span><br><span class="line">            dhcp4: false</span><br><span class="line">            addresses: [192.168.10.135/24]</span><br><span class="line">    wifis:</span><br><span class="line">        wlan0:</span><br><span class="line">            access-points:</span><br><span class="line">                &quot;10X&quot;:</span><br><span class="line">                    password: 123456787</span><br><span class="line">            dhcp4: true</span><br></pre></td></tr></table></figure><h1 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/apt/sources.list</span><br></pre></td></tr></table></figure><p>参考:<a href="https://blog.csdn.net/Meteor_s/article/details/81301252">Ubuntu–更换软件源_星迹-CSDN博客_乌班图软件源</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>网线连接好,通过<code>ip a</code>查看是否配置好,然后在物理机上尝试<code>ping</code>通后连接</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh.exe ubuntu@192.168.xx.xx</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_36628778/article/detai</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -438,30 +485,6 @@
   </entry>
   
   <entry>
-    <title>三维空间内旋转</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/02/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%86%85%E6%97%8B%E8%BD%AC/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/02/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E5%86%85%E6%97%8B%E8%BD%AC/</id>
-    <published>2021-11-02T04:30:12.000Z</published>
-    <updated>2021-11-02T13:07:47.696Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/ahelloyou/article/details/108903506?ops_request_misc=%7B%22request_id%22:%22163585328716780271555754%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585328716780271555754&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-108903506.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&spm=1018.2226.3001.4187">旋转矩阵_ahelloyou的博客-CSDN博客_旋转矩阵</a></p><p><a href="https://blog.csdn.net/u012424737/article/details/106269229?ops_request_misc=%7B%22request_id%22:%22163585328716780271555754%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585328716780271555754&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-2-106269229.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&spm=1018.2226.3001.4187">机器人运动学基础——旋转矩阵_太初有泪的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/hongbin_xu/article/details/78929006?ops_request_misc=%7B%22request_id%22:%22163585334816780366567178%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163585334816780366567178&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-78929006.pc_search_mgc_flag&utm_term=%E6%97%8B%E8%BD%AC%E5%90%91%E9%87%8F&spm=1018.2226.3001.4187">三维重建学习(1)：基础知识：旋转矩阵与旋转向量_hongbin_xu的博客-CSDN博客_旋转向量</a></p><h1 id="简记"><a href="#简记" class="headerlink" title="简记"></a>简记</h1><p><img src="https://i.loli.net/2021/11/02/dxrQGvqahi5YN2I.jpg" alt="三位空间内的旋转"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/ahelloyou/article/details/108</summary>
-      
-    
-    
-    
-    <category term="slam" scheme="https://peitianyu.github.io/blog/categories/slam/"/>
-    
-    
-    <category term="slam" scheme="https://peitianyu.github.io/blog/tags/slam/"/>
-    
-  </entry>
-  
-  <entry>
     <title>ros_rosbag</title>
     <link href="https://peitianyu.github.io/blog/2021/11/02/rosbag/"/>
     <id>https://peitianyu.github.io/blog/2021/11/02/rosbag/</id>
@@ -482,32 +505,6 @@
     
     
     <category term="ros" scheme="https://peitianyu.github.io/blog/tags/ros/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RTOS多任务访问同一个UART的操作方法</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/01/RTOS%E5%A4%9A%E4%BB%BB%E5%8A%A1%E8%AE%BF%E9%97%AE%E5%90%8C%E4%B8%80%E4%B8%AAUART%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/01/RTOS%E5%A4%9A%E4%BB%BB%E5%8A%A1%E8%AE%BF%E9%97%AE%E5%90%8C%E4%B8%80%E4%B8%AAUART%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/</id>
-    <published>2021-11-01T04:30:12.000Z</published>
-    <updated>2021-11-04T00:46:00.546Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h3><p><a href="https://mp.weixin.qq.com/s/4wWhF-Pm0vC8O0Qt5eiN-Q">RTOS多任务访问同一个UART的操作方法</a></p><p>在RTOS多任务编程的时候，同一个硬件（比如UART、I2C等）被多个任务访问的情况比较多，如果不合理处理，就会导致“混乱”的局面。</p><p>处理“混乱”局面的方法比较多，下面基于<strong>FreeRTOS</strong>，以UART为例讲讲常见的<em><strong>互斥</strong></em>、<em><strong>队列</strong></em>这两种方法。</p><h3 id="互斥访问方法"><a href="#互斥访问方法" class="headerlink" title="互斥访问方法"></a><strong>互斥访问方法</strong></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建互斥量资源</span></span><br><span class="line">SemaphoreHandle_t xSemaphore = <span class="literal">NULL</span>;</span><br><span class="line">xSemaphore = xSemaphoreCreateMutex();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TaskA</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//占用资源</span></span><br><span class="line">    <span class="keyword">if</span>(xSemaphoreTake(xSemaphore, <span class="number">10</span> ) == pdTRUE)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="comment">//使用资源(发送数据)</span></span><br><span class="line">      USART_SendNByte();</span><br><span class="line">      <span class="comment">//释放资源</span></span><br><span class="line">      xSemaphoreGive(xSemaphore);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>信号量与互斥量区别</strong>：</p><p><strong>信号量</strong>：多个任务同步使用某个资源；</p><p>一个任务完成某个动作后通过信号告诉别的任务，别的任务才可以执行某些动作；</p><p><strong>互斥量</strong>：多任务互斥使用某个资源；</p><p>一个任务占用某个资源，那么别的任务就无法访问，直到该任务离开，其他任务才可以访问该资源；</p><h3 id="队列操作方法"><a href="#队列操作方法" class="headerlink" title="队列操作方法"></a><strong>队列操作方法</strong></h3><p>队列操作方法就是FIFO，先入先出的原理。比如：<strong>任务A要使用UART发送一串数据，将其加入队列； 接着任务B也要使用UART发送一串数据</strong>。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">QueueHandle_t xQueue;</span><br><span class="line">xQueue = xQueueCreate(QUEUE_LENGTH, QUEUE_ITEM_SIZE);</span><br><span class="line"></span><br><span class="line">xTaskCreate(UART_Send_Task, <span class="string">&quot;UART_Send&quot;</span>, STACK_SIZE, <span class="literal">NULL</span>, TASK_PRIORITY, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TaskA</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//任务相关操作</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//加入队列</span></span><br><span class="line">    xQueueSend(xQueue, &amp;TaskA_Buf, <span class="number">10</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TaskB</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//任务相关操作</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//加入队列</span></span><br><span class="line">    xQueueSend(xQueue, &amp;TaskB_Buf, <span class="number">10</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">UART_Send_Task</span><span class="params">(<span class="keyword">void</span> *pvParameters)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(;;)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">//循环读取队列BUF</span></span><br><span class="line">    <span class="keyword">if</span>(xQueueReceive(xQueue, &amp;Buf, <span class="number">10</span>) == pdTRUE)</span><br><span class="line">    &#123;</span><br><span class="line">      USART_SendNByte(&amp;Buf);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4wWhF-Pm0vC8O0Qt5eiN-Q&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
