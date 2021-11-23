@@ -290,30 +290,6 @@
   </entry>
   
   <entry>
-    <title>树莓派备份</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/</id>
-    <published>2021-11-06T04:30:12.000Z</published>
-    <updated>2021-11-06T13:10:22.879Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://zhuanlan.zhihu.com/p/299844978?utm_source=wechat_session">收藏！最简单的树莓派系统备份方法！ - 知乎 (zhihu.com)</a></p><p><a href="https://post.smzdm.com/p/apzkgne7/">树莓派学习笔记 篇四：树莓派4B 的系统备份方法大全（全卡+压缩备份）_其他智能设备_什么值得买 (smzdm.com)</a></p><p><a href="https://blog.csdn.net/sinat_16643223/article/details/109006150">烧写之前备份过的树莓派镜像到SD卡，证明这样备份恢复是可行的！！！！！！！_TYINY的博客-CSDN博客</a></p><h1 id="最简单的方式"><a href="#最简单的方式" class="headerlink" title="最简单的方式"></a>最简单的方式</h1><p><code>win10</code>下新建一个<code>.img</code>格式文件,通过<code>Win32DiskImager</code>,<code>read</code>插入卡的系统,<code>read</code>完就备份好了</p><p><img src="https://qnam.smzdm.com/201912/08/5ded02bcc031f2090.jpg_e1080.jpg" alt="树莓派4B 的系统备份方法大全（全卡+压缩备份）"></p><h1 id="脚本方式-推荐"><a href="#脚本方式-推荐" class="headerlink" title="脚本方式(推荐)"></a>脚本方式(推荐)</h1><p><a href="https://github.com/BigBubbleGum/RaspberryBackup"> 在Linux系统中一键备份树莓派系统SD卡的脚本 (github.com)</a></p><ul><li>下载下来脚本<code>rpi-backup.sh</code>放入到<code>Linux</code>系统</li><li>插入需备份的树莓派系统,用<code>df -h</code>命令查询SD卡设备名</li><li>运行<code>sudo chmod +x rpi-backup.sh</code>后,运行<code>./rpi-backup.sh /dev/sdb1 /dev/sdb2</code></li><li>注意第一个参数是树莓派SD卡<code>/boot</code>分区的设备名：/dev/sdb1，第二个参数是<code>/</code>分区的设备名：/dev/sdb2，视情况修改）</li><li>终 img 文件会生成在<code>~/backupimg/</code>文件夹下</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/299844978?utm_source=w</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>树莓派安装Ubuntu18_server</title>
     <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"/>
     <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</id>
@@ -326,6 +302,30 @@
       
       
     <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_36628778/article/detai</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派备份</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/</id>
+    <published>2021-11-06T04:30:12.000Z</published>
+    <updated>2021-11-06T13:10:22.879Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://zhuanlan.zhihu.com/p/299844978?utm_source=wechat_session">收藏！最简单的树莓派系统备份方法！ - 知乎 (zhihu.com)</a></p><p><a href="https://post.smzdm.com/p/apzkgne7/">树莓派学习笔记 篇四：树莓派4B 的系统备份方法大全（全卡+压缩备份）_其他智能设备_什么值得买 (smzdm.com)</a></p><p><a href="https://blog.csdn.net/sinat_16643223/article/details/109006150">烧写之前备份过的树莓派镜像到SD卡，证明这样备份恢复是可行的！！！！！！！_TYINY的博客-CSDN博客</a></p><h1 id="最简单的方式"><a href="#最简单的方式" class="headerlink" title="最简单的方式"></a>最简单的方式</h1><p><code>win10</code>下新建一个<code>.img</code>格式文件,通过<code>Win32DiskImager</code>,<code>read</code>插入卡的系统,<code>read</code>完就备份好了</p><p><img src="https://qnam.smzdm.com/201912/08/5ded02bcc031f2090.jpg_e1080.jpg" alt="树莓派4B 的系统备份方法大全（全卡+压缩备份）"></p><h1 id="脚本方式-推荐"><a href="#脚本方式-推荐" class="headerlink" title="脚本方式(推荐)"></a>脚本方式(推荐)</h1><p><a href="https://github.com/BigBubbleGum/RaspberryBackup"> 在Linux系统中一键备份树莓派系统SD卡的脚本 (github.com)</a></p><ul><li>下载下来脚本<code>rpi-backup.sh</code>放入到<code>Linux</code>系统</li><li>插入需备份的树莓派系统,用<code>df -h</code>命令查询SD卡设备名</li><li>运行<code>sudo chmod +x rpi-backup.sh</code>后,运行<code>./rpi-backup.sh /dev/sdb1 /dev/sdb2</code></li><li>注意第一个参数是树莓派SD卡<code>/boot</code>分区的设备名：/dev/sdb1，第二个参数是<code>/</code>分区的设备名：/dev/sdb2，视情况修改）</li><li>终 img 文件会生成在<code>~/backupimg/</code>文件夹下</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/299844978?utm_source=w</summary>
       
     
     
