@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-11-26T07:33:17.516Z</updated>
+  <updated>2021-11-28T03:38:08.768Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://peitianyu.github.io/blog/2021/11/26/easy_log/"/>
     <id>https://peitianyu.github.io/blog/2021/11/26/easy_log/</id>
     <published>2021-11-26T04:30:12.000Z</published>
-    <updated>2021-11-26T07:33:17.516Z</updated>
+    <updated>2021-11-28T03:38:08.768Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://github.com/armink/EasyLogger">一款超轻量级(ROM&lt;1.6K, RAM&lt;0.3k)、高性能的 C/C++ 日志库 </a></p><h1 id="移植到linux"><a href="#移植到linux" class="headerlink" title="移植到linux"></a>移植到linux</h1><p><a href="https://github.com/peitianyu/easy_log">peitianyu/easy_log (github.com)</a></p><p>注意修改log文件保存路径,在<code>easy_log/include/elog_file_cfg.h</code>中</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://github.com/armink/EasyLogger">一款超轻量级(ROM&lt;1.6K, RAM&lt;0.3k)、高性能的 C/C++ 日志库 </a></p><h1 id="移植到linux"><a href="#移植到linux" class="headerlink" title="移植到linux"></a>移植到linux</h1><p><a href="https://github.com/peitianyu/easy_log">peitianyu/easy_log (github.com)</a></p><p>注意修改log文件保存路径,在<code>easy_log/include/elog_file_cfg.h</code>中</p><p>一款更加轻量化的log工具,可以自行更改函数,实现功能</p><p><a href="https://github.com/peitianyu/light_log/blob/main/README.md"> peitianyu/light_log (github.com)</a></p>]]></content>
     
     
       
@@ -36,9 +36,9 @@
     <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
     
     
-    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
-    
     <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
+    
+    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
     
   </entry>
   
@@ -474,9 +474,9 @@
     <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
     
     
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
