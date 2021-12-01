@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-12-01T02:47:41.839Z</updated>
+  <updated>2021-12-01T03:24:17.355Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://peitianyu.github.io/blog/2021/12/01/wsl%E4%BD%BF%E7%94%A8%E4%B8%B2%E5%8F%A3/"/>
     <id>https://peitianyu.github.io/blog/2021/12/01/wsl%E4%BD%BF%E7%94%A8%E4%B8%B2%E5%8F%A3/</id>
     <published>2021-12-01T04:30:12.000Z</published>
-    <updated>2021-12-01T02:47:41.839Z</updated>
+    <updated>2021-12-01T03:24:17.355Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/chentuo2000/article/details/116447956?ops_request_misc=&request_id=&biz_id=102&utm_term=wsl%E4%BD%BF%E7%94%A8%E4%B8%B2%E5%8F%A3&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-4-116447956.pc_search_mgc_flag&spm=1018.2226.3001.4187">Win10的Linux子系统Ubuntu使用串口_晨之清风-CSDN博客</a></p><p><a href="https://www.scivision.dev/usb-tty-windows-subsystem-for-linux/">WSL | 上的 USB 到串行适配器科学计算|科学视讯 (scivision.dev)</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/chentuo2000/article/details/116447956?ops_request_misc=&request_id=&biz_id=102&utm_term=wsl%E4%BD%BF%E7%94%A8%E4%B8%B2%E5%8F%A3&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-4-116447956.pc_search_mgc_flag&spm=1018.2226.3001.4187">Win10的Linux子系统Ubuntu使用串口_晨之清风-CSDN博客</a></p><p><a href="https://www.scivision.dev/usb-tty-windows-subsystem-for-linux/">WSL | 上的 USB 到串行适配器科学计算|科学视讯 (scivision.dev)</a></p><p>由于技术原因usb转串行没成功</p>]]></content>
     
     
       
@@ -62,9 +62,9 @@
     <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
     
     
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
     <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
@@ -358,30 +358,6 @@
   </entry>
   
   <entry>
-    <title>vscode</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/13/vscode/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/13/vscode/</id>
-    <published>2021-11-13T04:30:12.000Z</published>
-    <updated>2021-11-13T01:22:17.748Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_48468423/article/details/118950592?ops_request_misc=%7B%22request_id%22:%22163676464916780262571699%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676464916780262571699&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-118950592.pc_search_mgc_flag&utm_term=vscode&spm=1018.2226.3001.4187">VsCode安装和配置c/c++环境（超完整，小白专用）_黄化的多多-CSDN博客_vscode配置c++环境</a></p><p><a href="https://blog.csdn.net/iceboy314159/article/details/107886801?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-107886801.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">vscode 与 WSL 进行linux开发_从零开始-CSDN博客_vscode wsl</a></p><p><a href="https://blog.csdn.net/reeeeein/article/details/104628415?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-104628415.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">在WSL中安装并配置VSCode_reeeeein的博客-CSDN博客_wsl安装vscode</a></p><p><a href="https://blog.csdn.net/weixin_43876113/article/details/105261577?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-4-105261577.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">WIN10安装WSL并使用VScode连接WSL_作业君的博客-CSDN博客_vscode wsl</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><code>vscode</code>配置<code>wsl</code></p><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><h2 id="下载安装vscode"><a href="#下载安装vscode" class="headerlink" title="下载安装vscode:"></a>下载安装<code>vscode</code>:</h2><p><a href="https://code.visualstudio.com/Download">Download Visual Studio Code - Mac, Linux, Windows</a></p><p>安装<code>win</code>版,一直下一步,注意改一下安装位置</p><h2 id="连接wsl"><a href="#连接wsl" class="headerlink" title="连接wsl"></a>连接<code>wsl</code></h2><p><code>ctrl + shift + x</code>打开应用商店,输入<code>Remote - WSL</code>安装由于事先安装好<code>wsl</code>了</p><p>打开左侧小电脑图标,点击进入即可进入<code>wsl</code>终端,可以通过点击左下角⚪,▲进入终端命令行</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_48468423/article/detai</summary>
-      
-    
-    
-    
-    <category term="tool" scheme="https://peitianyu.github.io/blog/categories/tool/"/>
-    
-    
-    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
-    
-  </entry>
-  
-  <entry>
     <title>ros教程</title>
     <link href="https://peitianyu.github.io/blog/2021/11/13/ros%E6%95%99%E7%A8%8B/"/>
     <id>https://peitianyu.github.io/blog/2021/11/13/ros%E6%95%99%E7%A8%8B/</id>
@@ -403,6 +379,30 @@
     
     
     <category term="ros" scheme="https://peitianyu.github.io/blog/tags/ros/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode</title>
+    <link href="https://peitianyu.github.io/blog/2021/11/13/vscode/"/>
+    <id>https://peitianyu.github.io/blog/2021/11/13/vscode/</id>
+    <published>2021-11-13T04:30:12.000Z</published>
+    <updated>2021-11-13T01:22:17.748Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/weixin_48468423/article/details/118950592?ops_request_misc=%7B%22request_id%22:%22163676464916780262571699%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676464916780262571699&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-118950592.pc_search_mgc_flag&utm_term=vscode&spm=1018.2226.3001.4187">VsCode安装和配置c/c++环境（超完整，小白专用）_黄化的多多-CSDN博客_vscode配置c++环境</a></p><p><a href="https://blog.csdn.net/iceboy314159/article/details/107886801?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-107886801.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">vscode 与 WSL 进行linux开发_从零开始-CSDN博客_vscode wsl</a></p><p><a href="https://blog.csdn.net/reeeeein/article/details/104628415?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-104628415.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">在WSL中安装并配置VSCode_reeeeein的博客-CSDN博客_wsl安装vscode</a></p><p><a href="https://blog.csdn.net/weixin_43876113/article/details/105261577?ops_request_misc=%7B%22request_id%22:%22163676572516780271510489%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163676572516780271510489&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-4-105261577.pc_search_mgc_flag&utm_term=vscode+wsl&spm=1018.2226.3001.4187">WIN10安装WSL并使用VScode连接WSL_作业君的博客-CSDN博客_vscode wsl</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><code>vscode</code>配置<code>wsl</code></p><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><h2 id="下载安装vscode"><a href="#下载安装vscode" class="headerlink" title="下载安装vscode:"></a>下载安装<code>vscode</code>:</h2><p><a href="https://code.visualstudio.com/Download">Download Visual Studio Code - Mac, Linux, Windows</a></p><p>安装<code>win</code>版,一直下一步,注意改一下安装位置</p><h2 id="连接wsl"><a href="#连接wsl" class="headerlink" title="连接wsl"></a>连接<code>wsl</code></h2><p><code>ctrl + shift + x</code>打开应用商店,输入<code>Remote - WSL</code>安装由于事先安装好<code>wsl</code>了</p><p>打开左侧小电脑图标,点击进入即可进入<code>wsl</code>终端,可以通过点击左下角⚪,▲进入终端命令行</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_48468423/article/detai</summary>
+      
+    
+    
+    
+    <category term="tool" scheme="https://peitianyu.github.io/blog/categories/tool/"/>
+    
+    
+    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
     
   </entry>
   
