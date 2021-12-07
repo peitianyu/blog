@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-12-06 14:19:20'
+  postUpdate: '2021-12-07 13:21:47'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -188,7 +188,17 @@ ME3116 是一款内部集成了 MOSFET 的异步整流降压型 稳压器。它�
 sudo systemctl disable bluetooth…… 禁用掉和蓝牙有关的开机启动项.直到桌面不再显示蓝牙标志，但是还有/ttyAMA0存在.
 
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/" title="树莓派备份">树莓派备份</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">参考网址:收藏！最简单的树莓派系统备份方法！ - 知乎 (zhihu.com)
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/" title="树莓派安装Ubuntu18_server">树莓派安装Ubuntu18_server</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">参考网址:树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客
+树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)
+树莓派4B安装Ubuntu18.04 + vnc远程桌面_我是大一菜鸡-CSDN博客
+img镜像下载树莓派操作系统镜像下载地址
+ubuntu18_server
+https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu/releases/18.04.5/release/
+将系统烧入SD卡使用win32diskimager或者balenaetcher烧录进去
+
+
+启动树莓派将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是ubuntu，之后需要马上修改密码，按提示操作即可。
+SSH打开 system-boot 磁盘下根目录的 network-config 文件1234567 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/" title="树莓派备份">树莓派备份</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">参考网址:收藏！最简单的树莓派系统备份方法！ - 知乎 (zhihu.com)
 树莓派学习笔记 篇四：树莓派4B 的系统备份方法大全（全卡+压缩备份）_其他智能设备_什么值得买 (smzdm.com)
 烧写之前备份过的树莓派镜像到SD卡，证明这样备份恢复是可行的！！！！！！！_TYINY的博客-CSDN博客
 最简单的方式win10下新建一个.img格式文件,通过Win32DiskImager,read插入卡的系统,read完就备份好了
@@ -201,17 +211,7 @@ sudo systemctl disable bluetooth…… 禁用掉和蓝牙有关的开机启动�
 注意第一个参数是树莓派SD卡/boot分区的设备名：/dev/sdb1，第二个参数是/分区的设备名：/dev/sdb2，视情况修改）
 终 img 文件会生成在~/backupimg/文件夹下
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/" title="树莓派安装Ubuntu18_server">树莓派安装Ubuntu18_server</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">参考网址:树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客
-树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)
-树莓派4B安装Ubuntu18.04 + vnc远程桌面_我是大一菜鸡-CSDN博客
-img镜像下载树莓派操作系统镜像下载地址
-ubuntu18_server
-https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu/releases/18.04.5/release/
-将系统烧入SD卡使用win32diskimager或者balenaetcher烧录进去
-
-
-启动树莓派将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是ubuntu，之后需要马上修改密码，按提示操作即可。
-SSH打开 system-boot 磁盘下根目录的 network-config 文件1234567 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/06/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="电路设计_最小系统设计">电路设计_最小系统设计</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/sch/">sch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/blog/tags/sch/">sch</a></span></div><div class="content">参考网址:(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/06/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1_%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="电路设计_最小系统设计">电路设计_最小系统设计</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/sch/">sch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/blog/tags/sch/">sch</a></span></div><div class="content">参考网址:(60条消息) STM32最小系统设计_little_ox的博客-CSDN博客
 最小系统组成:主芯片,复位电路,时钟电路,电源电路,下载电路
 主芯片根据自己需要的io数量,功能选择好主芯片
 复位电路,时钟电路,下载电路由于低电平复位,因此可以通过上拉电阻实现,由于复位电路与时钟电路一般芯片都会提供参考电路或者查查资料都很容易找到,就不再赘述,下载电路的话直接clk,dio给他,通过SWD,或者JTAG下载,这里使用的时SWD下载
