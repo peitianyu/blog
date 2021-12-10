@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-12-10 22:00:36'
+  postUpdate: '2021-12-10 22:02:26'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -166,18 +166,7 @@ Rosbag基础使用保存12345678# 保存所有topicrosbag record -a# 只记录�
 比如RAM初始化零操作,如下,只有4字节空间被初始化为零
 1234567unsigned int *pRAMaddr;         //定义地址指针变量  // pRAMaddr+=4代码其实使pRAMaddr偏移了4*sizeof(int)=16个字节for(pRAMaddr=StartAddr;pRAMaddr&lt;EndAddr;pRAMaddr+=4)  &#123;       *pRAMaddr=0x00000000;   //指定RAM地址清零      // 这里清除了四个字节&#125; 
 
-关键字sizeofsizeof是一个关键字,需要注意的是,使用sizeo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/" title="变量初始化多种操作">变量初始化多种操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-01T04:30:12.000Z" title="发表于 2021-11-01 12:30:12">2021-11-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/cpp/">cpp</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/cpp/">cpp</a></span></div><div class="content">参考网址:嵌入式C语言编程时，变量、数组、指针初始化的多种操作
-数值初始化123int    inum  = 0;float  fnum = 0.00f;double dnum = 0.00;
-
-字符初始化1char ch = &#x27;\0&#x27;; 
-
-字符串初始化实际上就是将字符数组中的字符都初始化为&#39;\0&#39;
-1234567891011// 使用&quot;&quot;实现char str[10] = &quot;&quot;;// 使用memsetchar str[10];memset(str, 0, sizeof(str));//使用循环char str[10];for(int i = 0; i &lt; 10; i++)&#123;    str[i] = &#x27;\0&#x27;;&#125;
-
-一般使用memset最合适,一般采用+1的方式参考:
-123char year[4+1];memset(year, 0, sizeof(year));strcpy(year,&quot;2018&quot;);
-
-指针初始化需要使用malloc申请动态内 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/01/%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/" title="软件开发中各种开发模型的优缺点">软件开发中各种开发模型的优缺点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-01T04:30:12.000Z" title="发表于 2021-11-01 12:30:12">2021-11-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E6%A8%A1%E6%9D%BF/">模板</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E6%A8%A1%E6%9D%BF/">模板</a></span></div><div class="content">参考网址:软件开发的几种常见模型（转自于葵阳林四的博客） - 知乎 (zhihu.com)
+关键字sizeofsizeof是一个关键字,需要注意的是,使用sizeo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/01/%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/" title="软件开发中各种开发模型的优缺点">软件开发中各种开发模型的优缺点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-01T04:30:12.000Z" title="发表于 2021-11-01 12:30:12">2021-11-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E6%A8%A1%E6%9D%BF/">模板</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E6%A8%A1%E6%9D%BF/">模板</a></span></div><div class="content">参考网址:软件开发的几种常见模型（转自于葵阳林四的博客） - 知乎 (zhihu.com)
 可能新手或初级工程师不会在乎什么开发模型，管他三七二十一，直接开干。
 但有经验的工程师都会考虑的比较周全，计划、需求、设计等各个环节考虑清楚才开始编码。下面就来说说软件开发中常见的开发模型。
 瀑布模型该模型是由上至下一次性完成整个项目的开发方式。该模型一共分为6个阶段，如图所示：
@@ -191,7 +180,18 @@ Rosbag基础使用保存12345678# 保存所有topicrosbag record -a# 只记录�
 无法评估项目进度。因为不知道哪个阶段会造成项目的延期
 无法适应用户的需求变更，只能等到项目完成后，用户才能够看到项目结果
 
-快速原型模型快速原型模型与瀑布模型相反，项目初期根据用户的需求快速构建一个可以运行的系统原型，之后向用户展示，由用户进行审核，提出意见，然后逐步丰富项目需求。当需求真正确定后，才正式进行项目开发。模型如图 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="嵌入式相关的开源项目">嵌入式相关的开源项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-01T04:30:12.000Z" title="发表于 2021-11-01 12:30:12">2021-11-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">参考网址:https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw
+快速原型模型快速原型模型与瀑布模型相反，项目初期根据用户的需求快速构建一个可以运行的系统原型，之后向用户展示，由用户进行审核，提出意见，然后逐步丰富项目需求。当需求真正确定后，才正式进行项目开发。模型如图 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/01/%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A4%9A%E7%A7%8D%E6%93%8D%E4%BD%9C/" title="变量初始化多种操作">变量初始化多种操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-01T04:30:12.000Z" title="发表于 2021-11-01 12:30:12">2021-11-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/cpp/">cpp</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/cpp/">cpp</a></span></div><div class="content">参考网址:嵌入式C语言编程时，变量、数组、指针初始化的多种操作
+数值初始化123int    inum  = 0;float  fnum = 0.00f;double dnum = 0.00;
+
+字符初始化1char ch = &#x27;\0&#x27;; 
+
+字符串初始化实际上就是将字符数组中的字符都初始化为&#39;\0&#39;
+1234567891011// 使用&quot;&quot;实现char str[10] = &quot;&quot;;// 使用memsetchar str[10];memset(str, 0, sizeof(str));//使用循环char str[10];for(int i = 0; i &lt; 10; i++)&#123;    str[i] = &#x27;\0&#x27;;&#125;
+
+一般使用memset最合适,一般采用+1的方式参考:
+123char year[4+1];memset(year, 0, sizeof(year));strcpy(year,&quot;2018&quot;);
+
+指针初始化需要使用malloc申请动态内 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/blog/2021/11/01/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="嵌入式相关的开源项目">嵌入式相关的开源项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-11-01T04:30:12.000Z" title="发表于 2021-11-01 12:30:12">2021-11-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="content">参考网址:https://mp.weixin.qq.com/s/UdJbDTWrnupMGYiwvKcIyw
 1.Avem这是一个轻量级无人机飞控项目。
 2.Awesome-Embedded这是一个很棒的嵌入式资源汇总的项目。汇聚了各种嵌入式相关的资源：
 3.soft-and-hard这是一个以物联网项目为主方向分享web开发教程，制作并演示一个物联网系统是怎么跑起来的，介绍如何学习相关知识。
