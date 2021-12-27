@@ -41,6 +41,30 @@
   </entry>
   
   <entry>
+    <title>hexo安装</title>
+    <link href="https://peitianyu.github.io/blog/2021/12/17/hexo%E5%AE%89%E8%A3%85/"/>
+    <id>https://peitianyu.github.io/blog/2021/12/17/hexo%E5%AE%89%E8%A3%85/</id>
+    <published>2021-12-17T04:30:12.000Z</published>
+    <updated>2021-12-27T03:41:04.864Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p> <a href="https://blog.csdn.net/sinat_37781304/article/details/82729029?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_utm_term~default-0.no_search_link&spm=1001.2101.3001.4242.1">(91条消息) hexo史上最全搭建教程_Fangzh的技术博客-CSDN博客_hexo</a> </p><p> <a href="https://blog.csdn.net/guzhao593/article/details/81712016?ops_request_misc=%7B%22request_id%22:%22164057576416780357213843%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=164057576416780357213843&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-81712016.pc_search_insert_es_download&utm_term=%E5%8D%87%E7%BA%A7node%E7%89%88%E6%9C%AC&spm=1018.2226.3001.4187">(91条消息) node版本如何升级_赵天铭的博客-CSDN博客_升级node版本</a> </p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装git</span></span><br><span class="line">sudo apt-get install git</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装nodejs</span></span><br><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装hexo</span></span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><h1 id="nodejs问题"><a href="#nodejs问题" class="headerlink" title="nodejs问题"></a>nodejs问题</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm i -g n</span><br><span class="line">npm i -g n --force</span><br><span class="line"><span class="meta">#</span><span class="bash"> 升级版本号</span></span><br><span class="line">n 版本号 如 n 10.0.0</span><br><span class="line"><span class="meta">#</span><span class="bash"> 升级最新</span></span><br><span class="line">n latest</span><br><span class="line"><span class="meta">#</span><span class="bash"> 升级最近稳定</span></span><br><span class="line">n stable</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt; &lt;a href=&quot;https://blog.csdn.net/sinat_37781304/article/detai</summary>
+      
+    
+    
+    
+    <category term="blog" scheme="https://peitianyu.github.io/blog/categories/blog/"/>
+    
+    
+    <category term="blog" scheme="https://peitianyu.github.io/blog/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pthread简单使用</title>
     <link href="https://peitianyu.github.io/blog/2021/12/17/pthread%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
     <id>https://peitianyu.github.io/blog/2021/12/17/pthread%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</id>
@@ -325,9 +349,9 @@
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
     <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -399,9 +423,9 @@
     <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
     
     
-    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
-    
     <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
+    
+    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
     
   </entry>
   
@@ -425,11 +449,11 @@
     <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
     
     
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
+    
     <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
     
     <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
@@ -477,33 +501,9 @@
     <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
     
     
-    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
-    
     <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Mk60+shell_letter</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/26/shell_letter/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/26/shell_letter/</id>
-    <published>2021-11-26T04:30:12.000Z</published>
-    <updated>2021-11-26T06:12:11.961Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://blog.csdn.net/Mculover666/article/details/105141286?ops_request_misc=%7B%22request_id%22:%22163790121416780357282944%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163790121416780357282944&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-105141286.pc_search_mgc_flag&utm_term=%E5%B5%8C%E5%85%A5%E5%BC%8Fshell&spm=1018.2226.3001.4187">letter-shell | 一个功能强大的嵌入式shell_Mculover666的博客（嵌入式）-CSDN博客_letter shell</a></p><h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//shell_port.c</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @briefshell移植到STM32L431时的接口实现</span></span><br><span class="line"><span class="comment"> * @authormculover666</span></span><br><span class="line"><span class="comment"> * @date2020/03/27 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;shell.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;uart.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;shell_port.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 1. 创建shell对象，开辟shell缓冲区 */</span></span><br><span class="line">Shell shell;</span><br><span class="line"><span class="keyword">char</span> shell_buffer[<span class="number">512</span>];</span><br><span class="line"><span class="comment">/* 2. 自己实现shell写函数 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//shell写函数原型：typedef void (*shellWrite)(const char);</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief 用户shell写</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * @param data 数据</span></span><br><span class="line"><span class="comment"> * @param len 数据长度</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * @return short 实际写入的数据长度</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">short</span> <span class="title">userShellWrite</span><span class="params">(<span class="keyword">char</span> *data, <span class="keyword">unsigned</span> <span class="keyword">short</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">&#123;</span><br><span class="line">UART_WriteByte(HW_UART0, data[i]);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3. 编写初始化函数 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">User_Shell_Init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//注册自己实现的写函数</span></span><br><span class="line">    shell.write = userShellWrite;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用shell初始化函数</span></span><br><span class="line">    shellInit(&amp;shell, shell_buffer, <span class="number">512</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// shell_port.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _SHELL_PORT_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span>_SHELL_PORT_H_</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;shell.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 将shell定义为外部变量，在串口中断回调函数中还要使用 */</span></span><br><span class="line"><span class="keyword">extern</span> Shell shell;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 声明自己编写的初始化函数 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">User_Shell_Init</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">/* _SHELL_PORT_H_ */</span></span></span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;gpio.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;common.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;uart.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;cpuidy.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;shell_port.h&quot;</span></span></span><br><span class="line"><span class="keyword">uint16_t</span> recv_buf = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* USER CODE BEGIN 0 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">char</span> ch, <span class="keyword">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;input int: %d, char: %c, string: %s\r\n&quot;</span>, i, ch, str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">UART_RX_ISR</span><span class="params">(<span class="keyword">uint16_t</span> byteReceived)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//调用shell处理数据的接口</span></span><br><span class="line">recv_buf = byteReceived;</span><br><span class="line">shellHandler(&amp;shell, recv_buf);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    DelayInit();</span><br><span class="line">    <span class="keyword">uint32_t</span> instance = GPIO_QuickInit(HW_GPIOE, <span class="number">0</span>, kGPIO_Mode_OPP);</span><br><span class="line">    UART_QuickInit(UART0_RX_PA01_TX_PA02, <span class="number">115200</span>);</span><br><span class="line">    <span class="comment">/*  配置UART 中断配置 打开接收中断 安装中断回调函数 */</span></span><br><span class="line">    UART_CallbackRxInstall(HW_UART0, UART_RX_ISR);</span><br><span class="line">    <span class="comment">/* 打开串口接收中断功能 IT 就是中断的意思*/</span></span><br><span class="line">    UART_ITDMAConfig(HW_UART0, kUART_IT_Rx, <span class="literal">true</span>);</span><br><span class="line">    User_Shell_Init();</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* 闪烁小灯 */</span></span><br><span class="line">        GPIO_ToggleBit(HW_GPIOE, <span class="number">0</span>);</span><br><span class="line">        DelayMs(<span class="number">500</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//导出到命令列表里</span></span><br><span class="line">SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(<span class="number">0</span>)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), test, test, test);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Mculover666/article/details/1</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
     
   </entry>
   
