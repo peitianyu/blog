@@ -6,7 +6,7 @@
   <link href="https://peitianyu.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://peitianyu.github.io/blog/"/>
-  <updated>2021-12-22T07:41:08.688Z</updated>
+  <updated>2021-12-27T07:28:24.371Z</updated>
   <id>https://peitianyu.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux程序开机启动与后台启动</title>
+    <link href="https://peitianyu.github.io/blog/2021/12/27/%E8%87%AA%E5%90%AF%E5%8A%A8_%E5%90%8E%E5%8F%B0%E5%90%AF%E5%8A%A8/"/>
+    <id>https://peitianyu.github.io/blog/2021/12/27/%E8%87%AA%E5%90%AF%E5%8A%A8_%E5%90%8E%E5%8F%B0%E5%90%AF%E5%8A%A8/</id>
+    <published>2021-12-27T04:30:12.000Z</published>
+    <updated>2021-12-27T07:28:24.371Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p> <a href="https://blog.csdn.net/qq_36328643/article/details/89359724?ops_request_misc=%7B%22request_id%22:%22164058731416780265430164%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=164058731416780265430164&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-3-89359724.pc_search_insert_es_download&utm_term=ubuntu18%E8%87%AA%E5%90%AF%E5%8A%A8&spm=1018.2226.3001.4187">(91条消息) Ubuntu18.04 开机自启动脚本_cxh的博客-CSDN博客_ubuntu18.04开机自启动脚本</a> </p><p> <a href="https://blog.csdn.net/qq_42353939/article/details/89242941?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.nonecase">(91条消息) linux如何后台运行服务_六指黑侠i的博客-CSDN博客_linux 后台运行</a> </p><h1 id="自启动"><a href="#自启动" class="headerlink" title="自启动"></a>自启动</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> rc-local.service生成</span></span><br><span class="line">sudo nano /etc/systemd/system/rc-local.service</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=/etc/rc.local Compatibility</span><br><span class="line">ConditionPathExists=/etc/rc.local  #脚本文件位置</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/etc/rc.local start  #配置的脚本文件rc.local为start</span><br><span class="line">TimeoutSec=0    </span><br><span class="line">StandardOutput=tty  #标准输出</span><br><span class="line">RemainAfterExit=yes</span><br><span class="line">SysVStartPriority=99  #优先级，当有多个开机启动文件时可以设置不同的值</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 生成rc.local</span></span><br><span class="line">sudo nano /etc/rc.local</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh -e</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># rc.local</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># This script is executed at the end of each multiuser runlevel.</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Make sure that the script will <span class="string">&quot;exit 0&quot;</span> on success or any other</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> value on error.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># In order to enable or disable this script just change the execution</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> bits.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># By default this script does nothing.</span></span></span><br><span class="line">echo &quot;看到这行字，说明添加自启动脚本成功。&quot; &gt; /usr/local/test.log</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 给rc.local加上权限，启用服务，启动服务并检查状态</span></span><br><span class="line">sudo chmod +x /etc/rc.local</span><br><span class="line">sudo systemctl enable rc-local</span><br><span class="line">sudo systemctl start rc-local.service</span><br><span class="line">sudo systemctl status rc-local.service</span><br></pre></td></tr></table></figure><h1 id="不挂断后台启动"><a href="#不挂断后台启动" class="headerlink" title="不挂断后台启动"></a>不挂断后台启动</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &amp;</span><br></pre></td></tr></table></figure><h1 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看进程</span></span><br><span class="line">jobs -l</span><br><span class="line"><span class="meta">#</span><span class="bash"> 杀死进程</span></span><br><span class="line">sudo kill 7889</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt; &lt;a href=&quot;https://blog.csdn.net/qq_36328643/article/details/</summary>
+      
+    
+    
+    
+    <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>一种嵌入式设计模式</title>
@@ -258,30 +282,6 @@
   </entry>
   
   <entry>
-    <title>k60_can_bootloader</title>
-    <link href="https://peitianyu.github.io/blog/2021/12/10/k60_can_bootloader/"/>
-    <id>https://peitianyu.github.io/blog/2021/12/10/k60_can_bootloader/</id>
-    <published>2021-12-10T04:30:12.000Z</published>
-    <updated>2021-12-10T12:58:35.323Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="参考demo"><a href="#参考demo" class="headerlink" title="参考demo:"></a>参考demo:</h3><p><a href="https://github.com/peitianyu/k60_bootloader">peitianyu/k60_bootloader (github.com)</a></p><h3 id="main-c文件配置"><a href="#main-c文件配置" class="headerlink" title="main.c文件配置"></a>main.c文件配置</h3><h4 id="进入mian-c文件加入头文件并引用bootloader-entry-函数"><a href="#进入mian-c文件加入头文件并引用bootloader-entry-函数" class="headerlink" title="进入mian.c文件加入头文件并引用bootloader_entry()函数"></a>进入mian.c文件加入头文件并引用bootloader_entry()函数</h4><p><img src="https://s2.loli.net/2021/12/10/ywEp53mGsnHMbYc.png" alt="1.PNG"></p><h4 id="使用ID-0x10发送06-00-00-00-00-00-00-00，表示已经进入app"><a href="#使用ID-0x10发送06-00-00-00-00-00-00-00，表示已经进入app" class="headerlink" title="使用ID=0x10发送06 00 00 00 00 00 00 00，表示已经进入app"></a>使用ID=0x10发送06 00 00 00 00 00 00 00，表示已经进入app</h4><p><img src="https://s2.loli.net/2021/12/10/SvE7taw8y9ozPbh.png" alt="2.png"></p><h4 id="判断bootflag是否制一，若是，进入boot模式"><a href="#判断bootflag是否制一，若是，进入boot模式" class="headerlink" title="判断bootflag是否制一，若是，进入boot模式"></a>判断bootflag是否制一，若是，进入boot模式</h4><p><img src="https://s2.loli.net/2021/12/10/7pd6cl9bwtKPzFT.png" alt="3.png"></p><h3 id="canbus-c文件配置"><a href="#canbus-c文件配置" class="headerlink" title="canbus.c文件配置"></a>canbus.c文件配置</h3><h4 id="在canbus-c文件中引用头文件，并判断是否0x25发来数据，若有且data-data-0-1-则bootflag-1"><a href="#在canbus-c文件中引用头文件，并判断是否0x25发来数据，若有且data-data-0-1-则bootflag-1" class="headerlink" title="在canbus.c文件中引用头文件，并判断是否0x25发来数据，若有且data._data[0]==1,则bootflag=1"></a>在canbus.c文件中引用头文件，并判断是否0x25发来数据，若有且data._data[0]==1,则bootflag=1</h4><p><img src="https://s2.loli.net/2021/12/10/1nd3eMiXpUtBlAr.png" alt="4.png"></p><h3 id="keil配置"><a href="#keil配置" class="headerlink" title="keil配置"></a>keil配置</h3><h4 id="将hex烧录地址改为从0x6000开始"><a href="#将hex烧录地址改为从0x6000开始" class="headerlink" title="将hex烧录地址改为从0x6000开始"></a>将hex烧录地址改为从0x6000开始</h4><p><img src="https://s2.loli.net/2021/12/10/UhGvZDBPQqSeM9Y.png" alt="5.png"></p><h3 id="树莓派使用"><a href="#树莓派使用" class="headerlink" title="树莓派使用"></a>树莓派使用</h3><h4 id="bootloader-can0-xx-hex"><a href="#bootloader-can0-xx-hex" class="headerlink" title="./bootloader can0 xx.hex"></a>./bootloader can0 xx.hex</h4><p><img src="https://s2.loli.net/2021/12/10/wkOHJ3reb8AXVyT.png" alt="7.PNG"></p><h3 id="挂载win10"><a href="#挂载win10" class="headerlink" title="挂载win10"></a>挂载win10</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t cifs //192.168.2.101/2021.04/CH-K-Lib/Project/1/bootloader/MDK/mk60d10/flash /k60 -o username=&quot;pty&quot;,password=&quot;pty123&quot;,sec=ntlmssp,rw</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;参考demo&quot;&gt;&lt;a href=&quot;#参考demo&quot; class=&quot;headerlink&quot; title=&quot;参考demo:&quot;&gt;&lt;/a&gt;参考demo:&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/peitianyu/k60_bootloader</summary>
-      
-    
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-    
-    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>linux定时器</title>
     <link href="https://peitianyu.github.io/blog/2021/12/10/linux%E5%86%85%E6%A0%B8%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
     <id>https://peitianyu.github.io/blog/2021/12/10/linux%E5%86%85%E6%A0%B8%E5%AE%9A%E6%97%B6%E5%99%A8/</id>
@@ -302,6 +302,30 @@
     
     
     <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>k60_can_bootloader</title>
+    <link href="https://peitianyu.github.io/blog/2021/12/10/k60_can_bootloader/"/>
+    <id>https://peitianyu.github.io/blog/2021/12/10/k60_can_bootloader/</id>
+    <published>2021-12-10T04:30:12.000Z</published>
+    <updated>2021-12-10T12:58:35.323Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="参考demo"><a href="#参考demo" class="headerlink" title="参考demo:"></a>参考demo:</h3><p><a href="https://github.com/peitianyu/k60_bootloader">peitianyu/k60_bootloader (github.com)</a></p><h3 id="main-c文件配置"><a href="#main-c文件配置" class="headerlink" title="main.c文件配置"></a>main.c文件配置</h3><h4 id="进入mian-c文件加入头文件并引用bootloader-entry-函数"><a href="#进入mian-c文件加入头文件并引用bootloader-entry-函数" class="headerlink" title="进入mian.c文件加入头文件并引用bootloader_entry()函数"></a>进入mian.c文件加入头文件并引用bootloader_entry()函数</h4><p><img src="https://s2.loli.net/2021/12/10/ywEp53mGsnHMbYc.png" alt="1.PNG"></p><h4 id="使用ID-0x10发送06-00-00-00-00-00-00-00，表示已经进入app"><a href="#使用ID-0x10发送06-00-00-00-00-00-00-00，表示已经进入app" class="headerlink" title="使用ID=0x10发送06 00 00 00 00 00 00 00，表示已经进入app"></a>使用ID=0x10发送06 00 00 00 00 00 00 00，表示已经进入app</h4><p><img src="https://s2.loli.net/2021/12/10/SvE7taw8y9ozPbh.png" alt="2.png"></p><h4 id="判断bootflag是否制一，若是，进入boot模式"><a href="#判断bootflag是否制一，若是，进入boot模式" class="headerlink" title="判断bootflag是否制一，若是，进入boot模式"></a>判断bootflag是否制一，若是，进入boot模式</h4><p><img src="https://s2.loli.net/2021/12/10/7pd6cl9bwtKPzFT.png" alt="3.png"></p><h3 id="canbus-c文件配置"><a href="#canbus-c文件配置" class="headerlink" title="canbus.c文件配置"></a>canbus.c文件配置</h3><h4 id="在canbus-c文件中引用头文件，并判断是否0x25发来数据，若有且data-data-0-1-则bootflag-1"><a href="#在canbus-c文件中引用头文件，并判断是否0x25发来数据，若有且data-data-0-1-则bootflag-1" class="headerlink" title="在canbus.c文件中引用头文件，并判断是否0x25发来数据，若有且data._data[0]==1,则bootflag=1"></a>在canbus.c文件中引用头文件，并判断是否0x25发来数据，若有且data._data[0]==1,则bootflag=1</h4><p><img src="https://s2.loli.net/2021/12/10/1nd3eMiXpUtBlAr.png" alt="4.png"></p><h3 id="keil配置"><a href="#keil配置" class="headerlink" title="keil配置"></a>keil配置</h3><h4 id="将hex烧录地址改为从0x6000开始"><a href="#将hex烧录地址改为从0x6000开始" class="headerlink" title="将hex烧录地址改为从0x6000开始"></a>将hex烧录地址改为从0x6000开始</h4><p><img src="https://s2.loli.net/2021/12/10/UhGvZDBPQqSeM9Y.png" alt="5.png"></p><h3 id="树莓派使用"><a href="#树莓派使用" class="headerlink" title="树莓派使用"></a>树莓派使用</h3><h4 id="bootloader-can0-xx-hex"><a href="#bootloader-can0-xx-hex" class="headerlink" title="./bootloader can0 xx.hex"></a>./bootloader can0 xx.hex</h4><p><img src="https://s2.loli.net/2021/12/10/wkOHJ3reb8AXVyT.png" alt="7.PNG"></p><h3 id="挂载win10"><a href="#挂载win10" class="headerlink" title="挂载win10"></a>挂载win10</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t cifs //192.168.2.101/2021.04/CH-K-Lib/Project/1/bootloader/MDK/mk60d10/flash /k60 -o username=&quot;pty&quot;,password=&quot;pty123&quot;,sec=ntlmssp,rw</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;参考demo&quot;&gt;&lt;a href=&quot;#参考demo&quot; class=&quot;headerlink&quot; title=&quot;参考demo:&quot;&gt;&lt;/a&gt;参考demo:&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/peitianyu/k60_bootloader</summary>
+      
+    
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+    <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
@@ -349,9 +373,9 @@
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
-    <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
-    
     <category term="嵌入式" scheme="https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="sch" scheme="https://peitianyu.github.io/blog/tags/sch/"/>
     
   </entry>
   
@@ -423,9 +447,9 @@
     <category term="cpp" scheme="https://peitianyu.github.io/blog/categories/cpp/"/>
     
     
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
-    
     <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
+    
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
@@ -449,11 +473,11 @@
     <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
     
     
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
+    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
     
     <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
     
-    <category term="tool" scheme="https://peitianyu.github.io/blog/tags/tool/"/>
+    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
   </entry>
   
@@ -476,32 +500,6 @@
     
     <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
     
-    
-    <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>easy_logger</title>
-    <link href="https://peitianyu.github.io/blog/2021/11/26/easy_log/"/>
-    <id>https://peitianyu.github.io/blog/2021/11/26/easy_log/</id>
-    <published>2021-11-26T04:30:12.000Z</published>
-    <updated>2021-11-28T03:38:08.768Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a href="https://github.com/armink/EasyLogger">一款超轻量级(ROM&lt;1.6K, RAM&lt;0.3k)、高性能的 C/C++ 日志库 </a></p><h1 id="移植到linux"><a href="#移植到linux" class="headerlink" title="移植到linux"></a>移植到linux</h1><p><a href="https://github.com/peitianyu/easy_log">peitianyu/easy_log (github.com)</a></p><p>注意修改log文件保存路径,在<code>easy_log/include/elog_file_cfg.h</code>中</p><p>一款更加轻量化的log工具,可以自行更改函数,实现功能</p><p><a href="https://github.com/peitianyu/light_log/blob/main/README.md"> peitianyu/light_log (github.com)</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;参考网址&quot;&gt;&lt;a href=&quot;#参考网址&quot; class=&quot;headerlink&quot; title=&quot;参考网址:&quot;&gt;&lt;/a&gt;参考网址:&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/armink/EasyLogger&quot;&gt;一款超轻量级(ROM&amp;lt</summary>
-      
-    
-    
-    
-    <category term="linux" scheme="https://peitianyu.github.io/blog/categories/linux/"/>
-    
-    
-    <category term="cpp" scheme="https://peitianyu.github.io/blog/tags/cpp/"/>
     
     <category term="linux" scheme="https://peitianyu.github.io/blog/tags/linux/"/>
     
