@@ -1327,6 +1327,13 @@
 
   
   <url>
+    <loc>https://peitianyu.github.io/blog/tags/cpp/</loc>
+    <lastmod>2022-05-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/tags/sch/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1334,7 +1341,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/cpp/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1355,7 +1362,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1376,13 +1383,6 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
-    <lastmod>2022-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1397,14 +1397,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/path-tracking/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/matlab/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/matlab/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/path-tracking/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1420,6 +1420,13 @@
 
   
   <url>
+    <loc>https://peitianyu.github.io/blog/categories/cpp/</loc>
+    <lastmod>2022-05-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/categories/sch/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1427,7 +1434,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/cpp/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1448,7 +1455,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1469,13 +1476,6 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
-    <lastmod>2022-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1490,14 +1490,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/path-tracking/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/matlab/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/matlab/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/path-tracking/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
