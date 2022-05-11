@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://peitianyu.github.io/blog/2022/05/11/test/</loc>
+    
+    <lastmod>2022-05-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/2022/05/11/addr2line/</loc>
     
     <lastmod>2022-05-11</lastmod>
@@ -1362,7 +1369,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/tool/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1376,7 +1383,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/tool/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1455,7 +1462,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/tool/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1469,7 +1476,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/tool/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
