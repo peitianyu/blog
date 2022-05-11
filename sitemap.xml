@@ -1327,14 +1327,14 @@
 
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/cpp/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/sch/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/sch/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/cpp/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1362,7 +1362,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/tool/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1376,7 +1376,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/tool/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1420,14 +1420,14 @@
 
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/cpp/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/sch/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/sch/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/cpp/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1455,7 +1455,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/tool/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1469,7 +1469,7 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/tool/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
