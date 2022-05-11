@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://peitianyu.github.io/blog/2022/05/11/test/</loc>
-    
-    <lastmod>2022-05-11</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://peitianyu.github.io/blog/2022/05/11/addr2line/</loc>
     
     <lastmod>2022-05-11</lastmod>
@@ -1341,14 +1334,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/path-plan/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/sch/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/sch/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/path-plan/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1369,6 +1362,13 @@
   </url>
   
   <url>
+    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
+    <lastmod>2022-05-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1377,13 +1377,6 @@
   
   <url>
     <loc>https://peitianyu.github.io/blog/tags/linux/</loc>
-    <lastmod>2022-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1434,14 +1427,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/path-plan/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/sch/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/sch/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/path-plan/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1462,6 +1455,13 @@
   </url>
   
   <url>
+    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
+    <lastmod>2022-05-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1470,13 +1470,6 @@
   
   <url>
     <loc>https://peitianyu.github.io/blog/categories/linux/</loc>
-    <lastmod>2022-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
