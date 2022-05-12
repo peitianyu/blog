@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://peitianyu.github.io/blog/2022/05/11/addr2line/</loc>
+    
+    <lastmod>2022-05-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://peitianyu.github.io/blog/2022/03/01/%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99/</loc>
+    
+    <lastmod>2022-05-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://peitianyu.github.io/blog/2021/10/19/ssh/</loc>
+    
+    <lastmod>2022-05-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://peitianyu.github.io/blog/2021/05/12/hexo%E6%8F%92%E4%BB%B6/</loc>
     
     <lastmod>2022-05-12</lastmod>
@@ -12,13 +33,6 @@
     <loc>https://peitianyu.github.io/blog/2021/12/17/hexo%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2022-05-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://peitianyu.github.io/blog/2022/05/11/addr2line/</loc>
-    
-    <lastmod>2022-05-11</lastmod>
     
   </url>
   
@@ -444,13 +458,6 @@
   
   <url>
     <loc>https://peitianyu.github.io/blog/2022/03/01/matlab%E5%AE%9E%E7%8E%B0%E9%9B%85%E5%8F%AF%E6%AF%94,%E6%B5%B7%E5%A1%9E%E7%9F%A9%E9%98%B5/</loc>
-    
-    <lastmod>2022-03-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://peitianyu.github.io/blog/2022/03/01/%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99/</loc>
     
     <lastmod>2022-03-01</lastmod>
     
@@ -1283,13 +1290,6 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/2021/10/19/ssh/</loc>
-    
-    <lastmod>2021-10-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://peitianyu.github.io/blog/2021/10/19/mpg%E5%A4%84%E7%90%86/</loc>
     
     <lastmod>2021-10-24</lastmod>
@@ -1355,14 +1355,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/linux/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/linux/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1390,14 +1390,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/blog/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/blog/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1448,14 +1448,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/linux/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/linux/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1483,14 +1483,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/blog/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/blog/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
