@@ -1439,13 +1439,6 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
-    <lastmod>2022-06-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://peitianyu.github.io/blog/tags/path-plan/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
@@ -1453,7 +1446,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/linux/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/slam/</loc>
+    <lastmod>2022-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1467,14 +1467,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/linux/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+    <loc>https://peitianyu.github.io/blog/tags/ros/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1532,13 +1532,6 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
-    <lastmod>2022-06-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://peitianyu.github.io/blog/categories/path-plan/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
@@ -1546,7 +1539,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/linux/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/slam/</loc>
+    <lastmod>2022-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1560,14 +1560,14 @@
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/linux/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://peitianyu.github.io/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/</loc>
+    <loc>https://peitianyu.github.io/blog/categories/ros/</loc>
     <lastmod>2022-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
