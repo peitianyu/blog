@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>树莓派安装Ubuntu18_server | 某飞行员的随笔</title><meta name="keywords" content="嵌入式"><meta name="author" content="某飞行员"><meta name="copyright" content="某飞行员"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="参考网址:树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客 树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com) 树莓派4B安装Ubuntu18.04 + vnc远程桌面_我是大一菜鸡-CSDN博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派安装Ubuntu18_server">
+<meta property="og:url" content="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/index.html">
+<meta property="og:site_name" content="某飞行员的随笔">
+<meta property="og:description" content="参考网址:树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客 树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com) 树莓派4B安装Ubuntu18.04 + vnc远程桌面_我是大一菜鸡-CSDN博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/05/11/8LVHxnaIP1jO2E9.jpg">
+<meta property="article:published_time" content="2021-11-06T04:30:12.000Z">
+<meta property="article:modified_time" content="2021-12-29T09:07:40.182Z">
+<meta property="article:author" content="某飞行员">
+<meta property="article:tag" content="嵌入式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/05/11/8LVHxnaIP1jO2E9.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '树莓派安装Ubuntu18_server',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-29 17:07:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="某飞行员的随笔" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">200</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/05/11/8LVHxnaIP1jO2E9.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">某飞行员的随笔</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">树莓派安装Ubuntu18_server</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-06T04:30:12.000Z" title="发表于 2021-11-06 12:30:12">2021-11-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-12-29T09:07:40.182Z" title="更新于 2021-12-29 17:07:40">2021-12-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="树莓派安装Ubuntu18_server"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36628778/article/details/105056549?ops_request_misc=%7B%22request_id%22:%22163048418216780264057617%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163048418216780264057617&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-105056549.pc_search_insert_download&utm_term=ubuntu18.04+server+wlan0&spm=1018.2226.3001.4187">树莓派raspberry 安装ubuntu18.04 server + desktop + ros1_越来越胖了_mengleijin的博客-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.freesion.com/article/3758800537/">树莓派4b安装带桌面的ubuntu18.04 server和ROS melodic系统 - 灰信网（软件开发博客聚合） (freesion.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_52364631/article/details/112439570?ops_request_misc=%7B%22request_id%22:%22163867892516780261940219%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163867892516780261940219&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-112439570.pc_search_mgc_flag&utm_term=%E6%A0%91%E8%8E%93%E6%B4%BEUbuntu18&spm=1018.2226.3001.4187">树莓派4B安装Ubuntu18.04 + vnc远程桌面_我是大一菜鸡-CSDN博客</a></p>
+<h1 id="img镜像下载"><a href="#img镜像下载" class="headerlink" title="img镜像下载"></a>img镜像下载</h1><p>pi烧录软件:<a target="_blank" rel="noopener" href="https://downloads.raspberrypi.org/imager/imager_latest.exe">https://downloads.raspberrypi.org/imager/imager_latest.exe</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.lxx1.com/3779">树莓派操作系统镜像下载地址</a></p>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/bionic/release/ubuntu-18.04.5-preinstalled-server-arm64%2Braspi4.img.xz">ubuntu18_server</a></p>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu/releases/18.04.5/release/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu/releases/18.04.5/release/</a></p>
+<h1 id="将系统烧入SD卡"><a href="#将系统烧入SD卡" class="headerlink" title="将系统烧入SD卡"></a>将系统烧入SD卡</h1><p>使用<strong>win32diskimager</strong>或者<strong>balenaetcher</strong>烧录进去</p>
+<p><img src="https://img-blog.csdnimg.cn/20210507104309422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxNTcwMDI1,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200603191826555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDU4NDYx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="启动树莓派"><a href="#启动树莓派" class="headerlink" title="启动树莓派"></a>启动树莓派</h1><p>将SD卡插入树莓派，并为树莓派连接好电源，显示器，鼠标，键盘，网线。启动树莓派，默认用户名密码都是<code>ubuntu</code>，之后需要马上修改密码，按提示操作即可。</p>
+<h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h1><h2 id="打开-system-boot-磁盘下根目录的-network-config-文件"><a href="#打开-system-boot-磁盘下根目录的-network-config-文件" class="headerlink" title="打开 system-boot 磁盘下根目录的 network-config 文件"></a>打开 <code>system-boot</code> 磁盘下根目录的 <code>network-config</code> 文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> This file contains a netplan-compatible configuration <span class="built_in">which</span> cloud-init</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> will apply on first-boot. Please refer to the cloud-init documentation and</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> the netplan reference <span class="keyword">for</span> full details:</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># https://cloudinit.readthedocs.io/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> https://netplan.io/reference</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># Some additional examples are commented out below</span></span></span><br><span class="line"></span><br><span class="line">version: 2</span><br><span class="line">ethernets:</span><br><span class="line">  eth0:</span><br><span class="line">    dhcp4: false</span><br><span class="line">    addresses: [192.168.30.110/24]</span><br><span class="line">wifis:</span><br><span class="line">  wlan0:</span><br><span class="line">    access-points:</span><br><span class="line">      HUAWEI_PTY:</span><br><span class="line">        password: pty123456787</span><br><span class="line">    dhcp4: true                         </span><br></pre></td></tr></table></figure>
+
+<h2 id="修改在相同目录下的-user-data-文件，expire：后改成false。"><a href="#修改在相同目录下的-user-data-文件，expire：后改成false。" class="headerlink" title="修改在相同目录下的 user-data 文件，expire：后改成false。"></a>修改在相同目录下的 <code>user-data</code> 文件，<code>expire：</code>后改成<code>false</code>。</h2><p><img src="https://s2.loli.net/2021/12/06/6Jked1uLC9oYIfN.png" alt="image-20211205144213769.png"></p>
+<h2 id="启动树莓派-1"><a href="#启动树莓派-1" class="headerlink" title="启动树莓派"></a>启动树莓派</h2><p>如果是刷完固件后第一次启动，因为第一次需要进行系统配置，所以第一次不会自动连接。第一次上电过两分钟后重新上电稍等片刻就会自动连接wifi了。</p>
+<h1 id="连网"><a href="#连网" class="headerlink" title="连网"></a>连网</h1><p>可以参考:</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zyr920425/article/details/93351457">Ubuntu Server 18.04 连接 WIFI_zyr920425的博客-CSDN博客</a></p>
+<p>编辑,注意需要使用<code>Tab</code>键对齐,建议使用能看到对其线的对其工具,比如<code>sublime</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/netplan/xxxxxxx.yaml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> This file is generated from information provided by the datasource.  Changes</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> to it will not persist across an instance reboot.  To <span class="built_in">disable</span> cloud-init<span class="string">&#x27;s</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> network configuration capabilities, write a file</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="string"> network: &#123;config: disabled&#125;</span></span></span><br><span class="line">network:</span><br><span class="line">    version: 2</span><br><span class="line">    ethernets:</span><br><span class="line">        eth0:</span><br><span class="line">            dhcp4: false</span><br><span class="line">            addresses: [192.168.8.110/24]</span><br><span class="line">    wifis:</span><br><span class="line">        wlan0:</span><br><span class="line">            access-points:</span><br><span class="line">                HUAWEI_PTY:</span><br><span class="line">                    password: pty123456787</span><br><span class="line">            dhcp4: true</span><br><span class="line">            optional: true</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano  /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>参考:<a target="_blank" rel="noopener" href="https://blog.csdn.net/lovely_yoshino/article/details/109448556?ops_request_misc=%7B%22request_id%22:%22163867892516780261940219%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163867892516780261940219&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-3-109448556.pc_search_mgc_flag&utm_term=%E6%A0%91%E8%8E%93%E6%B4%BEUbuntu18&spm=1018.2226.3001.4187">树莓派4安装 18.04ubuntu server（2020.11.2）_lovely_yoshino的博客-CSDN博客_树莓派ubuntu18.04</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic main restricted</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-updates main restricted</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-updates universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-updates multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-backports main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-security main restricted</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-security universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu-ports bionic-security multiverse</span><br><span class="line"> </span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-updates main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic universe</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-updates universe</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-updates multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-security main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-security universe</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu-ports bionic-security multiverse</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<h1 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h1><p>网线连接好,通过<code>ip a</code>查看是否配置好,然后在物理机上尝试<code>ping</code>通后连接</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh.exe ubuntu@192.168.xx.xx</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装gcc与g"><a href="#安装gcc与g" class="headerlink" title="安装gcc与g++"></a>安装gcc与g++</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">某飞行员</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/">https://peitianyu.github.io/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85ubuntu18_server/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://peitianyu.github.io/blog" target="_blank">某飞行员的随笔</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/05/11/8LVHxnaIP1jO2E9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/"><img class="prev-cover" src="https://s2.loli.net/2022/05/11/3fuRTYqAeMZ2VlX.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">树莓派串口通信</div></div></a></div><div class="next-post pull-right"><a href="/blog/2021/11/06/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A4%87%E4%BB%BD/"><img class="next-cover" src="https://s2.loli.net/2022/05/11/gs2ShWvZ3QHpki9.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">树莓派备份</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">某飞行员</div><div class="author-info__description">向西可剃度,向东可寻欢,但山野笨拙,我也笨拙.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">200</div></a></div><div class="card-info-data-item is-center"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/peitianyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/peitianyu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:peitianyu18@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80"><span class="toc-number">1.</span> <span class="toc-text">参考网址:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#img%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">img镜像下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%86%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%85%A5SD%E5%8D%A1"><span class="toc-number">3.</span> <span class="toc-text">将系统烧入SD卡</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%A0%91%E8%8E%93%E6%B4%BE"><span class="toc-number">4.</span> <span class="toc-text">启动树莓派</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SSH"><span class="toc-number">5.</span> <span class="toc-text">SSH</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%BC%80-system-boot-%E7%A3%81%E7%9B%98%E4%B8%8B%E6%A0%B9%E7%9B%AE%E5%BD%95%E7%9A%84-network-config-%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">打开 system-boot 磁盘下根目录的 network-config 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%9C%A8%E7%9B%B8%E5%90%8C%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84-user-data-%E6%96%87%E4%BB%B6%EF%BC%8Cexpire%EF%BC%9A%E5%90%8E%E6%94%B9%E6%88%90false%E3%80%82"><span class="toc-number">5.2.</span> <span class="toc-text">修改在相同目录下的 user-data 文件，expire：后改成false。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%A0%91%E8%8E%93%E6%B4%BE-1"><span class="toc-number">5.3.</span> <span class="toc-text">启动树莓派</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E7%BD%91"><span class="toc-number">6.</span> <span class="toc-text">连网</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">7.</span> <span class="toc-text">换源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SSH%E8%BF%9E%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text">SSH连接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85gcc%E4%B8%8Eg"><span class="toc-number">9.</span> <span class="toc-text">安装gcc与g++</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 某飞行员</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="/blog/js/tw_cn.js"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
