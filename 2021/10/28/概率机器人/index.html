@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>概率机器人 | 某飞行员的随笔</title><meta name="keywords" content="slam"><meta name="author" content="某飞行员"><meta name="copyright" content="某飞行员"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="参考网址:概率机器人 5.机器人运动模型速度模型(概率运动规划)闭式算法 采样算法 数学推导精确运动 真实运动加入扰动,模型表达为  加入噪声,求得概率公式为:  里程计模型(估计)模型为:  闭式算法 采样算法 数学推导三次转换:  加入噪声:  求出坐标:  求得最终概率:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率机器人">
+<meta property="og:url" content="https://peitianyu.github.io/blog/2021/10/28/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/index.html">
+<meta property="og:site_name" content="某飞行员的随笔">
+<meta property="og:description" content="参考网址:概率机器人 5.机器人运动模型速度模型(概率运动规划)闭式算法 采样算法 数学推导精确运动 真实运动加入扰动,模型表达为  加入噪声,求得概率公式为:  里程计模型(估计)模型为:  闭式算法 采样算法 数学推导三次转换:  加入噪声:  求出坐标:  求得最终概率:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/05/11/cRUtWEmOV2gFjz7.jpg">
+<meta property="article:published_time" content="2021-10-28T04:30:12.000Z">
+<meta property="article:modified_time" content="2022-11-18T01:14:01.759Z">
+<meta property="article:author" content="某飞行员">
+<meta property="article:tag" content="slam">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/05/11/cRUtWEmOV2gFjz7.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://peitianyu.github.io/blog/2021/10/28/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '概率机器人',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-18 09:14:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="某飞行员的随笔" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">222</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/05/11/cRUtWEmOV2gFjz7.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">某飞行员的随笔</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">概率机器人</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-28T04:30:12.000Z" title="发表于 2021-10-28 12:30:12">2021-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-18T01:14:01.759Z" title="更新于 2022-11-18 09:14:01">2022-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/slam/">slam</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="概率机器人"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p><a target="_blank" rel="noopener" href="https://gaoyichao.com/Xiaotu/?book=probabilistic_robotics&title=index">概率机器人</a></p>
+<h1 id="5-机器人运动模型"><a href="#5-机器人运动模型" class="headerlink" title="5.机器人运动模型"></a>5.机器人运动模型</h1><h2 id="速度模型-概率运动规划"><a href="#速度模型-概率运动规划" class="headerlink" title="速度模型(概率运动规划)"></a>速度模型(概率运动规划)</h2><h3 id="闭式算法"><a href="#闭式算法" class="headerlink" title="闭式算法"></a>闭式算法</h3><p><img src="https://i.loli.net/2021/10/28/DsfN1nov5VqJuFC.png" alt="5.1.png"></p>
+<h3 id="采样算法"><a href="#采样算法" class="headerlink" title="采样算法"></a>采样算法</h3><p><img src="https://i.loli.net/2021/10/28/DsfN1nov5VqJuFC.png" alt="5.1.png"></p>
+<h3 id="数学推导"><a href="#数学推导" class="headerlink" title="数学推导"></a>数学推导</h3><h4 id="精确运动"><a href="#精确运动" class="headerlink" title="精确运动"></a>精确运动</h4><p><img src="https://i.loli.net/2021/10/28/q6Bp1FfriNSYJOm.png" alt="image-20211028195757782.png"></p>
+<h4 id="真实运动"><a href="#真实运动" class="headerlink" title="真实运动"></a>真实运动</h4><p>加入扰动,模型表达为</p>
+<p><img src="https://i.loli.net/2021/10/28/pLu9BycOrKq5jJz.png" alt="image-20211028195927994.png"></p>
+<p>加入噪声,求得概率公式为:</p>
+<p><img src="https://i.loli.net/2021/10/28/dSyQKWDwZokC31L.png" alt="image-20211028200012951.png"></p>
+<h2 id="里程计模型-估计"><a href="#里程计模型-估计" class="headerlink" title="里程计模型(估计)"></a>里程计模型(估计)</h2><p>模型为:</p>
+<p><img src="https://i.loli.net/2021/10/28/SlTo9XeFOgYc5mV.png" alt="image-20211028200122122.png"></p>
+<h3 id="闭式算法-1"><a href="#闭式算法-1" class="headerlink" title="闭式算法"></a>闭式算法</h3><p><img src="https://i.loli.net/2021/10/28/NIADHiMonhT1Kme.png" alt="image-20211028200230307.png"></p>
+<h3 id="采样算法-1"><a href="#采样算法-1" class="headerlink" title="采样算法"></a>采样算法</h3><p><img src="https://i.loli.net/2021/10/28/c48vqLlKwirNEuF.png" alt="image-20211028200258350.png"></p>
+<h3 id="数学推导-1"><a href="#数学推导-1" class="headerlink" title="数学推导"></a>数学推导</h3><p>三次转换:</p>
+<p><img src="https://i.loli.net/2021/10/28/mpeJFAc3E2dYTUB.png" alt="image-20211028200511164.png"></p>
+<p>加入噪声:</p>
+<p><img src="https://i.loli.net/2021/10/28/zWb12u97LjVsfEt.png" alt="image-20211028200548403.png"></p>
+<p>求出坐标:</p>
+<p><img src="https://i.loli.net/2021/10/28/pLu9BycOrKq5jJz.png" alt="image-20211028195927994.png"></p>
+<p>求得最终概率:</p>
+<p><img src="https://i.loli.net/2021/10/28/JMKtbz5W2ErdQCO.png" alt="image-20211028200832805.png"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">某飞行员</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://peitianyu.github.io/blog/2021/10/28/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/">https://peitianyu.github.io/blog/2021/10/28/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://peitianyu.github.io/blog" target="_blank">某飞行员的随笔</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/slam/">slam</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/05/11/cRUtWEmOV2gFjz7.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/2021/10/29/%E5%B1%80%E9%83%A8%E5%85%A8%E5%B1%80%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/"><img class="prev-cover" src="https://s2.loli.net/2022/05/11/tsUxH2I9jrXgcYa.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">局部全局坐标转换</div></div></a></div><div class="next-post pull-right"><a href="/blog/2021/10/28/STL/"><img class="next-cover" src="https://s2.loli.net/2022/05/11/ulqbCaZsiXkyjpY.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">STL库</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">某飞行员</div><div class="author-info__description">向西可剃度,向东可寻欢,但山野笨拙,我也笨拙.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">222</div></a></div><div class="card-info-data-item is-center"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/peitianyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/peitianyu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:peitianyu18@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80"><span class="toc-number">1.</span> <span class="toc-text">参考网址:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">5.机器人运动模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6%E6%A8%A1%E5%9E%8B-%E6%A6%82%E7%8E%87%E8%BF%90%E5%8A%A8%E8%A7%84%E5%88%92"><span class="toc-number">2.1.</span> <span class="toc-text">速度模型(概率运动规划)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%BC%8F%E7%AE%97%E6%B3%95"><span class="toc-number">2.1.1.</span> <span class="toc-text">闭式算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%87%E6%A0%B7%E7%AE%97%E6%B3%95"><span class="toc-number">2.1.2.</span> <span class="toc-text">采样算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC"><span class="toc-number">2.1.3.</span> <span class="toc-text">数学推导</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E8%BF%90%E5%8A%A8"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">精确运动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9C%9F%E5%AE%9E%E8%BF%90%E5%8A%A8"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">真实运动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8C%E7%A8%8B%E8%AE%A1%E6%A8%A1%E5%9E%8B-%E4%BC%B0%E8%AE%A1"><span class="toc-number">2.2.</span> <span class="toc-text">里程计模型(估计)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%BC%8F%E7%AE%97%E6%B3%95-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">闭式算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%87%E6%A0%B7%E7%AE%97%E6%B3%95-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">采样算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC-1"><span class="toc-number">2.2.3.</span> <span class="toc-text">数学推导</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 某飞行员</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="/blog/js/tw_cn.js"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
