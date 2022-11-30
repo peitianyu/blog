@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>jetson_nano 踩坑 | 某飞行员的随笔</title><meta name="keywords" content="嵌入式"><meta name="author" content="某飞行员"><meta name="copyright" content="某飞行员"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="参考网址:玩转智能硬件之Jetson Nano(一)安装篇 - 知乎 (zhihu.com) Jetson Nano-配置环境_Ay_yzx的博客-CSDN博客 预先下载:balenaEtcher balenaEtcher - Flash OS images to SD cards &amp; USB drives 系统下载 官方默认系统: https:&#x2F;&#x2F;developer.download.n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jetson_nano 踩坑">
+<meta property="og:url" content="https://peitianyu.github.io/blog/2021/10/19/jetson_nano/index.html">
+<meta property="og:site_name" content="某飞行员的随笔">
+<meta property="og:description" content="参考网址:玩转智能硬件之Jetson Nano(一)安装篇 - 知乎 (zhihu.com) Jetson Nano-配置环境_Ay_yzx的博客-CSDN博客 预先下载:balenaEtcher balenaEtcher - Flash OS images to SD cards &amp; USB drives 系统下载 官方默认系统: https:&#x2F;&#x2F;developer.download.n">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/05/11/ulqbCaZsiXkyjpY.jpg">
+<meta property="article:published_time" content="2021-10-19T04:30:12.000Z">
+<meta property="article:modified_time" content="2022-11-30T05:50:41.648Z">
+<meta property="article:author" content="某飞行员">
+<meta property="article:tag" content="嵌入式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/05/11/ulqbCaZsiXkyjpY.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://peitianyu.github.io/blog/2021/10/19/jetson_nano/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'jetson_nano 踩坑',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-30 13:50:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="某飞行员的随笔" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">222</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/05/11/ulqbCaZsiXkyjpY.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">某飞行员的随笔</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">jetson_nano 踩坑</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-19T04:30:12.000Z" title="发表于 2021-10-19 12:30:12">2021-10-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-30T05:50:41.648Z" title="更新于 2022-11-30 13:50:41">2022-11-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/%E5%B7%A5%E7%A8%8B/">工程</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/%E5%B7%A5%E7%A8%8B/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="jetson_nano 踩坑"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/166464566">玩转智能硬件之Jetson Nano(一)安装篇 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Ay_yzx/article/details/113779544">Jetson Nano-配置环境_Ay_yzx的博客-CSDN博客</a></p>
+<h4 id="预先下载"><a href="#预先下载" class="headerlink" title="预先下载:"></a>预先下载:</h4><p><code>balenaEtcher</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">balenaEtcher - Flash OS images to SD cards &amp; USB drives</a></p>
+<p><code>系统下载</code></p>
+<p>官方默认系统:</p>
+<p><a target="_blank" rel="noopener" href="https://developer.download.nvidia.cn/embedded/L4T/r32_Release_v6.1/Jeston_Nano/jetson-nano-jp46-sd-card-image.zip?xtLGc386JIwQlfgPPGITNMMx3dC47xG6lIybgH0z9HUPzZaP7ZO2h3U3UFhcpzo7QJsYr-1cCnspcgl929SsucJH043bqSzwC_jUQGxqQuJvmNyIMcrmp8IJopYJUgh41KDf32qZNNeEUEquBj5vkUSAUH_46_UJ1VEv5d1IbYE_36EcSGByIJ1Anw">https://developer.download.nvidia.cn/embedded/L4T/r32_Release_v6.1/Jeston_Nano/jetson-nano-jp46-sd-card-image.zip?xtLGc386JIwQlfgPPGITNMMx3dC47xG6lIybgH0z9HUPzZaP7ZO2h3U3UFhcpzo7QJsYr-1cCnspcgl929SsucJH043bqSzwC_jUQGxqQuJvmNyIMcrmp8IJopYJUgh41KDf32qZNNeEUEquBj5vkUSAUH_46_UJ1VEv5d1IbYE_36EcSGByIJ1Anw</a></p>
+<p>Ubuntu18.04:</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=QXd34V5FfLcFk2XDgphoig">https://pan.baidu.com/share/init?surl=QXd34V5FfLcFk2XDgphoig</a> 密码 : tun3</p>
+<p><code>sd卡格式化工具</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/">SD Memory Card Formatter for Windows Download | SD Association (sdcard.org)</a></p>
+<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤:"></a>安装步骤:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.格式化sd卡</span><br><span class="line">2.使用balenaEtcher烧录下载好的系统</span><br><span class="line">3.插上卡后做初始化设置</span><br></pre></td></tr></table></figure>
+
+<h3 id="jetson三种供电方式"><a href="#jetson三种供电方式" class="headerlink" title="jetson三种供电方式:"></a>jetson三种供电方式:</h3><h4 id="参考网址-1"><a href="#参考网址-1" class="headerlink" title="参考网址:"></a>参考网址:</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44350337/article/details/111674531?ops_request_misc=%7B%22request_id%22:%22163456105816780262525022%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163456105816780262525022&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-111674531.pc_search_ecpm_flag&utm_term=jetson+%E4%BE%9B%E7%94%B5&spm=1018.2226.3001.4187">Jetson nano 的三种供电方式_Dunkle.T的博客-CSDN博客_jetson nano供电</a></p>
+<h4 id="分别为"><a href="#分别为" class="headerlink" title="分别为:"></a>分别为:</h4><ul>
+<li>USB供电(默认5v2a 仅低功率),使用时拔去条线帽</li>
+<li>使用 DC 供电(默认5v 4A),使用时插上跳线帽</li>
+<li>使用引脚供电(5v3a 无所谓跳线帽)</li>
+</ul>
+<h4 id="查看cuda配置"><a href="#查看cuda配置" class="headerlink" title="查看cuda配置"></a>查看cuda配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install jetson-stats</span><br><span class="line">sudo jtop</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于ros安装"><a href="#关于ros安装" class="headerlink" title="关于ros安装"></a>关于ros安装</h3><h4 id="参考网址-2"><a href="#参考网址-2" class="headerlink" title="参考网址:"></a>参考网址:</h4><p><a href="https://peitianyu.github.io/pty_blog.github.io/ros/ros%E5%AE%89%E8%A3%85/">ROS_安装 (peitianyu.github.io)</a></p>
+<h4 id="其他部分按ros安装教程来即可"><a href="#其他部分按ros安装教程来即可" class="headerlink" title="其他部分按ros安装教程来即可"></a>其他部分按ros安装教程来即可</h4><p>比较实用的方案是先按照我的步骤安装ros,之后再通过<code>fishros一行代码</code>解决rosdep问题</p>
+<h3 id="远程连接nano"><a href="#远程连接nano" class="headerlink" title="远程连接nano"></a>远程连接nano</h3><p><code>ssh.exe usrname@192.168.xxx.xxx</code></p>
+<h3 id="jetson-nano初始化配置"><a href="#jetson-nano初始化配置" class="headerlink" title="jetson nano初始化配置"></a>jetson nano初始化配置</h3><h4 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h4><p><code>静态ip设置</code>:<a target="_blank" rel="noopener" href="https://www.cnblogs.com/blueyunchao0618/p/11394640.html">Ubuntu 18.04配置静态IP地址)</a></p>
+<h4 id="root免密登录"><a href="#root免密登录" class="headerlink" title="root免密登录"></a>root免密登录</h4><p><code>参考网址</code>:<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44673299/article/details/108658078?ops_request_misc=%7B%22request_id%22:%22163463123116780271513740%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=163463123116780271513740&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-2-108658078.pc_search_ecpm_flag&utm_term=Ubuntu18+root%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95&spm=1018.2226.3001.4187">ubuntu设置root免密登陆</a></p>
+<h3 id="vscode连接jetson-nano"><a href="#vscode连接jetson-nano" class="headerlink" title="vscode连接jetson nano"></a>vscode连接jetson nano</h3><h4 id="参考网址-3"><a href="#参考网址-3" class="headerlink" title="参考网址:"></a>参考网址:</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sqlquan/article/details/111918019?ops_request_misc=%7B%22request_id%22:%22163463106616780264095126%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=163463106616780264095126&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-111918019.pc_search_ecpm_flag&utm_term=vscode+ssh&spm=1018.2226.3001.4187">vscode设置ssh进行远程编辑_Quan的博客-CSDN博客</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">某飞行员</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://peitianyu.github.io/blog/2021/10/19/jetson_nano/">https://peitianyu.github.io/blog/2021/10/19/jetson_nano/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://peitianyu.github.io/blog" target="_blank">某飞行员的随笔</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/05/11/ulqbCaZsiXkyjpY.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/2021/10/19/hugo/"><img class="prev-cover" src="https://s2.loli.net/2022/05/11/2pEyFdOzKGkJtjb.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">hugo配置</div></div></a></div><div class="next-post pull-right"><a href="/blog/2021/10/19/make%E6%A8%A1%E6%9D%BF/"><img class="next-cover" src="https://s2.loli.net/2022/05/11/gs2ShWvZ3QHpki9.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">make配置模板</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">某飞行员</div><div class="author-info__description">向西可剃度,向东可寻欢,但山野笨拙,我也笨拙.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">222</div></a></div><div class="card-info-data-item is-center"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/peitianyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/peitianyu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:peitianyu18@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80"><span class="toc-number">1.</span> <span class="toc-text">参考网址:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%84%E5%85%88%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.1.</span> <span class="toc-text">预先下载:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text">安装步骤:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jetson%E4%B8%89%E7%A7%8D%E4%BE%9B%E7%94%B5%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">jetson三种供电方式:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80-1"><span class="toc-number">3.1.</span> <span class="toc-text">参考网址:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E5%88%AB%E4%B8%BA"><span class="toc-number">3.2.</span> <span class="toc-text">分别为:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bcuda%E9%85%8D%E7%BD%AE"><span class="toc-number">3.3.</span> <span class="toc-text">查看cuda配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Eros%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">关于ros安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80-2"><span class="toc-number">4.1.</span> <span class="toc-text">参考网址:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%83%A8%E5%88%86%E6%8C%89ros%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E6%9D%A5%E5%8D%B3%E5%8F%AF"><span class="toc-number">4.2.</span> <span class="toc-text">其他部分按ros安装教程来即可</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5nano"><span class="toc-number">5.</span> <span class="toc-text">远程连接nano</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jetson-nano%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="toc-number">6.</span> <span class="toc-text">jetson nano初始化配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-number">6.1.</span> <span class="toc-text">网络配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#root%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="toc-number">6.2.</span> <span class="toc-text">root免密登录</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vscode%E8%BF%9E%E6%8E%A5jetson-nano"><span class="toc-number">7.</span> <span class="toc-text">vscode连接jetson nano</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80-3"><span class="toc-number">7.1.</span> <span class="toc-text">参考网址:</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 某飞行员</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="/blog/js/tw_cn.js"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

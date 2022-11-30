@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>对于slam整体流程的思考 | 某飞行员的随笔</title><meta name="keywords" content="slam"><meta name="author" content="某飞行员"><meta name="copyright" content="某飞行员"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="参考网址: (112条消息) SLAM基本流程和算法框架_lzj50002801的博客-CSDN博客_slam基本框架  流程图 123456789传感器信息读取:在视觉 SLAM 中主要为相机图像信息的读取和预处理。如果在机器人中，还可能有码盘、惯性传感器等信息的读取和同步。视觉里程计 (Visual Odometry, VO):视觉里程计任务是估算相邻图像间相机的运动，以及局部地图的样子。VO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对于slam整体流程的思考">
+<meta property="og:url" content="https://peitianyu.github.io/blog/2022/03/07/%E5%AF%B9%E4%BA%8Eslam%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E7%9A%84%E6%80%9D%E8%80%83/index.html">
+<meta property="og:site_name" content="某飞行员的随笔">
+<meta property="og:description" content="参考网址: (112条消息) SLAM基本流程和算法框架_lzj50002801的博客-CSDN博客_slam基本框架  流程图 123456789传感器信息读取:在视觉 SLAM 中主要为相机图像信息的读取和预处理。如果在机器人中，还可能有码盘、惯性传感器等信息的读取和同步。视觉里程计 (Visual Odometry, VO):视觉里程计任务是估算相邻图像间相机的运动，以及局部地图的样子。VO">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/05/11/DfjJiMPWGCsFV26.jpg">
+<meta property="article:published_time" content="2022-03-07T04:30:12.000Z">
+<meta property="article:modified_time" content="2022-11-30T05:47:13.719Z">
+<meta property="article:author" content="某飞行员">
+<meta property="article:tag" content="slam">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/05/11/DfjJiMPWGCsFV26.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://peitianyu.github.io/blog/2022/03/07/%E5%AF%B9%E4%BA%8Eslam%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E7%9A%84%E6%80%9D%E8%80%83/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '对于slam整体流程的思考',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-30 13:47:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="某飞行员的随笔" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">222</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/05/11/DfjJiMPWGCsFV26.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">某飞行员的随笔</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">对于slam整体流程的思考</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-07T04:30:12.000Z" title="发表于 2022-03-07 12:30:12">2022-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-30T05:47:13.719Z" title="更新于 2022-11-30 13:47:13">2022-11-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/slam/">slam</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/slam/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/">理论学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="对于slam整体流程的思考"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址:"></a>参考网址:</h1><p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/lzj50002801/article/details/108432226">(112条消息) SLAM基本流程和算法框架_lzj50002801的博客-CSDN博客_slam基本框架</a> </p>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><p><img src="https://s2.loli.net/2022/03/07/gz3q4trXJBlFUEZ.png" alt="20200906153505547.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">传感器信息读取:在视觉 SLAM 中主要为相机图像信息的读取和预处理。如果在机器人中，还可能有码盘、惯性传感器等信息的读取和同步。</span><br><span class="line"></span><br><span class="line">视觉里程计 (Visual Odometry, VO):视觉里程计任务是估算相邻图像间相机的运动，以及局部地图的样子。VO 又称为前端（Front End）。</span><br><span class="line"></span><br><span class="line">后端优化（Optimization）:后端接受不同时刻视觉里程计测量的相机位姿，以及回环检测的信息，对它们进行优化，得到全局一致的轨迹和地图。由于接在 VO 之后，又称为后端（Back End）。</span><br><span class="line"></span><br><span class="line">回环检测（Loop Closing）:回环检测判断机器人是否曾经到达过先前的位置。如果检测到回环，它会把信息提供给后端进行处理。</span><br><span class="line"></span><br><span class="line">建图（Mapping）:它根据估计的轨迹，建立与任务要求对应的地图。</span><br></pre></td></tr></table></figure>
+
+<p>在图中很清晰的表现出了slam流程:</p>
+<p>根据传感器信息获得初步的前端里程计,这时候同时进行回环检测,然后将两个数据都传给后端进行后端的非线性优化,最后通过非线性优化得到的坐标数据,进行最终建图.</p>
+<h1 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h1><ul>
+<li>odom:一般用于辅助前端定位作用</li>
+<li>imu:由于其角度相较于odom更准,所以也会将其放做里程计角度数值,当然也会有用于ekf做传感器融合</li>
+<li>scan:激光数据包括:ranges, intensities,数据</li>
+</ul>
+<h1 id="前端里程计"><a href="#前端里程计" class="headerlink" title="前端里程计"></a>前端里程计</h1><h2 id="滤波大法"><a href="#滤波大法" class="headerlink" title="滤波大法"></a>滤波大法</h2><h3 id="主要是ekf与pf两种-具体可参考"><a href="#主要是ekf与pf两种-具体可参考" class="headerlink" title="主要是ekf与pf两种,具体可参考:"></a>主要是ekf与pf两种,具体可参考:</h3><p><strong>gmapping,amcl,refletor_ekf_slam</strong></p>
+<h2 id="非线性优化"><a href="#非线性优化" class="headerlink" title="非线性优化"></a>非线性优化</h2><ul>
+<li><strong>icp</strong></li>
+<li><strong>scan_to_map</strong></li>
+<li><strong>scan_to_submap: Scan To SubMap方法只将当前帧激光雷达数据与历史前几帧数据进行匹配</strong> </li>
+</ul>
+<h1 id="回环检测"><a href="#回环检测" class="headerlink" title="回环检测"></a>回环检测</h1><ul>
+<li><strong>通过特征点进行匹配(原特征,叫角特征,线特征)</strong></li>
+<li><strong>通过icp进行的暴力匹配</strong></li>
+<li><strong>scan_context</strong></li>
+</ul>
+<h1 id="后端优化-图优化"><a href="#后端优化-图优化" class="headerlink" title="后端优化(图优化)"></a>后端优化(图优化)</h1><p> <strong>图优化的目的是从整体上对所有已估计到的并且在回环上的位姿进行优化，减小误差。普遍有两种:</strong></p>
+<ul>
+<li> <strong>图优化的思路是将位姿作为图(Graph)的顶点(Vertex),位姿间的坐标变换关系作为边(Edge), 顶点为优化变量，边为优化约束，构建出一个位姿图(Pose Graph)。</strong> </li>
+<li> <strong>将雷达观测点也作为图的顶点，观测点与机器人的位姿之间的关系也作为边构建出一个图，这种情况下称之为Bundle Adjustment(BA)问题</strong> </li>
+</ul>
+<p><strong>具体非线性优化可以参考g2o与之前的手撸高斯牛顿,以此得到较为不错的估计坐标</strong></p>
+<h1 id="建图"><a href="#建图" class="headerlink" title="建图"></a>建图</h1><p><strong>这方面,其实可以参考的有很多,比如hector的建图,以及深蓝学院的建图都比较简单容易移植.</strong></p>
+<h1 id="全局定位"><a href="#全局定位" class="headerlink" title="全局定位"></a>全局定位</h1><ul>
+<li>最常用且传统的方式是amcl,采用贝叶斯滤波的方式实现,包括比较固定的里程计模型,还有就是根据不同传感器写的不同观测模型,对于2d激光slam来讲,scan是最常见的观测方式,当然再此基础上结合gps结合反光板,结合多激光头进行多传感器融合也同样常见,原理类似</li>
+<li>scan_to_map是比较常用的纯定位方式,缺点是由于重定位比较麻烦,一般对于车体初始位姿要求比较高</li>
+<li>采用carto的scan_to_submap,首先在各个子图中搜索,然后再查找,不过同样的面临着一开始需要很长时间进行搜索定位的过程,所以一般做法依旧是选择较好的初始位姿.</li>
+<li>基于特征匹配进行的全局定位,如scan_context或者是角特征,线特征,原特征等</li>
+<li>最粗暴的方法,使用icp进行暴力穷举,我相信那一定是很让人难忘的方式</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">某飞行员</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://peitianyu.github.io/blog/2022/03/07/%E5%AF%B9%E4%BA%8Eslam%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E7%9A%84%E6%80%9D%E8%80%83/">https://peitianyu.github.io/blog/2022/03/07/%E5%AF%B9%E4%BA%8Eslam%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E7%9A%84%E6%80%9D%E8%80%83/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://peitianyu.github.io/blog" target="_blank">某飞行员的随笔</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/blog/tags/slam/">slam</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/05/11/DfjJiMPWGCsFV26.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/blog/2022/03/07/ros_mobile/"><img class="prev-cover" src="https://s2.loli.net/2022/05/11/JUP8sHm3fqjAMwc.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ros_mobile</div></div></a></div><div class="next-post pull-right"><a href="/blog/2022/03/06/scan_context/"><img class="next-cover" src="https://s2.loli.net/2022/05/11/vFfg9Vrwmy7uPbq.jpg" onerror="onerror=null;src='/blog/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">scan_context</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.wxcha.com%2Ffile%2F201603%2F04%2F274aab78d1.jpg&amp;refer=http%3A%2F%2Fimg.wxcha.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1637633345&amp;t=66fe958a1bb4deedb5d227c6440f9e87" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">某飞行员</div><div class="author-info__description">向西可剃度,向东可寻欢,但山野笨拙,我也笨拙.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">222</div></a></div><div class="card-info-data-item is-center"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/peitianyu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/peitianyu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:peitianyu18@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80"><span class="toc-number">1.</span> <span class="toc-text">参考网址:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">传感器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E9%87%8C%E7%A8%8B%E8%AE%A1"><span class="toc-number">4.</span> <span class="toc-text">前端里程计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%A4%E6%B3%A2%E5%A4%A7%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">滤波大法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%98%AFekf%E4%B8%8Epf%E4%B8%A4%E7%A7%8D-%E5%85%B7%E4%BD%93%E5%8F%AF%E5%8F%82%E8%80%83"><span class="toc-number">4.1.1.</span> <span class="toc-text">主要是ekf与pf两种,具体可参考:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E4%BC%98%E5%8C%96"><span class="toc-number">4.2.</span> <span class="toc-text">非线性优化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9E%E7%8E%AF%E6%A3%80%E6%B5%8B"><span class="toc-number">5.</span> <span class="toc-text">回环检测</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E4%BC%98%E5%8C%96-%E5%9B%BE%E4%BC%98%E5%8C%96"><span class="toc-number">6.</span> <span class="toc-text">后端优化(图优化)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BB%BA%E5%9B%BE"><span class="toc-number">7.</span> <span class="toc-text">建图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%9A%E4%BD%8D"><span class="toc-number">8.</span> <span class="toc-text">全局定位</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 某飞行员</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="/blog/js/tw_cn.js"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
